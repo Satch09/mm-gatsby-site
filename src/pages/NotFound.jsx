@@ -5,7 +5,8 @@ import HeaderPicture from "components/HeaderPicture";
 import HeaderSection from "layout/HeaderSection";
 import ContentLayout from "layout/ContentLayout";
 
-export default function NotFound({ page }) {
+import page from "data/notFound.json";
+export default function NotFound() {
   return (
     <>
       <HeaderPicture headerProps={page.headerProps} />
