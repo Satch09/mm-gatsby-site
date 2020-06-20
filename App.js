@@ -8,11 +8,11 @@
 import React from "react";
 import { Router } from "@reach/router";
 import Home from "pages/Home";
-import Services from "pages/Services";
-import Projects from "pages/Projects";
-import Training from "pages/Training";
-import Contact from "pages/Contact";
-import About from "pages/About";
+import Services from "pages/services";
+import Projects from "pages/projects";
+import Training from "pages/training";
+import Contact from "pages/contact";
+import About from "pages/about";
 import NotFound from "pages/NotFound";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import createMuiTheme from "@material-ui/core/styles/createMuiTheme";

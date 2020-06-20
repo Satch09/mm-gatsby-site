@@ -14,7 +14,8 @@ import OverhangSpacing from "layout/OverhangSpacing";
 import Footer from "components/Footer/Footer";
 import ContactOperatingHours from "components/ContactOperatingHours";
 
-const useStyles = makeStyles((theme) => ({
+import page from "data/training.json";
+const useStyles = makeStyles(theme => ({
   ...theme.customProps,
   root: {
     display: "flex",
@@ -33,13 +34,14 @@ const useStyles = makeStyles((theme) => ({
       "linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 100%)",
   },
 }));
-export default function Training({ page }) {
+export default function Training() {
   const classes = useStyles();
   return (
     <>
       <HeaderPicture headerProps={page.headerProps} />
       <OverhangSpacing
-        mainItem={<MessageBox {...page.heading} noBottomDivider />}>
+        mainItem={<MessageBox {...page.heading} noBottomDivider />}
+      >
         <ContentLayout>
           <Grid
             container
@@ -47,8 +49,9 @@ export default function Training({ page }) {
             flexDirection="row"
             justify="start"
             align="center"
-            spacing={2}>
-            {page.courses.map((course) => (
+            spacing={2}
+          >
+            {page.courses.map(course => (
               <Grid item md={4} xs={12} key={course.heading}>
                 <CardTraining {...course} />
               </Grid>

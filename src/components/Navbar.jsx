@@ -39,17 +39,16 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const navButtons = [
-  "home",
-  "about",
-  "services",
-  "training",
-  "projects",
-  "contact",
+  { name: "home", link: "/" },
+  { name: "about", link: "/about" },
+  { name: "services", link: "/services" },
+  { name: "training", link: "/training" },
+  { name: "projects", link: "/projects" },
+  { name: "contact", link: "/contact" },
 ];
 
 export default function Navbar() {
   const [anchorEl, setAnchorEl] = React.useState(null);
-
   const handleClick = event => {
     setAnchorEl(event.currentTarget);
   };
@@ -68,17 +67,17 @@ export default function Navbar() {
           <Box p={0}>
             {navButtons.map(item => {
               return (
-                <Route key={item} to={item}>
+                <Route key={item.name} to={item.link}>
                   <Link
                     component="button"
                     variant="body2"
                     color="primary"
-                    onClick={() => {
-                      console.info("I'm a button.");
-                    }}
+                    // onClick={() => {
+                    //   // console.info("I'm a button.");
+                    // }}
                   >
                     <Button className={classes.navButton}>
-                      {item.charAt(0).toUpperCase() + item.slice(1)}
+                      {item.name.charAt(0).toUpperCase() + item.name.slice(1)}
                     </Button>
                   </Link>
                 </Route>
@@ -106,11 +105,12 @@ export default function Navbar() {
             >
               {navButtons.map(item => {
                 return (
-                  <Route key={item} to={item}>
+                  <Route key={item.name} to={item.link}>
                     <Link component="li" className={classes.navButton}>
                       <MenuItem>
                         <Button className={classes.navButton}>
-                          {item.charAt(0).toUpperCase() + item.slice(1)}
+                          {item.name.charAt(0).toUpperCase() +
+                            item.name.slice(1)}
                         </Button>
                       </MenuItem>
                     </Link>

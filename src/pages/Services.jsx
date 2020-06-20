@@ -13,6 +13,7 @@ import ContactOperatingHours from "components/ContactOperatingHours";
 import ServicesList from "components/Cards/ServicesList";
 import { Grid, Box, Container, Paper } from "@material-ui/core";
 
+import page from "data/services.json";
 // const useStyles = makeStyles((theme) => ({
 //   ...theme.customProperties,
 //   root: {
@@ -36,14 +37,15 @@ import { Grid, Box, Container, Paper } from "@material-ui/core";
 //   },
 // }));
 
-export default function Services({ page }) {
+export default function Services() {
   // const classes = useStyles();
   return (
     <>
       <HeaderPicture headerProps={page.headerProps} />
 
       <OverhangSpacing
-        mainItem={<MessageBox {...page.heading} noBottomDivider />}>
+        mainItem={<MessageBox {...page.heading} noBottomDivider />}
+      >
         <ContentLayout>
           <AffiliatesBanner />
           {/* <Grid
@@ -59,7 +61,7 @@ export default function Services({ page }) {
           </Grid> */}
 
           <Grid container xs={12} justify="center" align="center" spacing={2}>
-            {page.services.map((service) => (
+            {page.services.map(service => (
               <Grid item xs={12} sm={5} key={service.heading}>
                 <ServicesList {...service} />
               </Grid>

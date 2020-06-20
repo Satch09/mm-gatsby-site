@@ -12,6 +12,7 @@ import OverhangSpacing from "layout/OverhangSpacing";
 import Footer from "components/Footer/Footer";
 import ContactOperatingHours from "components/ContactOperatingHours";
 
+import page from "data/projects.json";
 // const useStyles = makeStyles((theme) => ({
 //   ...theme.customProperties,
 //   root: {
@@ -35,12 +36,13 @@ import ContactOperatingHours from "components/ContactOperatingHours";
 //   },
 // }));
 
-export default function Projects({ page }) {
+export default function Projects() {
   return (
     <>
       <HeaderPicture headerProps={page.headerProps} />
       <OverhangSpacing
-        mainItem={<MessageBox {...page.heading} noBottomDivider />}>
+        mainItem={<MessageBox {...page.heading} noBottomDivider />}
+      >
         <ContentLayout>
           <Box m={2} p={2}>
             <Grid container justify="center" xs={12} spacing={2}>

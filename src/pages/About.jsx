@@ -13,6 +13,7 @@ import Footer from "components/Footer/Footer";
 import ContactOperatingHours from "components/ContactOperatingHours";
 import OverhangSpacing from "layout/OverhangSpacing";
 
+import page from "data/about.json";
 // const useStyles = makeStyles((theme) => ({
 //   ...theme.customProperties,
 //   root: {
@@ -26,14 +27,15 @@ import OverhangSpacing from "layout/OverhangSpacing";
 //   },
 // }));
 
-export default function About({ page }) {
+export default function About() {
   // const classes = useStyles();
   return (
     <>
       {/* <Header headerProps={page.headerProps} /> */}
       <HeaderPicture headerProps={page.headerProps} />
       <OverhangSpacing
-        mainItem={<MessageBox {...page.heading} noBottomDivider />}>
+        mainItem={<MessageBox {...page.heading} noBottomDivider />}
+      >
         <ContentLayout>
           <Grid container justify="space-around" spacing={0}>
             <Grid item xs={12} sm={5}>
@@ -44,7 +46,7 @@ export default function About({ page }) {
                 {page.principlesAndValues.body}
               </Typography>
 
-              {page.principlesAndValues.items.map((principle) => (
+              {page.principlesAndValues.items.map(principle => (
                 <Box m={2} p={1} key={principle.title}>
                   <Typography variant="h5" component="h2">
                     {principle.title}
@@ -52,7 +54,8 @@ export default function About({ page }) {
                   <Typography
                     variant="body1"
                     color="textSecondary"
-                    component="p">
+                    component="p"
+                  >
                     {principle.body}
                   </Typography>
                 </Box>
@@ -66,7 +69,7 @@ export default function About({ page }) {
                 {page.bee.body}
               </Typography>
 
-              {page.bee.items.map((bee) => (
+              {page.bee.items.map(bee => (
                 <Box m={2} p={1} key={bee.title}>
                   <Typography variant="h5" component="h2">
                     {bee.title}
@@ -74,7 +77,8 @@ export default function About({ page }) {
                   <Typography
                     variant="body1"
                     color="textSecondary"
-                    component="p">
+                    component="p"
+                  >
                     {bee.body}
                   </Typography>
                 </Box>

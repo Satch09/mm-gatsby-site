@@ -1,8 +1,16 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `M and M Electronics`,
+    description: `Professional Website`,
+    author: `Christopher Maisch`,
+    menuLinks: [
+      { name: "home", link: "/" },
+      { name: "about", link: "/about" },
+      { name: "services", link: "/services" },
+      { name: "training", link: "/training" },
+      { name: "projects", link: "/projects" },
+      { name: "contact", link: "/contact" },
+    ],
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -16,15 +24,25 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-resolve-src`,
-    `gatsby-plugin-material-ui`,
+    `gatsby-plugin-top-layout`,
     {
-      resolve: `gatsby-plugin-global-styles`,
+      resolve: `gatsby-plugin-material-ui`,
+      // If you want to use styled components you should change the injection order.
       options: {
-        props: {
-          theme: `${__dirname}/src/util/theme`,
-        },
+        // stylesProvider: {
+        //   injectFirst: true,
+        // },
       },
     },
+    // `gatsby-plugin-material-ui`,
+    // {
+    //   resolve: `gatsby-plugin-global-styles`,
+    //   options: {
+    //     props: {
+    //       theme: `${__dirname}/src/util/theme`,
+    //     },
+    //   },
+    // },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

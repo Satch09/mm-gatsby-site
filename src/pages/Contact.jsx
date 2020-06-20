@@ -19,7 +19,11 @@ import ContentLayout from "layout/ContentLayout";
 import HeaderSection from "layout/HeaderSection";
 import FadeIn from "interactions/FadeIn";
 
-const useStyles = makeStyles((theme) => ({
+import page from "data/contact.json";
+import Footer from "components/Footer/Footer";
+import ContactOperatingHours from "components/ContactOperatingHours";
+
+const useStyles = makeStyles(theme => ({
   ...theme.customProperties,
   root: {
     flexGrow: 1,
@@ -29,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Contact({ page }) {
+export default function Contact() {
   const classes = useStyles();
 
   return (
@@ -43,11 +47,14 @@ export default function Contact({ page }) {
           </Box>
         </Grid>
         <Grid container justify="center" sx={12}>
-          {page.contacts.map((course) => {
+          {page.contacts.map(course => {
             return <CardContact key={course.name} {...course} />;
           })}
         </Grid>
       </HeaderSection>
+      <Footer>
+        <ContactOperatingHours />
+      </Footer>
     </>
   );
 }
