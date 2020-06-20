@@ -1,9 +1,12 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 
+import { useStaticQuery, graphql } from "gatsby";
 import Box from "@material-ui/core/Box";
 import { CardMedia } from "@material-ui/core";
 import coverImage from "static/nasa-cover-compressed.jpg";
+import Image from "./image";
+import Img from "gatsby-image";
 const useStyles = makeStyles(theme => ({
   ...theme.customProperties,
   heroContainer: {
@@ -27,8 +30,21 @@ const useStyles = makeStyles(theme => ({
 export default function HeroCoverPicture({ children, minHeight, picture }) {
   const classes = useStyles();
 
+  const data = useStaticQuery(graphql`
+    query {
+      placeholderImage: file(relativePath: { eq: "nasa-cover.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1024) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `);
+
   return (
     <>
+      {/* <Img fluid={data.placeholderImage.childImageSharp.fluid} /> */}
       <CardMedia
         image={coverImage}
         style={{

@@ -1,24 +1,20 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
-import Typography from "@material-ui/core/Typography";
 
 import { Box, Button, Container } from "@material-ui/core";
 import Divider from "@material-ui/core/Divider";
 import OperationHours from "components/OperationHours";
-import PhoneIcon from "@material-ui/icons/Phone";
-import DescriptionIcon from "@material-ui/icons/Description";
 // Icons
 
 import ExternalLink from "./ExternalLink";
 import Location from "./Location";
 import Call from "./Call";
-import SocialLinks from "./SocialLinks";
 import OperationHoursAfter from "./OperationHoursAfter";
 import Fax from "./Fax";
 import Postal from "./Postal";
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   ...theme.customProps,
   root: {
     backgroundRepeat: "no-repeat",
@@ -49,7 +45,8 @@ export default function ContactOperatingHours() {
         xs={12}
         justify="space-around"
         alignItems="center"
-        style={{ paddingBottom: "0" }}>
+        style={{ paddingBottom: "0" }}
+      >
         {children}
       </Grid>
     );
