@@ -6,7 +6,6 @@ import Grid from "@material-ui/core/Grid";
 import { Link as Go, graphql } from "gatsby";
 
 import MessageBox from "components/MessageBox";
-import Header from "components/Header";
 import HeaderPicture from "components/HeaderPicture";
 import { Box, Paper, Container, Grow } from "@material-ui/core";
 //import Link from "@material-ui/core/Link";
@@ -14,12 +13,10 @@ import { Box, Paper, Container, Grow } from "@material-ui/core";
 
 import QuickLinks from "components/QuickLinks";
 import ContentLayout from "layout/ContentLayout";
-import HeaderSection from "layout/HeaderSection";
 import CovidBanner from "components/CovidBanner";
 import Footer from "components/Footer/Footer";
 import ContactOperatingHours from "components/ContactOperatingHours";
 import OverhangSpacing from "layout/OverhangSpacing";
-import { Popover } from "@material-ui/core";
 import page from "data/home.json";
 
 const useStyles = makeStyles(theme => ({

@@ -52,7 +52,7 @@ export default function ScrollingNav(props) {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [props.colorTransitionScrollHeight, state]);
 
   return (
     <>
@@ -69,7 +69,8 @@ export default function ScrollingNav(props) {
               // boxShadow: state.transparent ? "none" : undefined,
               boxShadow: "none",
               transition: "background 1s",
-            }}>
+            }}
+          >
             <Toolbar>
               <Navbar />
             </Toolbar>

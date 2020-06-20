@@ -5,17 +5,9 @@ import Typography from "@material-ui/core/Typography";
 import GpsFixedIcon from "@material-ui/icons/GpsFixed";
 // Icons
 
-import Header from "components/Header";
-
-import { bookWithPencil } from "svg";
-
-import ContactDialog from "components/ContactDialog";
-import ContentLayout from "layout/ContentLayout";
-import HeaderSection from "layout/HeaderSection";
-import ExternalLink from "./ExternalLink";
 import { Box } from "@material-ui/core";
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   ...theme.customProperties,
   root: {
     backgroundRepeat: "no-repeat",

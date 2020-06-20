@@ -3,11 +3,9 @@ import React from "react";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 
-import { Box, Paper } from "@material-ui/core";
-import Header from "components/Header";
+import { Box } from "@material-ui/core";
 import HeaderPicture from "components/HeaderPicture";
 import MessageBox from "components/MessageBox";
-import HeaderSection from "layout/HeaderSection";
 import ContentLayout from "layout/ContentLayout";
 import Footer from "components/Footer/Footer";
 import ContactOperatingHours from "components/ContactOperatingHours";

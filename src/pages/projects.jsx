@@ -6,7 +6,6 @@ import MessageBox from "components/MessageBox";
 import { Box } from "@material-ui/core";
 import HeaderPicture from "components/HeaderPicture";
 import CardWithSideImage from "components/Cards/CardWithSideImage";
-import HeaderSection from "layout/HeaderSection";
 import ContentLayout from "layout/ContentLayout";
 import OverhangSpacing from "layout/OverhangSpacing";
 import Footer from "components/Footer/Footer";
