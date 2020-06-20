@@ -3,7 +3,7 @@ import SEO from "../components/seo";
 import React, { useEffect, useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
-import { Link as Go } from "gatsby";
+import { Link as Go, graphql } from "gatsby";
 
 import MessageBox from "components/MessageBox";
 import Header from "components/Header";
@@ -19,7 +19,6 @@ import CovidBanner from "components/CovidBanner";
 import Footer from "components/Footer/Footer";
 import ContactOperatingHours from "components/ContactOperatingHours";
 import OverhangSpacing from "layout/OverhangSpacing";
-import HeroCover from "components/HeroCover";
 import { Popover } from "@material-ui/core";
 import page from "data/home.json";
 
@@ -75,7 +74,6 @@ const IndexPage = () => {
       <OverhangSpacing mainItem={<QuickLinks />}>
         <ContentLayout>
           {/* <div ref={inputEl}></div> */}
-
           <Grid
             container
             display="flex"
@@ -89,7 +87,7 @@ const IndexPage = () => {
                 <Box style={{ height: "100%" }}>
                   <Go to={topic.link} style={{ textDecoration: "none" }}>
                     <Paper
-                      style={{ height: "100%" }}
+                      style={{ minHeight: "100%" }}
                       className={classes.heading}
                     >
                       <MessageBox {...topic} noBottomDivider />
@@ -107,4 +105,5 @@ const IndexPage = () => {
     </>
   );
 };
+
 export default IndexPage;
