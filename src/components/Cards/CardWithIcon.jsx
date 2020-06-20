@@ -1,17 +1,8 @@
 import React from "react";
-import { makeStyles, withStyles } from "@material-ui/core/styles";
 import { Link } from "gatsby";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 import { Container } from "@material-ui/core";
-const styles = makeStyles(theme => ({
-  root: {
-    margin: "0 10%",
-  },
-  title: {
-    fontSize: "100px",
-  },
-}));
 
 const CardWithIcon = ({ classes, text, children, linkTo, Icon }) => {
   return (
@@ -29,11 +20,7 @@ const CardWithIcon = ({ classes, text, children, linkTo, Icon }) => {
               justifyContent: "center",
             }}
           >
-            <Typography
-              className={classes.title}
-              variant="body1"
-              component="h5"
-            >
+            <Typography variant="body1" component="h5">
               {text}
             </Typography>
           </Box>
@@ -48,4 +35,4 @@ const CardWithIcon = ({ classes, text, children, linkTo, Icon }) => {
   );
 };
 
-export default withStyles(styles)(CardWithIcon);
+export default CardWithIcon;

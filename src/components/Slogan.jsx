@@ -5,9 +5,9 @@ import Typography from "@material-ui/core/Typography";
 import Typist from "react-typist";
 
 import Box from "@material-ui/core/Box";
-import { Container, Grid } from "@material-ui/core";
+import { Grid } from "@material-ui/core";
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   ...theme.customProps,
   banner: {
     backgroundColor: "rgba(0,0,0,0.8)",
@@ -27,7 +27,8 @@ export default function Slogan() {
           startDelay={1000}
           cursor={{ show: false }}
           avgTypingDelay={60}
-          stdTypingDelay={10}>
+          stdTypingDelay={10}
+        >
           <Box>
             <Typography
               variant="h2"
@@ -35,7 +36,8 @@ export default function Slogan() {
               style={{
                 color: "white",
                 fontSize: "calc(1.5vh + 1.7vw + 10px)",
-              }}>
+              }}
+            >
               Leaders in service
               <Typist.Backspace count={7} delay={1200} />
               solutions

@@ -63,23 +63,7 @@ export default function HeaderPicture(
 
         <Slogan />
         {children}
-        {/* <Img fluid={data.file.childImageSharp.fluid} /> */}
       </HeroCoverPicture>
     </>
   );
 }
-
-export const query = graphql`
-  query {
-    file(relativePath: { eq: "images/nasa-cover.jpg" }) {
-      childImageSharp {
-        # Specify the image processing specifications right in the query.
-        # Makes it trivial to update as your page's design changes.
-        fluid(maxWidth: 700) {
-          # Choose either the fragment including a small base64ed image, a traced placeholder SVG, or one without.
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-  }
-`;
