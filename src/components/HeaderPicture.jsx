@@ -2,12 +2,14 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import HeroCoverPicture from "components/HeroCoverPicture";
 import ScrollingNavbar from "components/ScrollingNav";
+import { graphql } from "gatsby";
+import Img from "gatsby-image";
 
 import { Grid, Container } from "@material-ui/core";
 import Logo from "components/Logo";
 import Slogan from "./Slogan";
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   ...theme.customProps,
   heroContainer: {
     // display: "block",
@@ -33,13 +35,10 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function HeaderPicture({
-  children,
-  minHeight,
-  picture,
-  headerProps,
-  cover,
-}) {
+export default function HeaderPicture(
+  { children, minHeight, picture, headerProps, cover },
+  data
+) {
   const classes = useStyles();
 
   const { options = {} } = headerProps;
@@ -64,7 +63,23 @@ export default function HeaderPicture({
 
         <Slogan />
         {children}
+        {/* <Img fluid={data.file.childImageSharp.fluid} /> */}
       </HeroCoverPicture>
     </>
   );
 }
+
+export const query = graphql`
+  query {
+    file(relativePath: { eq: "images/nasa-cover.jpg" }) {
+      childImageSharp {
+        # Specify the image processing specifications right in the query.
+        # Makes it trivial to update as your page's design changes.
+        fluid(maxWidth: 700) {
+          # Choose either the fragment including a small base64ed image, a traced placeholder SVG, or one without.
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`;

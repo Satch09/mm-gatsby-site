@@ -21,17 +21,17 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     `gatsby-plugin-resolve-src`,
     `gatsby-plugin-top-layout`,
     {
       resolve: `gatsby-plugin-material-ui`,
       // If you want to use styled components you should change the injection order.
       options: {
-        // stylesProvider: {
-        //   injectFirst: true,
-        // },
+        stylesProvider: {
+          injectFirst: true,
+        },
       },
     },
     // `gatsby-plugin-material-ui`,

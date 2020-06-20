@@ -10,7 +10,7 @@ import Typography from "@material-ui/core/Typography";
 import { Box, Container } from "@material-ui/core";
 
 import Divider from "@material-ui/core/Divider";
-const styles = makeStyles((theme) => ({
+const styles = makeStyles(theme => ({
   ...theme.customProperties,
   root: { display: "flex", flexDirection: "column" },
   details: { display: "flex", flexDirection: "column" },
@@ -23,7 +23,7 @@ const styles = makeStyles((theme) => ({
   },
 }));
 
-const MessageBox = ({ classes, title, body, noBottomDivider }) => {
+const MessageBox = ({ title, body, noBottomDivider }) => {
   //TODO put link rendering into function
 
   if (title && body) {
@@ -37,7 +37,8 @@ const MessageBox = ({ classes, title, body, noBottomDivider }) => {
                 alignItems="center"
                 justifyContent="center"
                 fontSize="1.6rem"
-                height="5em">
+                height="5em"
+              >
                 {title.toUpperCase()}
               </Box>
             </Typography>
@@ -45,7 +46,7 @@ const MessageBox = ({ classes, title, body, noBottomDivider }) => {
             <Divider variant="middle" />
             <Box align="start" style={{ height: "100%" }}>
               <Typography variant="body1" color="textSecondary" component="p">
-                {body.map((line) => (
+                {body.map(line => (
                   <Box key={line} m={1}>
                     {line}
                   </Box>
