@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: `www.mandmdemo.netlify.app`,
+    // siteUrl: `www.mandmdemo.netlify.app`,
     title: `M and M Electronics`,
     description: `Professional Website`,
     author: `Christopher Maisch`,
