@@ -1,14 +1,20 @@
-import React from "react"
+import React from "react";
+import MessageBox from "components/MessageBox";
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import HeaderPicture from "components/HeaderPicture";
+import HeaderSection from "layout/HeaderSection";
+import ContentLayout from "layout/ContentLayout";
 
-const NotFoundPage = () => (
-  <Layout>
-    <SEO title="404: Not found" />
-    <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-  </Layout>
-)
+import page from "data/notFound.json";
+export default function PageNotFound() {
+  return (
+    <>
+      <HeaderPicture headerProps={page.headerProps} />
 
-export default NotFoundPage
+      <HeaderSection>
+        <MessageBox {...page.heading} />
+      </HeaderSection>
+      <ContentLayout></ContentLayout>
+    </>
+  );
+}
