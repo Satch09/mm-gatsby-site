@@ -12,7 +12,7 @@ const useStyles = makeStyles(theme => ({
     flexDirection: "column",
     justifyContent: "flex-end",
     alignItems: "center",
-    backgroundImage: "url(nasa-cover-compressed.jpg)",
+    // backgroundImage: "url(nasa-cover-compressed.jpg)",
     backgroundRepeat: "no-repeat",
     backgroundAttachment: "fixed",
     backgroundPosition: "bottom",
