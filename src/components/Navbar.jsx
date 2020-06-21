@@ -1,5 +1,5 @@
 import React from "react";
-import { Link as Route, StaticQuery } from "gatsby";
+import { Link as Route, StaticQuery, graphql } from "gatsby";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 import { makeStyles } from "@material-ui/core/styles";
