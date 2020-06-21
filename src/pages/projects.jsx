@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 // import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 
@@ -36,6 +36,23 @@ import page from "data/projects.json";
 // }));
 
 export default function Projects() {
+  const [hasMounted, setHasMounted] = useState(false);
+
+  // const inputEl = useRef(null);
+  useEffect(() => {
+    setHasMounted(true);
+
+    // window.scrollTo({
+    //   behavior: "smooth",
+    //   top: inputEl.current.offsetTop,
+    // });
+    // inputEl.current.focus();
+    return () => {};
+  }, []);
+
+  if (!hasMounted) {
+    return null;
+  }
   return (
     <>
       <HeaderPicture headerProps={page.headerProps} />

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 // import { makeStyles } from "@material-ui/core/styles";
 
 import MessageBox from "components/MessageBox";
@@ -37,6 +37,23 @@ import page from "data/services.json";
 // }));
 
 export default function Services() {
+  const [hasMounted, setHasMounted] = useState(false);
+
+  // const inputEl = useRef(null);
+  useEffect(() => {
+    setHasMounted(true);
+
+    // window.scrollTo({
+    //   behavior: "smooth",
+    //   top: inputEl.current.offsetTop,
+    // });
+    // inputEl.current.focus();
+    return () => {};
+  }, []);
+
+  if (!hasMounted) {
+    return null;
+  }
   // const classes = useStyles();
   return (
     <>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Grid from "@material-ui/core/Grid";
 
 import CardTraining from "components/Cards/CardTraining";
@@ -13,6 +13,23 @@ import ContactOperatingHours from "components/ContactOperatingHours";
 
 import page from "data/training.json";
 export default function Training() {
+  const [hasMounted, setHasMounted] = useState(false);
+
+  // const inputEl = useRef(null);
+  useEffect(() => {
+    setHasMounted(true);
+
+    // window.scrollTo({
+    //   behavior: "smooth",
+    //   top: inputEl.current.offsetTop,
+    // });
+    // inputEl.current.focus();
+    return () => {};
+  }, []);
+
+  if (!hasMounted) {
+    return null;
+  }
   return (
     <>
       <HeaderPicture headerProps={page.headerProps} />

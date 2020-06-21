@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 
@@ -12,6 +12,23 @@ import Footer from "components/Footer/Footer";
 import ContactOperatingHours from "components/ContactOperatingHours";
 
 export default function Contact() {
+  const [hasMounted, setHasMounted] = useState(false);
+
+  // const inputEl = useRef(null);
+  useEffect(() => {
+    setHasMounted(true);
+
+    // window.scrollTo({
+    //   behavior: "smooth",
+    //   top: inputEl.current.offsetTop,
+    // });
+    // inputEl.current.focus();
+    return () => {};
+  }, []);
+
+  if (!hasMounted) {
+    return null;
+  }
   return (
     <>
       <HeaderPicture headerProps={page.headerProps} />
