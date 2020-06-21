@@ -9,7 +9,7 @@ import ContentLayout from "layout/ContentLayout";
 import OverhangSpacing from "layout/OverhangSpacing";
 import Footer from "components/Footer/Footer";
 import ContactOperatingHours from "components/ContactOperatingHours";
-import ServicesList from "components/Cards/ServicesList";
+import { ServicesList } from "components/Cards";
 import { Grid } from "@material-ui/core";
 
 import page from "data/services.json";

@@ -12,8 +12,6 @@ import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import ContactDialog from "./ContactDialog";
 import ExternalLink from "./ExternalLink";
 
-const useStyles = makeStyles(theme => ({}));
-
 export default function SocialLinks() {
   const {
     site: {
@@ -36,7 +34,6 @@ export default function SocialLinks() {
       }
     `
   );
-  const classes = useStyles();
 
   const links = {
     faceBook: {
@@ -52,13 +49,7 @@ export default function SocialLinks() {
 
   return (
     <>
-      <Grid
-        container
-        justify="center"
-        spacing={0}
-        align="end"
-        className={classes.links}
-      >
+      <Grid container justify="center" spacing={0} align="end">
         <ExternalLink {...links.faceBook}>
           <Button>
             <FacebookIcon fontSize="large" style={{ color: "white" }} />

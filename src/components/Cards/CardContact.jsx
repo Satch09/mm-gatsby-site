@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
@@ -6,7 +7,7 @@ import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 import Grid from "@material-ui/core/Grid";
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   ...theme.customProperties,
 
   details: {
@@ -51,3 +52,12 @@ export default function CardContact({
     </Box>
   );
 }
+
+CardContact.propTypes = {
+  department: PropTypes.string.isRequired,
+  email: PropTypes.string.isRequired,
+  ext: PropTypes.string,
+  name: PropTypes.string.isRequired,
+  number: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+};

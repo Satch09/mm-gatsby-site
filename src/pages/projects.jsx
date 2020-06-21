@@ -4,13 +4,13 @@ import Grid from "@material-ui/core/Grid";
 import MessageBox from "components/MessageBox";
 import { Box } from "@material-ui/core";
 import HeaderPicture from "components/HeaderPicture";
-import CardWithSideImage from "components/Cards/CardWithSideImage";
+import { CardWithSideImage } from "components/Cards";
 import ContentLayout from "layout/ContentLayout";
 import OverhangSpacing from "layout/OverhangSpacing";
 import Footer from "components/Footer/Footer";
 import ContactOperatingHours from "components/ContactOperatingHours";
-import page from "data/projects.json";
 import Rehydrate from "interactions/Rehydrate";
+import page from "data/projects.json";
 
 export default function Projects() {
   return (

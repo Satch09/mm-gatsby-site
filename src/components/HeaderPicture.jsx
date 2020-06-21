@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import HeroCoverPicture from "components/HeroCoverPicture";
@@ -37,7 +38,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 export default function HeaderPicture(
-  { children, minHeight, picture, headerProps, cover },
+  { children, minHeight, headerProps },
   data
 ) {
   const classes = useStyles();
@@ -69,3 +70,9 @@ export default function HeaderPicture(
     </>
   );
 }
+
+HeaderPicture.propTypes = {
+  children: PropTypes.any,
+
+  headerProps: PropTypes.object,
+};

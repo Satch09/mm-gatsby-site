@@ -76,3 +76,7 @@ export default function ScrollingNav(props) {
     </>
   );
 }
+
+ScrollingNav.propTypes = {
+  colorTransitionScrollHeight: PropTypes.number,
+};

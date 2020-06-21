@@ -18,16 +18,47 @@ module.exports = {
       },
     },
     menuLinks: [
-      { name: "home", link: "/" },
-      { name: "about", link: "/about" },
-      { name: "services", link: "/services" },
-      { name: "training", link: "/training" },
-      { name: "projects", link: "/projects" },
-      { name: "contact", link: "/contact" },
+      { name: `home`, link: `/` },
+      { name: `about`, link: `/about` },
+      { name: `services`, link: `/services` },
+      { name: `training`, link: `/training` },
+      { name: `projects`, link: `/projects` },
+      { name: `contact`, link: `/contact` },
     ],
   },
   plugins: [
-    `gatsby-plugin-sitemap`,
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                siteUrl: url
+              }
+            }
+            allSitePage(
+              filter: {
+                path: { regex: "/^(?!/404/|/404.html|/dev-404-page/)/" }
+              }
+            ) {
+              edges {
+                node {
+                  path
+                }
+              }
+            }
+          }
+        `,
+        output: `/sitemap.xml`,
+        serialize: ({ site, allSitePage }) =>
+          allSitePage.edges.map(edge => ({
+            url: site.siteMetadata.siteUrl + edge.node.path,
+            changefreq: `daily`,
+            priority: 0.7,
+          })),
+      },
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,

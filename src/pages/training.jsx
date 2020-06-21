@@ -1,7 +1,7 @@
 import React from "react";
 import Grid from "@material-ui/core/Grid";
 
-import CardTraining from "components/Cards/CardTraining";
+import { CardTraining } from "components/Cards";
 
 import HeaderPicture from "components/HeaderPicture";
 

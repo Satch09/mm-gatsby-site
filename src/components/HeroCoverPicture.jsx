@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 
@@ -31,7 +32,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function HeroCoverPicture({ children, minHeight, picture }) {
+export default function HeroCoverPicture({ children, minHeight }) {
   const classes = useStyles();
 
   const data = useStaticQuery(graphql`
@@ -62,3 +63,8 @@ export default function HeroCoverPicture({ children, minHeight, picture }) {
     </>
   );
 }
+
+HeroCoverPicture.propTypes = {
+  children: PropTypes.any,
+  minHeight: PropTypes.string,
+};

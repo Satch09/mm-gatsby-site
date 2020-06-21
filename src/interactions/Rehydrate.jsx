@@ -1,13 +1,16 @@
+import PropTypes from "prop-types";
 import React, { useEffect, useState } from "react";
-import { WaveSpinner } from "react-spinners-kit";
 import Spinner from "components/Spinner";
 
-// import { makeStyles } from "@material-ui/core/styles";
-
 export default function Rehydrate({ children }) {
+  /**
+   * Gatsby is focused on speed and will render the site with the css
+   * but the contents will look strange and render incorrectly.
+   * Having a useEffect to check that the page have rendered and is ready to render contents
+   * fixes this.
+   */
   const [hasMounted, setHasMounted] = useState(false);
 
-  // const inputEl = useRef(null);
   useEffect(() => {
     setHasMounted(true);
 
@@ -17,6 +20,9 @@ export default function Rehydrate({ children }) {
   if (!hasMounted) {
     return <Spinner />;
   }
-  // const classes = useStyles();
   return <>{children}</>;
 }
+
+Rehydrate.propTypes = {
+  children: PropTypes.any,
+};
