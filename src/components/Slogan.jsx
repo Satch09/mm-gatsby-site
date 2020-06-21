@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 
@@ -18,7 +18,23 @@ const useStyles = makeStyles(theme => ({
 }));
 
 export default function Slogan() {
+  const [hasMounted, setHasMounted] = useState(false);
   const classes = useStyles();
+  useEffect(() => {
+    setHasMounted(true);
+    // setHasMounted(true);
+
+    // window.scrollTo({
+    //   behavior: "smooth",
+    //   top: inputEl.current.offsetTop,
+    // });
+    // inputEl.current.focus();
+    return () => {};
+  }, []);
+
+  if (!hasMounted) {
+    return <div className={classes.slogan}></div>;
+  }
 
   return (
     <>

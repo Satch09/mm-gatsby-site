@@ -26,7 +26,7 @@ const MessageBox = ({ title, body, noBottomDivider }) => {
             </Typography>
 
             <Divider variant="middle" />
-            <Box align="start" style={{ height: "100%" }}>
+            <Box p={1} align="start" style={{ height: "100%" }}>
               <Typography variant="body1" color="textSecondary" component="p">
                 {body.map(line => (
                   <Box key={line} m={1}>

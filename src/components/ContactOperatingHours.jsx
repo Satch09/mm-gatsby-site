@@ -45,7 +45,6 @@ export default function ContactOperatingHours() {
         xs={12}
         justify="space-around"
         alignItems="center"
-        style={{ paddingBottom: "0" }}
       >
         {children}
       </Grid>
