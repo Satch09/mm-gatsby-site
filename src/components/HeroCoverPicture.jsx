@@ -1,6 +1,7 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 
+import useMediaQuery from "@material-ui/core/useMediaQuery";
 import { useStaticQuery, graphql } from "gatsby";
 import Box from "@material-ui/core/Box";
 import { CardMedia } from "@material-ui/core";
@@ -23,6 +24,11 @@ const useStyles = makeStyles(theme => ({
     padding: 0,
     paddingBottom: "70px",
   },
+  image: {
+    repeat: "no-repeat",
+    backgroundPosition: "bottom",
+    [theme.breakpoints.up("sm")]: { backgroundAttachment: "fixed" },
+  },
 }));
 
 export default function HeroCoverPicture({ children, minHeight, picture }) {
@@ -43,15 +49,7 @@ export default function HeroCoverPicture({ children, minHeight, picture }) {
   return (
     <>
       {/* <Img fluid={data.placeholderImage.childImageSharp.fluid} /> */}
-      <CardMedia
-        image={coverImage}
-        style={{
-          repeat: "no-repeat",
-          backgroundAttachment: "fixed",
-          backgroundPosition: "bottom",
-          backgroundPositionY: "-200px",
-        }}
-      >
+      <CardMedia image={coverImage} className={classes.image}>
         <Box
           boxShadow={8}
           minHeight={minHeight || "30vh"}
