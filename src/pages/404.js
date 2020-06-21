@@ -6,6 +6,7 @@ import HeaderSection from "layout/HeaderSection";
 import ContentLayout from "layout/ContentLayout";
 
 import page from "data/notFound.json";
+import Spinner from "components/Spinner";
 export default function PageNotFound() {
   const [hasMounted, setHasMounted] = useState(false);
 
@@ -22,7 +23,7 @@ export default function PageNotFound() {
   }, []);
 
   if (!hasMounted) {
-    return null;
+    return <Spinner />;
   }
   return (
     <>

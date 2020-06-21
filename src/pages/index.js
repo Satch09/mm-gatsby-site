@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import { Link as Go, graphql } from "gatsby";
+import { RingSpinner } from "react-spinners-kit";
 
 import MessageBox from "components/MessageBox";
 import HeaderPicture from "components/HeaderPicture";
@@ -18,6 +19,7 @@ import Footer from "components/Footer/Footer";
 import ContactOperatingHours from "components/ContactOperatingHours";
 import OverhangSpacing from "layout/OverhangSpacing";
 import page from "data/home.json";
+import Spinner from "components/Spinner";
 
 const useStyles = makeStyles(theme => ({
   ...theme.customProps,
@@ -53,7 +55,6 @@ const IndexPage = () => {
   // const inputEl = useRef(null);
   useEffect(() => {
     setHasMounted(true);
-
     // window.scrollTo({
     //   behavior: "smooth",
     //   top: inputEl.current.offsetTop,
@@ -63,52 +64,52 @@ const IndexPage = () => {
   }, []);
 
   if (!hasMounted) {
-    return null;
+    return <Spinner />;
+  } else {
+    const headerPropsWithOptions = {
+      ...page.headerProps,
+      options: { slogan: true },
+    };
+
+    return (
+      <>
+        <HeaderPicture minHeight="50vh" headerProps={headerPropsWithOptions}>
+          <CovidBanner />
+        </HeaderPicture>
+        <OverhangSpacing mainItem={<QuickLinks />}>
+          <ContentLayout>
+            {/* <div ref={inputEl}></div> */}
+            <Grid
+              container
+              display="flex"
+              flexDirection="row"
+              justify="center"
+              align="center"
+              spacing={2}
+            >
+              {page.topics.map(topic => (
+                <Grid item md={3} xs={12} key={topic.heading}>
+                  <Box style={{ height: "100%" }}>
+                    <Go to={topic.link} style={{ textDecoration: "none" }}>
+                      <Paper
+                        style={{ minHeight: "100%" }}
+                        className={classes.heading}
+                      >
+                        <MessageBox {...topic} noBottomDivider />
+                      </Paper>
+                    </Go>
+                  </Box>
+                </Grid>
+              ))}
+            </Grid>
+          </ContentLayout>
+          <Footer>
+            <ContactOperatingHours />
+          </Footer>
+        </OverhangSpacing>
+      </>
+    );
   }
-
-  const headerPropsWithOptions = {
-    ...page.headerProps,
-    options: { slogan: true },
-  };
-
-  return (
-    <>
-      <HeaderPicture minHeight="50vh" headerProps={headerPropsWithOptions}>
-        <CovidBanner />
-      </HeaderPicture>
-      <OverhangSpacing mainItem={<QuickLinks />}>
-        <ContentLayout>
-          {/* <div ref={inputEl}></div> */}
-          <Grid
-            container
-            display="flex"
-            flexDirection="row"
-            justify="center"
-            align="center"
-            spacing={2}
-          >
-            {page.topics.map(topic => (
-              <Grid item md={3} xs={12} key={topic.heading}>
-                <Box style={{ height: "100%" }}>
-                  <Go to={topic.link} style={{ textDecoration: "none" }}>
-                    <Paper
-                      style={{ minHeight: "100%" }}
-                      className={classes.heading}
-                    >
-                      <MessageBox {...topic} noBottomDivider />
-                    </Paper>
-                  </Go>
-                </Box>
-              </Grid>
-            ))}
-          </Grid>
-        </ContentLayout>
-        <Footer>
-          <ContactOperatingHours />
-        </Footer>
-      </OverhangSpacing>
-    </>
-  );
 };
 
 export default IndexPage;

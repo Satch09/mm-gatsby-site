@@ -12,6 +12,7 @@ import Footer from "components/Footer/Footer";
 import ContactOperatingHours from "components/ContactOperatingHours";
 
 import page from "data/training.json";
+import Spinner from "components/Spinner";
 export default function Training() {
   const [hasMounted, setHasMounted] = useState(false);
 
@@ -28,7 +29,7 @@ export default function Training() {
   }, []);
 
   if (!hasMounted) {
-    return null;
+    return <Spinner />;
   }
   return (
     <>

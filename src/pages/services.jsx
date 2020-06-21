@@ -13,6 +13,7 @@ import ServicesList from "components/Cards/ServicesList";
 import { Grid } from "@material-ui/core";
 
 import page from "data/services.json";
+import Spinner from "components/Spinner";
 // const useStyles = makeStyles((theme) => ({
 //   ...theme.customProperties,
 //   root: {
@@ -52,7 +53,7 @@ export default function Services() {
   }, []);
 
   if (!hasMounted) {
-    return null;
+    return <Spinner />;
   }
   // const classes = useStyles();
   return (

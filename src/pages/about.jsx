@@ -11,7 +11,9 @@ import Footer from "components/Footer/Footer";
 import ContactOperatingHours from "components/ContactOperatingHours";
 import OverhangSpacing from "layout/OverhangSpacing";
 
+import { RingSpinner } from "react-spinners-kit";
 import page from "data/about.json";
+import Spinner from "components/Spinner";
 // const useStyles = makeStyles((theme) => ({
 //   ...theme.customProperties,
 //   root: {
@@ -41,7 +43,7 @@ export default function About() {
   }, []);
 
   if (!hasMounted) {
-    return null;
+    return <Spinner />;
   }
   // const classes = useStyles();
   return (

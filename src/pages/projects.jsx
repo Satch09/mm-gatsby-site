@@ -12,6 +12,7 @@ import Footer from "components/Footer/Footer";
 import ContactOperatingHours from "components/ContactOperatingHours";
 
 import page from "data/projects.json";
+import Spinner from "components/Spinner";
 // const useStyles = makeStyles((theme) => ({
 //   ...theme.customProperties,
 //   root: {
@@ -51,7 +52,7 @@ export default function Projects() {
   }, []);
 
   if (!hasMounted) {
-    return null;
+    return <Spinner />;
   }
   return (
     <>

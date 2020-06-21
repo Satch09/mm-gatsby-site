@@ -16,7 +16,7 @@ export default function TopLayout(props) {
       </Helmet>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        {props.children ? props.children : null}
+        {props.children}
       </ThemeProvider>
     </React.Fragment>
   );

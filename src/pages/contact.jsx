@@ -11,12 +11,14 @@ import page from "data/contact.json";
 import Footer from "components/Footer/Footer";
 import ContactOperatingHours from "components/ContactOperatingHours";
 
+import { RingSpinner } from "react-spinners-kit";
+import Spinner from "components/Spinner";
 export default function Contact() {
   const [hasMounted, setHasMounted] = useState(false);
 
   // const inputEl = useRef(null);
   useEffect(() => {
-    setHasMounted(true);
+    setTimeout(() => setHasMounted(true), 3000);
 
     // window.scrollTo({
     //   behavior: "smooth",
@@ -27,7 +29,7 @@ export default function Contact() {
   }, []);
 
   if (!hasMounted) {
-    return null;
+    return <Spinner />;
   }
   return (
     <>
