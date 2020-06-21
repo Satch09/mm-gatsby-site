@@ -8,6 +8,7 @@ import Img from "gatsby-image";
 import { Grid, Container } from "@material-ui/core";
 import Logo from "components/Logo";
 import Slogan from "./Slogan";
+import SocialLinks from "./SocialLinks";
 
 const useStyles = makeStyles(theme => ({
   ...theme.customProps,
@@ -62,6 +63,7 @@ export default function HeaderPicture(
         {options.logo ? null : <Logo />}
 
         <Slogan />
+        <SocialLinks />
         {children}
       </HeroCoverPicture>
     </>

@@ -1,15 +1,11 @@
-import SEO from "../components/seo";
-
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
-import { Link as Go, graphql } from "gatsby";
-import { RingSpinner } from "react-spinners-kit";
+import { Link as Go } from "gatsby";
 
 import MessageBox from "components/MessageBox";
 import HeaderPicture from "components/HeaderPicture";
-import { Box, Paper, Container, Grow } from "@material-ui/core";
-//import Link from "@material-ui/core/Link";
+import { Box, Paper } from "@material-ui/core";
 // Icons
 
 import QuickLinks from "components/QuickLinks";
@@ -19,7 +15,7 @@ import Footer from "components/Footer/Footer";
 import ContactOperatingHours from "components/ContactOperatingHours";
 import OverhangSpacing from "layout/OverhangSpacing";
 import page from "data/home.json";
-import Spinner from "components/Spinner";
+import Rehydrate from "interactions/Rehydrate";
 
 const useStyles = makeStyles(theme => ({
   ...theme.customProps,
@@ -50,29 +46,15 @@ const useStyles = makeStyles(theme => ({
 
 const IndexPage = () => {
   const classes = useStyles();
-  const [hasMounted, setHasMounted] = useState(false);
 
-  // const inputEl = useRef(null);
-  useEffect(() => {
-    setHasMounted(true);
-    // window.scrollTo({
-    //   behavior: "smooth",
-    //   top: inputEl.current.offsetTop,
-    // });
-    // inputEl.current.focus();
-    return () => {};
-  }, []);
+  const headerPropsWithOptions = {
+    ...page.headerProps,
+    options: { slogan: true },
+  };
 
-  if (!hasMounted) {
-    return <Spinner />;
-  } else {
-    const headerPropsWithOptions = {
-      ...page.headerProps,
-      options: { slogan: true },
-    };
-
-    return (
-      <>
+  return (
+    <>
+      <Rehydrate>
         <HeaderPicture minHeight="50vh" headerProps={headerPropsWithOptions}>
           <CovidBanner />
         </HeaderPicture>
@@ -107,9 +89,9 @@ const IndexPage = () => {
             <ContactOperatingHours />
           </Footer>
         </OverhangSpacing>
-      </>
-    );
-  }
+      </Rehydrate>
+    </>
+  );
 };
 
 export default IndexPage;

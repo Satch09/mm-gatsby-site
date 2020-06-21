@@ -62,35 +62,31 @@ export default function ContactOperatingHours() {
     <>
       <ContainerGrid>
         <SpacedGrid>
-          <Box m={1}>
+          <Box p={1}>
             <OperationHours />
           </Box>
-
-          <Divider orientation="horizontal" />
-
-          <Box m={1}>
+          <Box p={1}>
             <OperationHoursAfter />
           </Box>
         </SpacedGrid>
         <Divider orientation="vertical" flexItem />
         <SpacedGrid>
-          <Box m={1} display="flex" justifyContent="center">
+          <Box p={1} display="flex" justifyContent="center">
             <Call />
           </Box>
           <Divider orientation="horizontal" />
-          <Box m={1} display="flex" justifyContent="center">
+          <Box p={1} display="flex" justifyContent="center">
             <Fax />
           </Box>
         </SpacedGrid>
         <Divider orientation="vertical" flexItem />
         <SpacedGrid>
-          <Box m={1}>
+          <Box p={1}>
             <ExternalLink {...locationLink}>
               <Location />
             </ExternalLink>
           </Box>
-          <Divider orientation="horizontal" />
-          <Box m={1}>
+          <Box p={1}>
             <Postal />
           </Box>
         </SpacedGrid>

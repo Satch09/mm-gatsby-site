@@ -23,7 +23,9 @@ export default function ContentLayout({ children }) {
       <FadeIn>
         <SlideIn>
           <Container>
-            <Box m={4}>{children}</Box>
+            <Box m={2} paddingTop={4} paddingBottom={4}>
+              {children}
+            </Box>
           </Container>
         </SlideIn>
       </FadeIn>

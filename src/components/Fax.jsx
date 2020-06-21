@@ -15,9 +15,15 @@ export default function Fax() {
           href="tel:+27218724805"
           style={{ textDecoration: "none", color: "white" }}
         >
-          <DescriptionIcon fontSize="medium" style={{ color: "white" }} />
-          <Typography variant="body1">021 8724805</Typography>
-          <Typography>Normal | Standby</Typography>
+          <Box display="flex">
+            <Box marginRight={1}>
+              <DescriptionIcon fontSize="medium" style={{ color: "white" }} />
+            </Box>
+            <Box>
+              <Typography variant="body1">+27 21 872 4805</Typography>
+            </Box>
+          </Box>
+          <Typography>fax</Typography>
         </a>
       </Button>
     </>

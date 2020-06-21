@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 // import { makeStyles } from "@material-ui/core/styles";
 
 import MessageBox from "components/MessageBox";
@@ -13,7 +13,7 @@ import ServicesList from "components/Cards/ServicesList";
 import { Grid } from "@material-ui/core";
 
 import page from "data/services.json";
-import Spinner from "components/Spinner";
+import Rehydrate from "interactions/Rehydrate";
 // const useStyles = makeStyles((theme) => ({
 //   ...theme.customProperties,
 //   root: {
@@ -38,34 +38,17 @@ import Spinner from "components/Spinner";
 // }));
 
 export default function Services() {
-  const [hasMounted, setHasMounted] = useState(false);
-
-  // const inputEl = useRef(null);
-  useEffect(() => {
-    setHasMounted(true);
-
-    // window.scrollTo({
-    //   behavior: "smooth",
-    //   top: inputEl.current.offsetTop,
-    // });
-    // inputEl.current.focus();
-    return () => {};
-  }, []);
-
-  if (!hasMounted) {
-    return <Spinner />;
-  }
-  // const classes = useStyles();
   return (
     <>
-      <HeaderPicture headerProps={page.headerProps} />
+      <Rehydrate>
+        <HeaderPicture headerProps={page.headerProps} />
 
-      <OverhangSpacing
-        mainItem={<MessageBox {...page.heading} noBottomDivider />}
-      >
-        <ContentLayout>
-          <AffiliatesBanner />
-          {/* <Grid
+        <OverhangSpacing
+          mainItem={<MessageBox {...page.heading} noBottomDivider />}
+        >
+          <ContentLayout>
+            <AffiliatesBanner />
+            {/* <Grid
             container
             display="flex"
             flexDirection="row"
@@ -77,19 +60,20 @@ export default function Services() {
             ))}
           </Grid> */}
 
-          <Grid container xs={12} justify="center" align="center" spacing={2}>
-            {page.services.map(service => (
-              <Grid item xs={12} sm={5} key={service.heading}>
-                <ServicesList {...service} />
-              </Grid>
-            ))}
-          </Grid>
-        </ContentLayout>
+            <Grid container xs={12} justify="center" align="center" spacing={2}>
+              {page.services.map(service => (
+                <Grid item xs={12} sm={5} key={service.heading}>
+                  <ServicesList {...service} />
+                </Grid>
+              ))}
+            </Grid>
+          </ContentLayout>
 
-        <Footer>
-          <ContactOperatingHours />
-        </Footer>
-      </OverhangSpacing>
+          <Footer>
+            <ContactOperatingHours />
+          </Footer>
+        </OverhangSpacing>
+      </Rehydrate>
     </>
   );
 }

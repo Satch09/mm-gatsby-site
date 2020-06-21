@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 // import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
@@ -11,102 +11,73 @@ import Footer from "components/Footer/Footer";
 import ContactOperatingHours from "components/ContactOperatingHours";
 import OverhangSpacing from "layout/OverhangSpacing";
 
-import { RingSpinner } from "react-spinners-kit";
 import page from "data/about.json";
-import Spinner from "components/Spinner";
-// const useStyles = makeStyles((theme) => ({
-//   ...theme.customProperties,
-//   root: {
-//     // flexGrow: 1,
-//   },
-//   paper: {
-//     padding: theme.spacing(2),
-//   },
-//   headerMargin: {
-//     marginBottom: theme.spacing(4),
-//   },
-// }));
+import Rehydrate from "interactions/Rehydrate";
 
 export default function About() {
-  const [hasMounted, setHasMounted] = useState(false);
-
-  // const inputEl = useRef(null);
-  useEffect(() => {
-    setHasMounted(true);
-
-    // window.scrollTo({
-    //   behavior: "smooth",
-    //   top: inputEl.current.offsetTop,
-    // });
-    // inputEl.current.focus();
-    return () => {};
-  }, []);
-
-  if (!hasMounted) {
-    return <Spinner />;
-  }
-  // const classes = useStyles();
   return (
     <>
-      {/* <Header headerProps={page.headerProps} /> */}
-      <HeaderPicture headerProps={page.headerProps} />
-      <OverhangSpacing
-        mainItem={<MessageBox {...page.heading} noBottomDivider />}
-      >
-        <ContentLayout>
-          <Grid container justify="space-around" spacing={0}>
-            <Grid item xs={12} sm={5}>
-              <Typography variant="h4" component="h1">
-                {page.principlesAndValues.title}
-              </Typography>
-              <Typography variant="body1" color="textSecondary" component="p">
-                {page.principlesAndValues.body}
-              </Typography>
+      <Rehydrate>
+        {/* <Header headerProps={page.headerProps} /> */}
+        <HeaderPicture headerProps={page.headerProps} />
+        <OverhangSpacing
+          mainItem={<MessageBox {...page.heading} noBottomDivider />}
+        >
+          <ContentLayout>
+            <Grid container justify="space-around" spacing={0}>
+              <Grid item xs={12} sm={5}>
+                <Typography variant="h4" component="h1">
+                  {page.principlesAndValues.title}
+                </Typography>
+                <Typography variant="body1" color="textSecondary" component="p">
+                  {page.principlesAndValues.body}
+                </Typography>
 
-              {page.principlesAndValues.items.map(principle => (
-                <Box m={2} p={1} key={principle.title}>
-                  <Typography variant="h5" component="h2">
-                    {principle.title}
-                  </Typography>
-                  <Typography
-                    variant="body1"
-                    color="textSecondary"
-                    component="p"
-                  >
-                    {principle.body}
-                  </Typography>
-                </Box>
-              ))}
-            </Grid>
-            <Grid item xs={12} sm={5}>
-              <Typography variant="h4" component="h1">
-                {page.bee.title}
-              </Typography>
-              <Typography variant="body1" color="textSecondary" component="p">
-                {page.bee.body}
-              </Typography>
+                {page.principlesAndValues.items.map(principle => (
+                  <Box m={2} p={1} key={principle.title}>
+                    <Typography variant="h5" component="h2">
+                      {principle.title}
+                    </Typography>
+                    <Typography
+                      variant="body1"
+                      color="textSecondary"
+                      component="p"
+                    >
+                      {principle.body}
+                    </Typography>
+                  </Box>
+                ))}
+              </Grid>
+              <Grid item xs={12} sm={5}>
+                <Typography variant="h4" component="h1">
+                  {page.bee.title}
+                </Typography>
+                <Typography variant="body1" color="textSecondary" component="p">
+                  {page.bee.body}
+                </Typography>
 
-              {page.bee.items.map(bee => (
-                <Box m={2} p={1} key={bee.title}>
-                  <Typography variant="h5" component="h2">
-                    {bee.title}
-                  </Typography>
-                  <Typography
-                    variant="body1"
-                    color="textSecondary"
-                    component="p"
-                  >
-                    {bee.body}
-                  </Typography>
-                </Box>
-              ))}
+                {page.bee.items.map(bee => (
+                  <Box m={2} p={1} key={bee.title}>
+                    <Typography variant="h5" component="h2">
+                      {bee.title}
+                    </Typography>
+                    <Typography
+                      variant="body1"
+                      color="textSecondary"
+                      component="p"
+                    >
+                      {bee.body}
+                    </Typography>
+                  </Box>
+                ))}
+              </Grid>
             </Grid>
-          </Grid>
-        </ContentLayout>
-        <Footer>
-          <ContactOperatingHours />
-        </Footer>
-      </OverhangSpacing>
+          </ContentLayout>
+          <Footer>
+            <ContactOperatingHours />
+          </Footer>
+        </OverhangSpacing>
+      </Rehydrate>
     </>
   );
 }

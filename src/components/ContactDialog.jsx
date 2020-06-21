@@ -11,7 +11,7 @@ import EmailIcon from "@material-ui/icons/Email";
 export default function ContactDialog({ children, useIcon }) {
   const [open, setOpen] = React.useState(false);
   const [details, setDetails] = React.useState({});
-  const useStyles = makeStyles((theme) => ({
+  const useStyles = makeStyles(theme => ({
     root: {
       "& .MuiTextField-root": {
         margin: theme.spacing(1),
@@ -22,7 +22,7 @@ export default function ContactDialog({ children, useIcon }) {
     },
   }));
 
-  const handleChange = (e) => {
+  const handleChange = e => {
     setDetails({ ...details, [e.target.name]: e.target.value });
   };
   const handleClickOpen = () => {
@@ -131,7 +131,7 @@ export default function ContactDialog({ children, useIcon }) {
     if (useIcon) {
       return (
         <Button>
-          <AlternateEmailIcon
+          <EmailIcon
             {...contactUsButton}
             fontSize="large"
             style={{ color: "white" }}
@@ -149,7 +149,7 @@ export default function ContactDialog({ children, useIcon }) {
         <Grid {...grid.container}>
           <Grid {...grid.item.end}></Grid>
           <Grid {...grid.item.start}>
-            <Box p={3}>
+            <Box p={1}>
               <form {...form.containerProps} className={classes.root}>
                 <div>
                   <TextField {...form.textFields.name} />

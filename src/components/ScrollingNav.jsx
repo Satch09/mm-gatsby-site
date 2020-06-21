@@ -60,13 +60,8 @@ export default function ScrollingNav(props) {
         <HideOnScroll {...props}>
           <AppBar
             style={{
-              backgroundImage:
-                // "linear-gradient( to right,  #000000af 35% , transparent  65%)",
-                "#000000af",
+              backgroundImage: "#000000af",
               backgroundColor: state.transparent ? "transparent" : "#0000005b",
-              // backgroundColor: "transparent",
-              // backgroundColor: "#000000af",
-              // boxShadow: state.transparent ? "none" : undefined,
               boxShadow: "none",
               transition: "background 1s",
             }}

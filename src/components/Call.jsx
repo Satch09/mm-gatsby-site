@@ -1,4 +1,5 @@
 import React from "react";
+import { useStaticQuery, graphql } from "gatsby";
 import Typography from "@material-ui/core/Typography";
 
 // Icons
@@ -8,22 +9,41 @@ import PhoneIcon from "@material-ui/icons/Phone";
 import { Box, Button } from "@material-ui/core";
 
 export default function Call() {
+  const {
+    site: {
+      siteMetadata: { contact },
+    },
+  } = useStaticQuery(
+    graphql`
+      query {
+        site {
+          siteMetadata {
+            contact {
+              tel
+            }
+          }
+        }
+      }
+    `
+  );
   return (
     <>
       <Button>
         <a
-          href="tel:+27218722218"
+          href={contact.tel}
           style={{ textDecoration: "none", color: "white" }}
         >
-          <PhoneIcon fontSize="medium" style={{ color: "white" }} />
-          <Typography variant="body1">021 8722218</Typography>
+          <Box display="flex">
+            <Box marginRight={1}>
+              <PhoneIcon fontSize="medium" style={{ color: "white" }} />
+            </Box>
+            <Box>
+              <Typography variant="body1">{contact.tel}</Typography>
+            </Box>
+          </Box>
           <Typography>Normal | Standby</Typography>
         </a>
       </Button>
-      {/* <Typography variant="body1">16 Alkmaar Street</Typography>
-      <Typography variant="body1">Paarl</Typography>
-      <Typography variant="body1">Western Cape</Typography>
-      <Typography variant="body1">7646</Typography> */}
     </>
   );
 }

@@ -11,20 +11,20 @@ export default function CallTest() {
   return (
     <>
       <Button>
-        <PhoneIcon fontSize="medium" style={{ color: "white" }} />
-        <Box display="flex" m={2}>
-          <a
-            href="tel:+27218722218"
-            style={{ textDecoration: "none", color: "white" }}
-          >
-            <Typography variant="body1">021 8722218</Typography>
-          </a>
-        </Box>
+        <a
+          href="tel:+27218722218"
+          style={{ textDecoration: "none", color: "white" }}
+        >
+          <Box display="flex">
+            <Box marginRight={1}>
+              <PhoneIcon fontSize="small" style={{ color: "white" }} />
+            </Box>
+            <Box>
+              <Typography variant="body1">+27 21 872 2218</Typography>
+            </Box>
+          </Box>
+        </a>
       </Button>
-      {/* <Typography variant="body1">16 Alkmaar Street</Typography>
-      <Typography variant="body1">Paarl</Typography>
-      <Typography variant="body1">Western Cape</Typography>
-      <Typography variant="body1">7646</Typography> */}
     </>
   );
 }

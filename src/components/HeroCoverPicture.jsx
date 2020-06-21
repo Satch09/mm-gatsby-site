@@ -5,8 +5,6 @@ import { useStaticQuery, graphql } from "gatsby";
 import Box from "@material-ui/core/Box";
 import { CardMedia } from "@material-ui/core";
 import coverImage from "static/nasa-cover-compressed.jpg";
-import Image from "./image";
-import Img from "gatsby-image";
 const useStyles = makeStyles(theme => ({
   ...theme.customProperties,
   heroContainer: {
@@ -19,7 +17,7 @@ const useStyles = makeStyles(theme => ({
     backgroundRepeat: "no-repeat",
     backgroundAttachment: "fixed",
     backgroundPosition: "bottom",
-    backgroundSize: "cover",
+    // backgroundSize: "cover",
     minWidth: "100%",
     height: "100%",
     padding: 0,
@@ -49,7 +47,7 @@ export default function HeroCoverPicture({ children, minHeight, picture }) {
         image={coverImage}
         style={{
           repeat: "no-repeat",
-          backgroundAttachment: "fixed",
+          // backgroundAttachment: "fixed",
           backgroundPosition: "bottom",
         }}
       >

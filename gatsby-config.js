@@ -1,9 +1,22 @@
 module.exports = {
   siteMetadata: {
-    // siteUrl: `www.mandmdemo.netlify.app`,
+    siteUrl: `https://www.mandmdemo.netlify.app`,
     title: `M and M Electronics`,
-    description: `Professional Website`,
+    titleTemplate: `Leaders in automation`,
+    description: `Leaders in automation`,
     author: `Christopher Maisch`,
+    contact: {
+      tel: `+27 21 872 2218`,
+      fax: `+27 21 872 4805`,
+      email: {
+        info: `info@mandmelec.co.za`,
+      },
+      map: `https://www.google.com/maps/place/M+and+M+Electronics/@-33.7119894,18.9746,17z/data=!3m1!4b1!4m5!3m4!1s0x1dcd07f2f679697d:0x7a86ea7263601aeb!8m2!3d-33.7119894!4d18.976794`,
+      social: {
+        faceBook: `https://www.facebook.com/MM-electronics-112297240473303`,
+        linkedIn: `https://www.linkedin.com/company/mandmelectronics`,
+      },
+    },
     menuLinks: [
       { name: "home", link: "/" },
       { name: "about", link: "/about" },
@@ -14,7 +27,7 @@ module.exports = {
     ],
   },
   plugins: [
-    // `gatsby-plugin-sitemap`,
+    `gatsby-plugin-sitemap`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -36,25 +49,17 @@ module.exports = {
         },
       },
     },
-    // `gatsby-plugin-material-ui`,
-    // {
-    //   resolve: `gatsby-plugin-global-styles`,
-    //   options: {
-    //     props: {
-    //       theme: `${__dirname}/src/util/theme`,
-    //     },
-    //   },
-    // },
+
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `M and M Electronics`,
+        short_name: `Start`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/favicon-32x32.png`, // This path is relative to the root of the site.
       },
     },
 

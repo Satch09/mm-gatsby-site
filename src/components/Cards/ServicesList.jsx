@@ -9,7 +9,7 @@ import InboxIcon from "@material-ui/icons/Inbox";
 import DraftsIcon from "@material-ui/icons/Drafts";
 import { Paper, Grid, Typography, Container, Box } from "@material-ui/core";
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   root: {
     width: "100%",
     maxWidth: 360,
@@ -35,9 +35,10 @@ export default function ServicesList(service) {
           <Paper elevation={2}>
             <List
               style={{ minHeight: "600px" }}
-              component="nav"
-              aria-label="main mailbox folders">
-              {service.items.map((topic) => (
+              component="div"
+              aria-label="services lists"
+            >
+              {service.items.map(topic => (
                 <ListItem key={topic.title}>
                   <ListItemText
                     primary={topic.title}

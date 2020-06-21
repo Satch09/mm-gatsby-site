@@ -5,9 +5,11 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import { ThemeProvider } from "@material-ui/core/styles";
 import theme from "util/theme";
 import "./baseline.css";
+import SEO from "components/seo";
 export default function TopLayout(props) {
   return (
-    <React.Fragment>
+    <>
+      <SEO />
       <Helmet>
         <meta
           name="viewport"
@@ -18,7 +20,7 @@ export default function TopLayout(props) {
         <CssBaseline />
         {props.children}
       </ThemeProvider>
-    </React.Fragment>
+    </>
   );
 }
 

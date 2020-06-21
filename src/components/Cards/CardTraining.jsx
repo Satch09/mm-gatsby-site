@@ -9,7 +9,7 @@ import Typography from "@material-ui/core/Typography";
 import ExpansionPanelTraining from "components/ExpansionPanelTraining";
 import ContactDialog from "components/ContactDialog";
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   ...theme.customProps,
   card: {},
   title: { minHeight: 80 },
@@ -28,7 +28,7 @@ export default function CardTraining({
 
   return (
     <>
-      <Card className={classes.card} elevation={4}>
+      <Card className={classes.card} elevation={2}>
         <CardActionArea>
           <CardMedia
             component="img"
@@ -42,14 +42,16 @@ export default function CardTraining({
               className={classes.title}
               gutterBottom
               variant="h5"
-              component="h2">
+              component="h2"
+            >
               {name}
             </Typography>
             <Typography
               className={classes.description}
               variant="body1"
               color="textSecondary"
-              component="p">
+              component="p"
+            >
               {description}
             </Typography>
           </CardContent>
