@@ -47,9 +47,12 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const IndexPage = () => {
-  const classes = useStyles();
+  const [hasMounted, setHasMounted] = useState(false);
+
   // const inputEl = useRef(null);
   useEffect(() => {
+    setHasMounted(true);
+
     // window.scrollTo({
     //   behavior: "smooth",
     //   top: inputEl.current.offsetTop,
@@ -57,6 +60,12 @@ const IndexPage = () => {
     // inputEl.current.focus();
     return () => {};
   }, []);
+
+  if (!hasMounted) {
+    return null;
+  }
+
+  const classes = useStyles();
 
   const headerPropsWithOptions = {
     ...page.headerProps,
