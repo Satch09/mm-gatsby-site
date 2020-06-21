@@ -47,6 +47,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const IndexPage = () => {
+  const classes = useStyles();
   const [hasMounted, setHasMounted] = useState(false);
 
   // const inputEl = useRef(null);
@@ -64,8 +65,6 @@ const IndexPage = () => {
   if (!hasMounted) {
     return null;
   }
-
-  const classes = useStyles();
 
   const headerPropsWithOptions = {
     ...page.headerProps,
