@@ -9,11 +9,9 @@ import OperationHours from "components/OperationHours";
 
 import ExternalLink from "./ExternalLink";
 import Location from "./Location";
-import Call from "./Call";
 import OperationHoursAfter from "./OperationHoursAfter";
-import Fax from "./Fax";
 import Postal from "./Postal";
-
+import { Call, Fax } from "./Contact";
 const useStyles = makeStyles(theme => ({
   ...theme.customProps,
   root: {

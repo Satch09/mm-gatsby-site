@@ -12,9 +12,7 @@ import Box from "@material-ui/core/Box";
 import MenuIcon from "@material-ui/icons/Menu";
 import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
-import SocialLinks from "./SocialLinks";
-import CallTest from "./CallTest";
-import FaxTest from "./FaxTest";
+import { Call } from "./Contact";
 
 const useStyles = makeStyles(theme => ({
   ...theme.customProperties,
@@ -67,7 +65,7 @@ export default function Navbar() {
       `}
       render={data => (
         <>
-          <CallTest />
+          <Call variant="small" />
           <div className={classes.root}>
             {isSmallDisplay ? (
               <Box p={0}>

@@ -47,8 +47,9 @@ export default function HeroCoverPicture({ children, minHeight, picture }) {
         image={coverImage}
         style={{
           repeat: "no-repeat",
-          // backgroundAttachment: "fixed",
+          backgroundAttachment: "fixed",
           backgroundPosition: "bottom",
+          backgroundPositionY: "-200px",
         }}
       >
         <Box
