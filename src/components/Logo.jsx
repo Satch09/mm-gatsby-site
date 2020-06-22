@@ -9,7 +9,7 @@ import CardMedia from "@material-ui/core/CardMedia";
 export default function Logo() {
   return (
     <>
-      <Fade in={true} timeout={1800}>
+      <Fade in={true} timeout={250}>
         <Container maxWidth="xs">
           <Box p={2}>
             <CardMedia
