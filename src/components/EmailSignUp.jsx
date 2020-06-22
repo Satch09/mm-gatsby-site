@@ -108,7 +108,7 @@ export default function EmailSignUp({ children, useIcon }) {
         justifyContent="center"
       >
         <Typography variant="h5">
-          Sign Up for our monthly news letter
+          Sign up for our monthly news letter
         </Typography>
         <form {...form.containerProps} className={classes.root}>
           <div>

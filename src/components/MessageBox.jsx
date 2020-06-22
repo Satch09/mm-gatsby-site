@@ -11,7 +11,7 @@ const MessageBox = ({ title, body, noBottomDivider }) => {
 
   return (
     <>
-      <Box p={2}>
+      <Box paddingY={1} margin={1}>
         <Container>
           <Typography variant="h4" component="p">
             <Box
@@ -26,10 +26,10 @@ const MessageBox = ({ title, body, noBottomDivider }) => {
           </Typography>
 
           <Divider variant="middle" />
-          <Box p={1} align="start" style={{ height: "100%" }}>
+          <Box marginY={2} align="start" style={{ height: "100%" }}>
             <Typography variant="body1" color="textSecondary" component="p">
               {body.map(line => (
-                <Box key={line} m={1}>
+                <Box component="p" key={line}>
                   {line}
                 </Box>
               ))}

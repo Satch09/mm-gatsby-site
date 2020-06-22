@@ -6,7 +6,7 @@
   "heading": {
     "title": "services",
     "body": [
-      "We at M&M Electronics believe that with a positive work ethic and a “can do” attitude no problem is insurmountable. Our talented staff and unique approach have made us leaders in automation along with our ability to provide a complete solution whether it be maintaining your existing system, sourcing of parts, providing a 24-hour 365 day emergency call out service or providing a complete new system.Our qualified engineers are specialists in their field and have the ability to assess the clients’ needs and, using an assortment of technical options and also drawing on their combined expertise, to provide the most effective solution for the client ensuring a seamless, maintainable system that provides growth with minimal disruption."
+      "We offer a wide range of industry leading automation services and solutions. Over our 24 years of operation, we have developed a keen sense of the problems that our clients face and how best to solve them. We have been awarded Recognise System Integrator status by Rockwell Automation which means that our solutions are backed and supported giving you piece of mind that our solutions are the best in the industry."
     ]
   },
   "services": [
@@ -112,5 +112,11 @@
         }
       ]
     }
-  ]
+  ],
+  "old": {
+    "title": "services",
+    "body": [
+      "We at M&M Electronics believe that with a positive work ethic and a “can do” attitude no problem is insurmountable. Our talented staff and unique approach have made us leaders in automation along with our ability to provide a complete solution whether it be maintaining your existing system, sourcing of parts, providing a 24-hour 365 day emergency call out service or providing a complete new system.Our qualified engineers are specialists in their field and have the ability to assess the clients’ needs and, using an assortment of technical options and also drawing on their combined expertise, to provide the most effective solution for the client ensuring a seamless, maintainable system that provides growth with minimal disruption."
+    ]
+  }
 }
