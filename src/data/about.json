@@ -6,39 +6,50 @@
   "heading": {
     "title": "our story",
     "body": [
-      "M&M Electronics was established in the picturesque Western Cape Winelands town of Paarl in 1995. The Directors, having a combined experience in excess of 75 years, have been involved in industrial electronics for the past 43 years and have a diverse and loyal client base. Due to our dedication to customer service and to our ability to deliver innovative solutions that put our customers in control, M&M Electronics has since experienced phenomenal growth on a continuous basis. In our early years, M&M Electronics became a Rockwell Automation Platinum Distributor.In 2011 Rockwell Automation re-structured their policies regarding their Distributors and System Integrators in order to standardise the structure worldwide and M&M Electronics are proud to have been selected as a Rockwell Recognised System Integrator. M&M Electronics has an on-site state of the art training facility, registered with Merseta, where training is provided on PLC’s, Control Systems, Drives, Trouble-shooting as well as client based training is offered. "
+      "We believe that passion, dedication and consistent service to our clients over our 24 year history have lead to our success. We would like to share the principles that we follow and practice daily that we feel has lead to our success as well as the story of our beginning."
     ]
   },
   "principlesAndValues": {
     "title": "Principles and Values ",
-    "body": " The source of our success is building long-term partnerships and relationships with our clients. We guide our clients to succeed by following these general principles ",
+    "body": "Time has proven that our core values and principles should reflect and reinforce those of our clients.",
     "items": [
       {
-        "title": "Knowledge",
-        "body": "Our staff continually attend training seminars in order to keep abreast of changing technology."
+        "title": "Competence",
+        "body": "In a world where technology is ever-changing, we make a point to keep abreast of new technological developments in order to deliver maximum benefit to our clients."
       },
       {
         "title": "Quality",
-        "body": "We pride ourselves on providing robust, quality solutions that meet our customer's needs.After being designed to fit the customer's unique process and goals, each design goes through a review process with our experienced senior-level engineers to ensure only the best solutions are implemented."
+        "body": "We all know that quality service and products are valuable but we believe that consistent quality is just as important to our clients as they seek to sustain and grow there business into the future. Our aim is to be a bedrock of quality that our quality that our clients can rely on now and into the future."
       },
       {
         "title": "Safety",
-        "body": "Safety is the number one concern from start to finish on every project. Each project goes through an extensive testing process to ensure that each system works properly and safely."
+        "body": "No amount of success or money is worth the lost of a single life. We pledge to join industry and our clients to cause ZERO harm to life and the environment. This will always be reflected in the work we do."
       },
       {
-        "title": "Efficiency",
-        "body": "Our solutions are effective at making our customer's facilities more efficient. From project concept to implementation our goal is to create the best solution for our customer's success."
+        "title": "Reliability",
+        "body": "Our operations are geared around being available 24/7/365 'round the clock to all our clients."
       }
     ]
   },
   "bee": {
     "title": "Committed to empowerment",
-    "body": "We are committed to developing and empowering the future of our nation.",
+    "body": "We are committed to developing and empowering our nation and our nations future.",
     "items": [
       {
-        "title": "Certification",
-        "body": "We are currently level 4 certified SME."
+        "title": "Skill",
+        "body": "Developing skill takes time and guidance, we believe that investing in our colleges and the community is the most valuable investment we can make."
+      },
+      {
+        "title": "Procurement",
+        "body": "....words. lots of words. more words. words. lots of words. more words. words. lots of words. more words. words. lots of words. more words."
       }
+    ]
+  },
+  "history": {
+    "title": "our beginning",
+    "body": [
+      "Our company was established in the picturesque Western Cape Winelands town of Paarl in 1995 by Mike and Maret Sprake-Jones. Over the course of their 24 year leadership and guidance as well as the efforts from all our employees have developed the company into what it is today - leaders in automation.",
+      "The Directors, having a combined experience in excess of 75 years, have been involved in industrial electronics for the past 43 years and have a diverse and loyal client base. Due to our dedication to customer service and to our ability to deliver innovative solutions that put our customers in control, M&M Electronics has since experienced phenomenal growth on a continuous basis. In our early years, M&M Electronics became a Rockwell Automation Platinum Distributor.In 2011 Rockwell Automation re-structured their policies regarding their Distributors and System Integrators in order to standardise the structure worldwide and M&M Electronics are proud to have been selected as a Rockwell Recognised System Integrator. M&M Electronics has an on-site state of the art training facility, registered with Merseta, where training is provided on PLC’s, Control Systems, Drives, Trouble-shooting as well as client based training is offered. "
     ]
   }
 }

@@ -4,12 +4,19 @@
     "description": ""
   },
   "heading": {
-    "title": "we are here: to help",
+    "title": "we are here to help",
     "body": [
       "We are always available, night and day"
     ]
   },
   "contacts": [
+    {
+      "name": "Enquires or Info",
+      "department": "General",
+      "title": "General",
+      "number": "021 8722218",
+      "email": "info@mandmelec.co.za"
+    },
     {
       "name": "Gunther Braasch",
       "department": "Workshop",

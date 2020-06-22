@@ -10,7 +10,7 @@ import CodeIcon from "@material-ui/icons/Code";
 import PlaylistAddCheckIcon from "@material-ui/icons/PlaylistAddCheck";
 import PeopleIcon from "@material-ui/icons/People";
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   ...theme.customProperties,
   linkBox: {
     minWidth: "100px",
@@ -76,7 +76,7 @@ export default function QuickLinks() {
     },
   };
   const trainingLink = {
-    text: "Personalised Training",
+    text: "Professional Training",
     linkTo: "/training",
     Icon: function Icon() {
       return (

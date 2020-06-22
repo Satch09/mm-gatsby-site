@@ -10,6 +10,7 @@ import { Grid, Container } from "@material-ui/core";
 import Logo from "components/Logo";
 import Slogan from "./Slogan";
 import SocialLinks from "./SocialLinks";
+import Section from "layout/Section";
 
 const useStyles = makeStyles(theme => ({
   ...theme.customProps,
@@ -57,7 +58,6 @@ export default function Header({ children, minHeight, headerProps }, data) {
       <Hero minHeight={minHeight || null}>
         <ScrollingNavbar />
         {/* {console.log(options)} */}
-
         {options.logo ? null : <Logo />}
 
         <Slogan />

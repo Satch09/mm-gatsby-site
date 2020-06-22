@@ -28,7 +28,7 @@ export default function Section({ children }) {
           alignItems="center"
           justifyContent="center"
           minHeight="50vh"
-          paddingY={4}
+          paddingY={8}
           paddingX={2}
         >
           {children}

@@ -2,11 +2,10 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import { Link as Go } from "gatsby";
-import _ from "lodash";
 
 import MessageBox from "components/MessageBox";
 import HeaderPicture from "components/Header";
-import { Box, Paper, Container, Divider } from "@material-ui/core";
+import { Box, Paper, Container } from "@material-ui/core";
 // Icons
 
 import QuickLinks from "components/QuickLinks";
@@ -61,7 +60,6 @@ const IndexPage = () => {
         <HeaderPicture minHeight="50vh" headerProps={headerPropsWithOptions}>
           <CovidBanner />
         </HeaderPicture>
-        {console.log(_.camelCase("ThisWordIsCool"))}
         <OverhangSpacing mainItem={<QuickLinks />}>
           <ContentLayout>
             {/* <div ref={inputEl}></div> */}

@@ -2,12 +2,10 @@ import PropTypes from "prop-types";
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 
-import useMediaQuery from "@material-ui/core/useMediaQuery";
 import { useStaticQuery, graphql } from "gatsby";
 import Box from "@material-ui/core/Box";
 import { CardMedia } from "@material-ui/core";
-import coverImage from "static/nasa-cover-compressed.jpg";
-import FadeIn from "interactions/FadeIn";
+import coverImage from "static/nasa-cover-cropped.jpg";
 const useStyles = makeStyles(theme => ({
   ...theme.customProperties,
   heroContainer: {
@@ -31,7 +29,7 @@ const useStyles = makeStyles(theme => ({
     backgroundImage: "linear-gradient( to bottom, #c43435 50%, #FF1940 )",
     repeat: "no-repeat",
     backgroundPosition: "bottom",
-    [theme.breakpoints.up("sm")]: { backgroundAttachment: "fixed" },
+    [theme.breakpoints.up("lg")]: { backgroundAttachment: "fixed" },
   },
 }));
 

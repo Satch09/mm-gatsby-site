@@ -6,6 +6,7 @@ import React from "react";
 import { Container, Box } from "@material-ui/core";
 import FadeIn from "interactions/FadeIn";
 import SlideIn from "interactions/SlideIn";
+import Section from "./Section";
 
 // const useStyles = makeStyles((theme) => ({
 //   root: {
@@ -23,7 +24,7 @@ export default function ContentLayout({ children }) {
     <>
       <FadeIn>
         <SlideIn>
-          <Box>{children}</Box>
+          <div>{children}</div>
         </SlideIn>
       </FadeIn>
     </>

@@ -3,7 +3,7 @@ import React from "react";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 
-import { Box } from "@material-ui/core";
+import { Box, Button, Paper } from "@material-ui/core";
 import HeaderPicture from "components/Header";
 import MessageBox from "components/MessageBox";
 import ContentLayout from "layout/ContentLayout";
@@ -77,8 +77,25 @@ export default function About() {
                       </Typography>
                     </Box>
                   ))}
+                  <Box dispay="flex" justifyContent="center" m={2} p={1}>
+                    <Typography variant="h6" component="h2">
+                      Certification
+                    </Typography>
+                    <Typography
+                      variant="body1"
+                      color="textSecondary"
+                      component="p"
+                    >
+                      We are currently level 4 certified SME. Our certificate is
+                      available below.
+                    </Typography>
+                    <Box m={2}>
+                      <Button variant="outlined">Download</Button>
+                    </Box>
+                  </Box>
                 </Grid>
               </Grid>
+              <MessageBox {...page.history} />
             </Section>
           </ContentLayout>
           <Footer>
