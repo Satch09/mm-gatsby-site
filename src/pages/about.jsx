@@ -27,7 +27,7 @@ export default function About() {
             <Section>
               <Grid container justify="space-around" spacing={0}>
                 <Grid item xs={12} sm={5}>
-                  <Typography variant="h4" component="h1">
+                  <Typography variant="h5" component="h1">
                     {page.principlesAndValues.title}
                   </Typography>
                   <Typography
@@ -38,8 +38,8 @@ export default function About() {
                     {page.principlesAndValues.body}
                   </Typography>
                   {page.principlesAndValues.items.map(principle => (
-                    <Box m={2} p={1} key={principle.title}>
-                      <Typography variant="h5" component="h2">
+                    <Box m={2} key={principle.title}>
+                      <Typography variant="h6" component="h2">
                         {principle.title}
                       </Typography>
                       <Typography
@@ -53,7 +53,7 @@ export default function About() {
                   ))}
                 </Grid>
                 <Grid item xs={12} sm={5}>
-                  <Typography variant="h4" component="h1">
+                  <Typography variant="h5" component="h1">
                     {page.bee.title}
                   </Typography>
                   <Typography
@@ -65,7 +65,7 @@ export default function About() {
                   </Typography>
                   {page.bee.items.map(bee => (
                     <Box m={2} p={1} key={bee.title}>
-                      <Typography variant="h5" component="h2">
+                      <Typography variant="h6" component="h2">
                         {bee.title}
                       </Typography>
                       <Typography
