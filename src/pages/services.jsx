@@ -3,17 +3,18 @@ import React from "react";
 
 import MessageBox from "components/MessageBox";
 // Icons
-import HeaderPicture from "components/HeaderPicture";
+import HeaderPicture from "components/Header";
 import AffiliatesBanner from "components/AffiliatesBanner";
 import ContentLayout from "layout/ContentLayout";
 import OverhangSpacing from "layout/OverhangSpacing";
 import Footer from "components/Footer";
 import ContactOperatingHours from "components/ContactOperatingHours";
 import { ServicesList } from "components/Cards";
-import { Grid } from "@material-ui/core";
+import { Grid, Container } from "@material-ui/core";
 
 import page from "data/services.json";
 import Rehydrate from "interactions/Rehydrate";
+import Section from "layout/Section";
 // const useStyles = makeStyles((theme) => ({
 //   ...theme.customProperties,
 //   root: {
@@ -47,26 +48,22 @@ export default function Services() {
           mainItem={<MessageBox {...page.heading} noBottomDivider />}
         >
           <ContentLayout>
-            <AffiliatesBanner />
-            {/* <Grid
-            container
-            display="flex"
-            flexDirection="row"
-            justify="center"
-            align="center"
-            spacing={2}>
-            {page.services.map((service) => (
-              <ServicesList key={service.heading} {...service} />
-            ))}
-          </Grid> */}
-
-            <Grid container xs={12} justify="center" align="center" spacing={2}>
-              {page.services.map(service => (
-                <Grid item xs={12} sm={5} key={service.heading}>
-                  <ServicesList {...service} />
-                </Grid>
-              ))}
-            </Grid>
+            <Section>
+              <AffiliatesBanner />
+              <Grid
+                container
+                xs={12}
+                justify="center"
+                align="center"
+                spacing={2}
+              >
+                {page.services.map(service => (
+                  <Grid item xs={12} sm={5} key={service.heading}>
+                    <ServicesList {...service} />
+                  </Grid>
+                ))}
+              </Grid>
+            </Section>
           </ContentLayout>
 
           <Footer>

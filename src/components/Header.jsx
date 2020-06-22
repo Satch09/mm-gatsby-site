@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import HeroCoverPicture from "components/HeroCoverPicture";
+import Hero from "components/Hero";
 import ScrollingNavbar from "components/ScrollingNav";
 import { graphql } from "gatsby";
 import Img from "gatsby-image";
@@ -37,10 +37,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function HeaderPicture(
-  { children, minHeight, headerProps },
-  data
-) {
+export default function Header({ children, minHeight, headerProps }, data) {
   const classes = useStyles();
 
   const { options = {} } = headerProps;
@@ -57,7 +54,7 @@ export default function HeaderPicture(
 
   return (
     <>
-      <HeroCoverPicture minHeight={minHeight || null}>
+      <Hero minHeight={minHeight || null}>
         <ScrollingNavbar />
         {/* {console.log(options)} */}
 
@@ -66,12 +63,12 @@ export default function HeaderPicture(
         <Slogan />
         <SocialLinks />
         {children}
-      </HeroCoverPicture>
+      </Hero>
     </>
   );
 }
 
-HeaderPicture.propTypes = {
+Header.propTypes = {
   children: PropTypes.any,
 
   headerProps: PropTypes.object,

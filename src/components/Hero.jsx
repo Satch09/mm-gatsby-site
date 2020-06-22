@@ -16,6 +16,7 @@ const useStyles = makeStyles(theme => ({
     flexDirection: "column",
     justifyContent: "flex-end",
     alignItems: "center",
+
     // backgroundImage: "url(nasa-cover-compressed.jpg)",
     backgroundRepeat: "no-repeat",
     backgroundAttachment: "fixed",
@@ -27,13 +28,14 @@ const useStyles = makeStyles(theme => ({
     paddingBottom: "70px",
   },
   image: {
+    backgroundImage: "linear-gradient( to bottom, #c43435 50%, #FF1940 )",
     repeat: "no-repeat",
     backgroundPosition: "bottom",
     [theme.breakpoints.up("sm")]: { backgroundAttachment: "fixed" },
   },
 }));
 
-export default function HeroCoverPicture({ children, minHeight }) {
+export default function Hero({ children, minHeight }) {
   const classes = useStyles();
 
   const data = useStaticQuery(graphql`
@@ -65,7 +67,7 @@ export default function HeroCoverPicture({ children, minHeight }) {
   );
 }
 
-HeroCoverPicture.propTypes = {
+Hero.propTypes = {
   children: PropTypes.any,
   minHeight: PropTypes.string,
 };

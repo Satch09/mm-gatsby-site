@@ -26,29 +26,28 @@ export default function ServicesList(service) {
 
   return (
     <>
-      <Box p={1}>
+      <Box marginTop={2}>
         <Typography variant="h4">{service.heading}</Typography>
         <Box m={1}>
           <Divider />
         </Box>
-        <Box p={1}>
-          <Paper elevation={2}>
-            <List
-              style={{ minHeight: "600px" }}
-              component="div"
-              aria-label="services lists"
-            >
-              {service.items.map(topic => (
-                <ListItem key={topic.title}>
-                  <ListItemText
-                    primary={topic.title}
-                    secondary={topic.detail || null}
-                  />
-                </ListItem>
-              ))}
-            </List>
-          </Paper>
-        </Box>
+
+        <Paper elevation={2}>
+          <List
+            style={{ minHeight: "600px" }}
+            component="div"
+            aria-label="services lists"
+          >
+            {service.items.map(topic => (
+              <ListItem key={topic.title}>
+                <ListItemText
+                  primary={topic.title}
+                  secondary={topic.detail || null}
+                />
+              </ListItem>
+            ))}
+          </List>
+        </Paper>
       </Box>
     </>
   );

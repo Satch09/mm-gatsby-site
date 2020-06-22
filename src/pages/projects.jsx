@@ -3,7 +3,7 @@ import Grid from "@material-ui/core/Grid";
 
 import MessageBox from "components/MessageBox";
 import { Box } from "@material-ui/core";
-import HeaderPicture from "components/HeaderPicture";
+import HeaderPicture from "components/Header";
 import { CardWithSideImage } from "components/Cards";
 import ContentLayout from "layout/ContentLayout";
 import OverhangSpacing from "layout/OverhangSpacing";
@@ -11,6 +11,7 @@ import Footer from "components/Footer";
 import ContactOperatingHours from "components/ContactOperatingHours";
 import Rehydrate from "interactions/Rehydrate";
 import page from "data/projects.json";
+import Section from "layout/Section";
 
 export default function Projects() {
   return (
@@ -21,7 +22,7 @@ export default function Projects() {
           mainItem={<MessageBox {...page.heading} noBottomDivider />}
         >
           <ContentLayout>
-            <Box m={2} p={2}>
+            <Section>
               <Grid container justify="center" xs={12} spacing={2}>
                 {page.projects.map((project, index) => {
                   return (
@@ -32,7 +33,7 @@ export default function Projects() {
                   );
                 })}
               </Grid>
-            </Box>
+            </Section>
           </ContentLayout>
           <Footer>
             <ContactOperatingHours />

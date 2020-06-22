@@ -18,14 +18,22 @@ import SlideIn from "interactions/SlideIn";
 //   },
 // }));
 
-export default function ContentLayout({ children }) {
+export default function Section({ children }) {
   return (
     <>
-      <FadeIn>
-        <SlideIn>
-          <Box>{children}</Box>
-        </SlideIn>
-      </FadeIn>
+      <Container>
+        <Box
+          display="flex"
+          flexDirection="column"
+          alignItems="center"
+          justifyContent="center"
+          minHeight="50vh"
+          paddingY={4}
+          paddingX={2}
+        >
+          {children}
+        </Box>
+      </Container>
     </>
   );
 }
