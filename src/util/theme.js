@@ -19,7 +19,7 @@ const muiTheme = createMuiTheme({
   },
   typography: {
     useNextVariants: true,
-    fontFamily: [`"Rubik","Roboto"`].join(","),
+    fontFamily: [`"Rubik", Helvetica`].join(","),
     body1: {
       fontSize: "17px",
     },

@@ -7,6 +7,7 @@ import { useStaticQuery, graphql } from "gatsby";
 import Box from "@material-ui/core/Box";
 import { CardMedia } from "@material-ui/core";
 import coverImage from "static/nasa-cover-compressed.jpg";
+import FadeIn from "interactions/FadeIn";
 const useStyles = makeStyles(theme => ({
   ...theme.customProperties,
   heroContainer: {

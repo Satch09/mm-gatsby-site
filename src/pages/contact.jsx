@@ -8,7 +8,7 @@ import HeaderPicture from "components/HeaderPicture";
 
 import HeaderSection from "layout/HeaderSection";
 import page from "data/contact.json";
-import Footer from "components/Footer/Footer";
+import Footer from "components/Footer";
 import ContactOperatingHours from "components/ContactOperatingHours";
 
 import Rehydrate from "interactions/Rehydrate";

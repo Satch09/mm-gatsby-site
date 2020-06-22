@@ -1,30 +1,12 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import AccessTimeIcon from "@material-ui/icons/AccessTime";
+
+import WatchLaterIcon from "@material-ui/icons/WatchLater";
 import { Box, Container } from "@material-ui/core";
 // Icons
 
-const useStyles = makeStyles((theme) => ({
-  ...theme.customProperties,
-  root: {
-    backgroundRepeat: "no-repeat",
-    backgroundAttachment: "fixed",
-    backgroundPosition: "bottom",
-    backgroundSize: "cover",
-    flexGrow: 1,
-    backgroundImage: "linear-gradient( to left, #c43435 5%, #d60000 )",
-    marginTop: "10px",
-    color: "white",
-    width: "100%",
-    padding: "30px",
-  },
-  paper: {
-    padding: theme.spacing(2),
-  },
-}));
-
-export default function OperationHours() {
+export function OperatingHoursNormal() {
   return (
     <>
       <Box display="flex" justifyContent="space-between">
@@ -36,6 +18,17 @@ export default function OperationHours() {
       <Typography variant="body1">
         Weekends and public holidays: closed
       </Typography>
+    </>
+  );
+}
+export function OperatingHoursAfter() {
+  return (
+    <>
+      <Box display="flex" justifyContent="space-between">
+        <Typography variant="h6">Standby Hours</Typography>
+        <WatchLaterIcon fontSize="medium" />
+      </Box>
+      <Typography variant="body1">Mon - Sun: 24/7/365</Typography>
     </>
   );
 }

@@ -7,7 +7,7 @@ import { Box } from "@material-ui/core";
 import HeaderPicture from "components/HeaderPicture";
 import MessageBox from "components/MessageBox";
 import ContentLayout from "layout/ContentLayout";
-import Footer from "components/Footer/Footer";
+import Footer from "components/Footer";
 import ContactOperatingHours from "components/ContactOperatingHours";
 import OverhangSpacing from "layout/OverhangSpacing";
 

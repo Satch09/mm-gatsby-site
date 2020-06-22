@@ -7,7 +7,7 @@ import HeaderPicture from "components/HeaderPicture";
 import { CardWithSideImage } from "components/Cards";
 import ContentLayout from "layout/ContentLayout";
 import OverhangSpacing from "layout/OverhangSpacing";
-import Footer from "components/Footer/Footer";
+import Footer from "components/Footer";
 import ContactOperatingHours from "components/ContactOperatingHours";
 import Rehydrate from "interactions/Rehydrate";
 import page from "data/projects.json";

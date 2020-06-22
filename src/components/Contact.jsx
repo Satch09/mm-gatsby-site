@@ -6,9 +6,11 @@ import Typography from "@material-ui/core/Typography";
 
 import PhoneIcon from "@material-ui/icons/Phone";
 
+import LocationOnIcon from "@material-ui/icons/LocationOn";
 import DescriptionIcon from "@material-ui/icons/Description";
 
 import { Box, Button } from "@material-ui/core";
+import ExternalLink from "./ExternalLink";
 
 function Contact() {
   const {
@@ -23,6 +25,9 @@ function Contact() {
             contact {
               tel
               fax
+              address {
+                link
+              }
             }
           }
         }
@@ -111,6 +116,22 @@ export function Fax({ variant }) {
       </a>
     </Button>
   );
+
+  return <>{variant === "small" ? small() : large()}</>;
+}
+
+export function Map({ variant }) {
+  const contact = Contact();
+  const large = () => (
+    <>
+      <ExternalLink {...{ href: contact.address.link }}>
+        <Button>
+          <LocationOnIcon fontSize="large" style={{ color: "white" }} />
+        </Button>
+      </ExternalLink>
+    </>
+  );
+  const small = () => null;
 
   return <>{variant === "small" ? small() : large()}</>;
 }

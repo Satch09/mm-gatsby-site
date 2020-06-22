@@ -18,7 +18,7 @@ export default function ContactDialog({ children, useIcon }) {
         margin: theme.spacing(1),
         display: "flex",
         flexDirection: "column",
-        //minWidth: "100%",
+        // minWidth: "100%",
       },
     },
   }));

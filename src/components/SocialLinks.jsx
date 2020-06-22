@@ -6,11 +6,11 @@ import Grid from "@material-ui/core/Grid";
 import { Button } from "@material-ui/core";
 
 // Icons
-import LocationOnIcon from "@material-ui/icons/LocationOn";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import ContactDialog from "./ContactDialog";
 import ExternalLink from "./ExternalLink";
+import { Map } from "./Contact";
 
 export default function SocialLinks() {
   const {
@@ -23,7 +23,6 @@ export default function SocialLinks() {
         site {
           siteMetadata {
             contact {
-              map
               social {
                 faceBook
                 linkedIn
@@ -41,9 +40,6 @@ export default function SocialLinks() {
     },
     linkedIn: {
       href: `${contact.social.linkedIn}`,
-    },
-    location: {
-      href: `${contact.map}`,
     },
   };
 
@@ -63,11 +59,7 @@ export default function SocialLinks() {
 
         <ContactDialog useIcon={true} />
 
-        <ExternalLink {...links.location}>
-          <Button>
-            <LocationOnIcon fontSize="large" style={{ color: "white" }} />
-          </Button>
-        </ExternalLink>
+        <Map />
       </Grid>
     </>
   );

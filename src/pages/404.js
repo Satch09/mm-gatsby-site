@@ -6,7 +6,6 @@ import HeaderSection from "layout/HeaderSection";
 import ContentLayout from "layout/ContentLayout";
 
 import page from "data/notFound.json";
-import Spinner from "components/Spinner";
 import Rehydrate from "interactions/Rehydrate";
 export default function PageNotFound() {
   // const inputEl = useRef(null);

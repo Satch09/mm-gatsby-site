@@ -8,7 +8,7 @@ import HeaderPicture from "components/HeaderPicture";
 import MessageBox from "components/MessageBox";
 import ContentLayout from "layout/ContentLayout";
 import OverhangSpacing from "layout/OverhangSpacing";
-import Footer from "components/Footer/Footer";
+import Footer from "components/Footer";
 import ContactOperatingHours from "components/ContactOperatingHours";
 
 import page from "data/training.json";

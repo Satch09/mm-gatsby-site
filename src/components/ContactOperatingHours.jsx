@@ -4,13 +4,11 @@ import Grid from "@material-ui/core/Grid";
 
 import { Box, Button, Container } from "@material-ui/core";
 import Divider from "@material-ui/core/Divider";
-import OperationHours from "components/OperationHours";
 // Icons
 
 import ExternalLink from "./ExternalLink";
-import Location from "./Location";
-import OperationHoursAfter from "./OperationHoursAfter";
-import Postal from "./Postal";
+import { StreetAddress, PostalAddress } from "./Address";
+import { OperatingHoursNormal, OperatingHoursAfter } from "./OperatingHours";
 import { Call, Fax } from "./Contact";
 const useStyles = makeStyles(theme => ({
   ...theme.customProps,
@@ -39,7 +37,6 @@ export default function ContactOperatingHours() {
       <Grid
         className={classes.root}
         container
-        boxShadow={3}
         xs={12}
         justify="space-around"
         alignItems="center"
@@ -61,10 +58,10 @@ export default function ContactOperatingHours() {
       <ContainerGrid>
         <SpacedGrid>
           <Box p={1}>
-            <OperationHours />
+            <OperatingHoursNormal />
           </Box>
           <Box p={1}>
-            <OperationHoursAfter />
+            <OperatingHoursAfter />
           </Box>
         </SpacedGrid>
         <Divider orientation="vertical" flexItem />
@@ -81,11 +78,11 @@ export default function ContactOperatingHours() {
         <SpacedGrid>
           <Box p={1}>
             <ExternalLink {...locationLink}>
-              <Location />
+              <StreetAddress />
             </ExternalLink>
           </Box>
           <Box p={1}>
-            <Postal />
+            <PostalAddress />
           </Box>
         </SpacedGrid>
       </ContainerGrid>

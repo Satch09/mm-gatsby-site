@@ -23,9 +23,9 @@ export default function CovidBanner() {
     return () => {};
   }, []);
 
-  if (!hasMounted) {
-    return null;
-  }
+  // if (!hasMounted) {
+  //   return null;
+  // }
   const linkProps = {
     href: "https://www.sacoronavirus.co.za",
   };
