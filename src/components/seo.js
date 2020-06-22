@@ -33,6 +33,7 @@ function SEO({ description, lang, meta, title, content }) {
       htmlAttributes={{
         lang,
       }}
+      rel="canonical"
       title={title || site.siteMetadata.title}
       content={"We are the leaders in industrial automation"}
       titleTemplate={`%s | ${site.siteMetadata.titleTemplate}`}
