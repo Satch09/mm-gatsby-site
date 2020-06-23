@@ -9,6 +9,7 @@ import PhoneIcon from "@material-ui/icons/Phone";
 import LocationOnIcon from "@material-ui/icons/LocationOn";
 import DescriptionIcon from "@material-ui/icons/Description";
 
+import EmailIcon from "@material-ui/icons/Email";
 import { Box, Button } from "@material-ui/core";
 import ExternalLink from "./ExternalLink";
 
@@ -133,5 +134,51 @@ export function Map({ variant }) {
   );
   const small = () => null;
 
+  return <>{variant === "small" ? small() : large()}</>;
+}
+
+export function Email({ variant }) {
+  const handleSend = () => {
+    window.location.href = "mailto:info@mandmelec.co.za?subject=''&body=''";
+  };
+
+  const large = () => (
+    <>
+      <Button>
+        <a
+          href={"mailto:info@mandmelec.co.za?subject=''&body=''"}
+          style={{ textDecoration: "none", color: "white" }}
+        >
+          <Box display="flex" alignItems="center">
+            <Box marginRight={1}>
+              <EmailIcon fontSize="large" style={{ color: "white" }} />
+            </Box>
+            <Box>
+              <Typography variant="p">info@mandmelec.co.za</Typography>
+            </Box>
+          </Box>
+        </a>
+      </Button>
+    </>
+  );
+  const small = () => (
+    <>
+      <Button>
+        <a
+          href={"mailto:info@mandmelec.co.za?subject=''&body=''"}
+          style={{ textDecoration: "none", color: "white" }}
+        >
+          <Box display="flex">
+            <Box marginRight={1}>
+              <EmailIcon fontSize="small" style={{ color: "white" }} />
+            </Box>
+            <Box>
+              <Typography variant="p">info@mandmelec.co.za</Typography>
+            </Box>
+          </Box>
+        </a>
+      </Button>
+    </>
+  );
   return <>{variant === "small" ? small() : large()}</>;
 }

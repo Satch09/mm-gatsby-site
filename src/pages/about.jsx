@@ -30,7 +30,11 @@ export default function About() {
                   Our Beginning
                 </Typography>
                 <Typography variant="body1" color="textSecondary" component="p">
-                  {page.history.body}
+                  {page.history.body.map(line => (
+                    <Box component="p" key={line}>
+                      {line}
+                    </Box>
+                  ))}
                 </Typography>
               </Box>
               <Grid container justify="space-around" spacing={0}>

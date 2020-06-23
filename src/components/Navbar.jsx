@@ -13,6 +13,7 @@ import MenuIcon from "@material-ui/icons/Menu";
 import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
 import { Call } from "./Contact";
+import { Email } from "./Contact";
 
 const useStyles = makeStyles(theme => ({
   ...theme.customProperties,
@@ -65,10 +66,13 @@ export default function Navbar() {
       `}
       render={data => (
         <>
-          <Call variant="small" />
+          <Box>
+            <Call variant="small" />
+            <Email variant="small" />
+          </Box>
           <div className={classes.root}>
             {isSmallDisplay ? (
-              <Box p={0}>
+              <Box p={0} display="flex" flexWrap="no-wrap">
                 {data.site.siteMetadata.menuLinks.map(item => {
                   return (
                     <Route key={item.name} to={item.link}>

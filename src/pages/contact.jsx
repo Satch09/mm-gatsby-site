@@ -18,10 +18,9 @@ export default function Contact() {
     <>
       <Rehydrate>
         <HeaderPicture headerProps={page.headerProps} />
-
         <HeaderSection>
           <Section>
-            <Box p={4}>
+            <Box p={2}>
               <Typography variant="h4">Departments</Typography>
             </Box>
             <Grid container justify="center">
