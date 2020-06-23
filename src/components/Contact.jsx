@@ -26,6 +26,9 @@ function Contact() {
             contact {
               tel
               fax
+              email {
+                info
+              }
               address {
                 link
               }
@@ -69,7 +72,7 @@ export function Call({ variant }) {
             <PhoneIcon fontSize="small" style={{ color: "white" }} />
           </Box>
           <Box>
-            <Typography variant="body1">+27 21 872 2218</Typography>
+            <Typography variant="body1">{contact.tel}</Typography>
           </Box>
         </Box>
       </a>
@@ -138,23 +141,21 @@ export function Map({ variant }) {
 }
 
 export function Email({ variant }) {
-  const handleSend = () => {
-    window.location.href = "mailto:info@mandmelec.co.za?subject=''&body=''";
-  };
+  const contact = Contact();
 
   const large = () => (
     <>
       <Button>
         <a
-          href={"mailto:info@mandmelec.co.za?subject=''&body=''"}
+          href={`mailto${contact.email.info}`}
           style={{ textDecoration: "none", color: "white" }}
         >
-          <Box display="flex" alignItems="center">
+          <Box display="flex">
             <Box marginRight={1}>
               <EmailIcon fontSize="large" style={{ color: "white" }} />
             </Box>
             <Box>
-              <Typography variant="p">info@mandmelec.co.za</Typography>
+              <Typography variant="p">{contact.email.info}</Typography>
             </Box>
           </Box>
         </a>
@@ -165,7 +166,7 @@ export function Email({ variant }) {
     <>
       <Button>
         <a
-          href={"mailto:info@mandmelec.co.za?subject=''&body=''"}
+          href={`mailto${contact.email.info}`}
           style={{ textDecoration: "none", color: "white" }}
         >
           <Box display="flex">
@@ -173,7 +174,7 @@ export function Email({ variant }) {
               <EmailIcon fontSize="small" style={{ color: "white" }} />
             </Box>
             <Box>
-              <Typography variant="p">info@mandmelec.co.za</Typography>
+              <Typography variant="p">{contact.email.info}</Typography>
             </Box>
           </Box>
         </a>
