@@ -25,6 +25,14 @@ export default function About() {
         >
           <ContentLayout>
             <Section>
+              <Box marginBottom={4} p={1}>
+                <Typography variant="h5" component="h2">
+                  Our Beginning
+                </Typography>
+                <Typography variant="body1" color="textSecondary" component="p">
+                  {page.history.body}
+                </Typography>
+              </Box>
               <Grid container justify="space-around" spacing={0}>
                 <Grid item xs={12} sm={5}>
                   <Typography variant="h5" component="h1">
@@ -95,7 +103,6 @@ export default function About() {
                   </Box>
                 </Grid>
               </Grid>
-              <MessageBox {...page.history} />
             </Section>
           </ContentLayout>
           <Footer>
