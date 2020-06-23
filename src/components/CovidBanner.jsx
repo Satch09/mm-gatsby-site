@@ -15,17 +15,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 export default function CovidBanner() {
-  const [hasMounted, setHasMounted] = useState(false);
   const classes = useStyles();
-  useEffect(() => {
-    setHasMounted(true);
-
-    return () => {};
-  }, []);
-
-  // if (!hasMounted) {
-  //   return null;
-  // }
   const linkProps = {
     href: "https://www.sacoronavirus.co.za",
   };
