@@ -147,7 +147,7 @@ export function Email({ variant }) {
     <>
       <Button>
         <a
-          href={`mailto${contact.email.info}`}
+          href={`mailto:${contact.email.info}`}
           style={{ textDecoration: "none", color: "white" }}
         >
           <Box display="flex">
@@ -166,7 +166,7 @@ export function Email({ variant }) {
     <>
       <Button>
         <a
-          href={`mailto${contact.email.info}`}
+          href={`mailto:${contact.email.info}`}
           style={{ textDecoration: "none", color: "white" }}
         >
           <Box display="flex">
