@@ -2,7 +2,7 @@ import CardContact from "./CardContact";
 import CardTraining from "./CardTraining";
 import CardWithIcon from "./CardWithIcon";
 import CardWithImage from "./CardWithImage";
-import CardWithSideImage from "./CardWithSideImage";
+import ProjectCard from "./ProjectCard";
 import ServicesList from "./ServicesList";
 
 export {
@@ -10,6 +10,6 @@ export {
   CardTraining,
   CardWithIcon,
   CardWithImage,
-  CardWithSideImage,
+  ProjectCard,
   ServicesList,
 };

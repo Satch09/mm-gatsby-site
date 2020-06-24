@@ -1,3 +1,4 @@
 alias dev='gatsby develop'
 alias build='gatsby build'
 alias clean='gatsby clean'
+alias 'co-master'='git checkout master'

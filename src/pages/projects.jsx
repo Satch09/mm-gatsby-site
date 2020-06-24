@@ -4,7 +4,7 @@ import Grid from "@material-ui/core/Grid";
 import MessageBox from "components/MessageBox";
 import { Box } from "@material-ui/core";
 import HeaderPicture from "components/Header";
-import { CardWithSideImage } from "components/Cards";
+import { ProjectCard } from "components/Cards";
 import ContentLayout from "layout/ContentLayout";
 import OverhangSpacing from "layout/OverhangSpacing";
 import Footer from "components/Footer";
@@ -24,11 +24,10 @@ export default function Projects() {
           <ContentLayout>
             <Section>
               <Grid container justify="center" xs={12} spacing={2}>
-                {page.projects.map((project, index) => {
+                {page.projects.map(project => {
                   return (
                     <Grid item xs={12} md={10} key={project.title}>
-                      {console.log((index + 1) % 2 === 0)}
-                      <CardWithSideImage {...project} />
+                      <ProjectCard {...project} />
                     </Grid>
                   );
                 })}

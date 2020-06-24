@@ -99,23 +99,21 @@ export default function EmailSignUp({ children, useIcon }) {
   };
 
   return (
-    <Container maxWidth="md">
-      <Box
-        display="flex"
-        flexDirection="column"
-        p={1}
-        alignItems="center"
-        justifyContent="center"
-      >
-        <Typography variant="h5">
-          Sign up for news and special offers
-        </Typography>
-        <form {...form.containerProps} className={classes.root}>
-          <div>
-            <TextField {...form.textFields.email} />
-          </div>
-        </form>
-      </Box>
-    </Container>
+    <Box
+      display="flex"
+      flexDirection="column"
+      p={1}
+      alignItems="center"
+      justifyContent="center"
+    >
+      <form {...form.containerProps} className={classes.root}>
+        <div>
+          <Typography variant="h6">
+            Sign up for news and special offers
+          </Typography>
+          <TextField {...form.textFields.email} />
+        </div>
+      </form>
+    </Box>
   );
 }

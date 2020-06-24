@@ -3,7 +3,7 @@ import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 
 import CardContact from "components/Cards/CardContact";
-import { Box, Paper, Container } from "@material-ui/core";
+import { Box, Paper, Container, Button, Dialog } from "@material-ui/core";
 import HeaderPicture from "components/Header";
 
 import HeaderSection from "layout/HeaderSection";
@@ -17,7 +17,10 @@ import { Call } from "components/Contact";
 import { Fax } from "components/Contact";
 import { OperatingHoursNormal } from "components/OperatingHours";
 import { TrainingTracker } from "components/Contact";
+import Spinner from "components/Spinner";
+import { PulseSpinner } from "react-spinners-kit";
 export default function Contact() {
+  const foo = 1;
   return (
     <>
       <Rehydrate>
@@ -43,10 +46,18 @@ export default function Contact() {
                   </Box>
                 </Paper>
               </Box>
-              <Box p={2} style={{ width: "100%" }}>
-                <TrainingTracker />
+
+              <Box
+                p={2}
+                marginBottom={2}
+                display="flex"
+                justifyContent="center"
+                style={{ width: "100%", backgroundColor: "black" }}
+              >
+                <PulseSpinner size={80} color="#686769" />
               </Box>
             </Box>
+            <TrainingTracker />
           </Section>
         </HeaderSection>
         <Footer>

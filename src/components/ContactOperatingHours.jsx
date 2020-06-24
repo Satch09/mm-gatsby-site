@@ -38,7 +38,6 @@ export default function ContactOperatingHours() {
       <Grid
         className={classes.root}
         container
-        xs={12}
         justify="space-around"
         alignItems="center"
       >
@@ -57,6 +56,14 @@ export default function ContactOperatingHours() {
   return (
     <>
       <ContainerGrid>
+        <Grid item xs={12} display="flex" justify="center" sm={3}>
+          <Paper>
+            <Box paddingY={1} m={1}>
+              <EmailSignUp />
+            </Box>
+          </Paper>
+        </Grid>
+        <Divider orientation="vertical" flexItem />
         <SpacedGrid>
           <Box p={1}>
             <OperatingHoursNormal />
@@ -64,14 +71,6 @@ export default function ContactOperatingHours() {
           <Box p={1}>
             <OperatingHoursAfter />
           </Box>
-        </SpacedGrid>
-        <Divider orientation="vertical" flexItem />
-        <SpacedGrid>
-          <Paper>
-            <Box paddingY={1} m={1}>
-              <EmailSignUp />
-            </Box>
-          </Paper>
           {/* <Box p={1} display="flex" justifyContent="center">
             <Call />
           </Box>
