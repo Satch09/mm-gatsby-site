@@ -14,24 +14,17 @@
       "heading": "Design",
       "items": [
         {
-          "title": "EC&I Design",
-          "detail": "Something about PLC software"
+          "title": "Network Architecture"
         },
         {
-          "title": "Network Architecture",
-          "detail": "Its all just ethernet"
-        },
-        {
-          "title": "Motion Control Applications",
-          "detail": "Something about scada"
+          "title": "Motion Control Applications"
         },
         {
           "title": "Power Monitoring",
-          "detail": "Something about scada"
+          "detail": "Greater efficacy on cost saving"
         },
         {
-          "title": "Medium Voltage VSD Applications",
-          "detail": "Something about scada"
+          "title": "Medium Voltage VSD Applications"
         }
       ]
     },
@@ -40,22 +33,19 @@
       "items": [
         {
           "title": "PLC Software",
-          "detail": "Something about PLC software"
+          "detail": "Logical implementation of your solutions"
         },
         {
-          "title": "SCADA Interfaces",
-          "detail": "Something about scada"
+          "title": "SCADA Interfaces"
         },
         {
           "title": "HMI Interfaces"
         },
         {
-          "title": "Functional Specifications",
-          "detail": "Something about scada"
+          "title": "Functional Specifications"
         },
         {
-          "title": "System Requirements",
-          "detail": "Something about scada"
+          "title": "System Requirements"
         }
       ]
     },
@@ -63,31 +53,31 @@
       "heading": "Service",
       "items": [
         {
-          "title": "Electrical COC and Inspections",
-          "detail": "Something about scada"
+          "title": "EC&I Design"
         },
         {
-          "title": "Technician / Electrician Service Contracts",
-          "detail": "Something about scada"
+          "title": "Electrical COC and Inspections"
+        },
+        {
+          "title": "Technician / Electrician Service Contracts"
         },
         {
           "title": "Fixed Term Service Level Agreements",
-          "detail": "Something about scada"
+          "detail": "Qualified personell when you need them"
         },
         {
-          "title": "Schematic and Documentation",
-          "detail": "Something about scada"
+          "title": "Schematics and Documentation",
+          "detail": "EPLAN P8 drafting services"
         },
         {
-          "title": "Realtime Data Trending and Reporting"
+          "title": "Realtime Data Trending and Reporting",
+          "detail": "Giving you insight into your system processes and operations"
         },
         {
-          "title": "System Upgrades",
-          "detail": "Something about scada"
+          "title": "System Upgrades and Extensions"
         },
         {
-          "title": "System Commissioning",
-          "detail": "Something about scada"
+          "title": "Plant & Process Commissioning"
         }
       ]
     },
@@ -96,19 +86,16 @@
       "items": [
         {
           "title": "Power Distribution Boards",
-          "detail": "Something about PLC software"
+          "detail": "Type tested panels"
         },
         {
-          "title": "Control System Panels",
-          "detail": "Something about scada"
+          "title": "Control System Panels"
         },
         {
-          "title": "Motor Control Centers",
-          "detail": "Something about scada"
+          "title": "Motor Control Centers"
         },
         {
-          "title": "DCS Interfaces",
-          "detail": "Something about scada"
+          "title": "DCS Interfaces"
         }
       ]
     }

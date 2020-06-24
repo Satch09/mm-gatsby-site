@@ -88,12 +88,6 @@ const IndexPage = () => {
                 ))}
               </Grid>
             </Section>
-
-            <Section>
-              <Container>
-                <EmailSignUp />
-              </Container>
-            </Section>
           </ContentLayout>
           <Footer>
             <ContactOperatingHours />

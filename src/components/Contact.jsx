@@ -183,3 +183,16 @@ export function Email({ variant }) {
   );
   return <>{variant === "small" ? small() : large()}</>;
 }
+
+export function TrainingTracker({ variant }) {
+  const large = () => (
+    <>
+      <ExternalLink {...{ href: "https://mmelectronics.netlify.app" }}>
+        <Button variant="outlined">Certification Tracker</Button>
+      </ExternalLink>
+    </>
+  );
+  const small = () => null;
+
+  return <>{variant === "small" ? small() : large()}</>;
+}

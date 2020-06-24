@@ -2,10 +2,10 @@ import PropTypes from "prop-types";
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 
-import { useStaticQuery, graphql } from "gatsby";
 import Box from "@material-ui/core/Box";
 import { CardMedia } from "@material-ui/core";
-import coverImage from "static/nasa-cover-cropped.jpg";
+import coverImage from "static/images/nasa-cover-cropped.jpg";
+import BackgroundSection from "./BackgroundSection";
 const useStyles = makeStyles(theme => ({
   ...theme.customProperties,
   heroContainer: {
@@ -26,8 +26,8 @@ const useStyles = makeStyles(theme => ({
     paddingBottom: "70px",
   },
   image: {
-    backgroundImage: "linear-gradient( to bottom, #c43435 50%, #FF1940 )",
     repeat: "no-repeat",
+    zIndex: -1,
     backgroundPosition: "bottom",
     [theme.breakpoints.up("lg")]: { backgroundAttachment: "fixed" },
   },
@@ -36,22 +36,13 @@ const useStyles = makeStyles(theme => ({
 export default function Hero({ children, minHeight }) {
   const classes = useStyles();
 
-  const data = useStaticQuery(graphql`
-    query {
-      placeholderImage: file(relativePath: { eq: "nasa-cover.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 1024) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `);
-
   return (
     <>
-      {/* <Img fluid={data.placeholderImage.childImageSharp.fluid} /> */}
-      <CardMedia image={coverImage} className={classes.image}>
+      {/* <Img
+        objectFit="cover"
+        fluid={data.placeholderImage.childImageSharp.fluid}
+      /> */}
+      <BackgroundSection>
         <Box
           boxShadow={8}
           minHeight={minHeight || "30vh"}
@@ -60,7 +51,7 @@ export default function Hero({ children, minHeight }) {
         >
           {children}
         </Box>
-      </CardMedia>
+      </BackgroundSection>
     </>
   );
 }

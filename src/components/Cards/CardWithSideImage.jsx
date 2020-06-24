@@ -7,19 +7,22 @@ import Typography from "@material-ui/core/Typography";
 import Divider from "@material-ui/core/Divider";
 
 import { Box } from "@material-ui/core";
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   root: {
-    display: "flex",
-  },
-  details: {
     display: "flex",
     flexDirection: "column",
   },
+  details: {
+    display: "flex",
+    flexGrow: 2,
+  },
   content: {
+    display: "flex",
+    flexGrow: 2,
     // maxWidth: 500,
   },
   cover: {
-    minWidth: "300px",
+    // minWidth: "300px",
   },
   controls: {
     display: "flex",
@@ -53,7 +56,8 @@ export default function CardWithSideImage({ title, body }) {
         <CardMedia
           className={classes.cover}
           image={require("../../images/drive1.jpg")}
-          title="Drive"></CardMedia>
+          title="Drive"
+        ></CardMedia>
       </Card>
     );
   }

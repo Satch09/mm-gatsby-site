@@ -98,10 +98,10 @@ export default function About() {
                       color="textSecondary"
                       component="p"
                     >
-                      We are currently level 4 certified SME. Our certificate is
-                      available below.
+                      We are currently level 4 certified SME - Our certificate
+                      is available for download:
                     </Typography>
-                    <Box m={2}>
+                    <Box m={2} display="flex" justifyContent="center">
                       <Button variant="outlined">Download</Button>
                     </Box>
                   </Box>

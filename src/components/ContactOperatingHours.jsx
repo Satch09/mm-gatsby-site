@@ -2,7 +2,7 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 
-import { Box, Button, Container } from "@material-ui/core";
+import { Box, Button, Container, Paper } from "@material-ui/core";
 import Divider from "@material-ui/core/Divider";
 // Icons
 
@@ -10,6 +10,7 @@ import ExternalLink from "./ExternalLink";
 import { StreetAddress, PostalAddress } from "./Address";
 import { OperatingHoursNormal, OperatingHoursAfter } from "./OperatingHours";
 import { Call, Fax } from "./Contact";
+import EmailSignUp from "./EmailSignUp";
 const useStyles = makeStyles(theme => ({
   ...theme.customProps,
   root: {
@@ -66,13 +67,18 @@ export default function ContactOperatingHours() {
         </SpacedGrid>
         <Divider orientation="vertical" flexItem />
         <SpacedGrid>
-          <Box p={1} display="flex" justifyContent="center">
+          <Paper>
+            <Box paddingY={1} m={1}>
+              <EmailSignUp />
+            </Box>
+          </Paper>
+          {/* <Box p={1} display="flex" justifyContent="center">
             <Call />
           </Box>
           <Divider orientation="horizontal" />
           <Box p={1} display="flex" justifyContent="center">
             <Fax />
-          </Box>
+          </Box> */}
         </SpacedGrid>
         <Divider orientation="vertical" flexItem />
         <SpacedGrid>
