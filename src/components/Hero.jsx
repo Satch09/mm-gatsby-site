@@ -4,8 +4,7 @@ import { makeStyles } from "@material-ui/core/styles";
 
 import Box from "@material-ui/core/Box";
 import { CardMedia } from "@material-ui/core";
-import coverImage from "static/images/nasa-cover-cropped.jpg";
-import BackgroundSection from "./BackgroundSection";
+import coverImage from "static/images/nasa-cover-cropped-compressed.jpeg";
 const useStyles = makeStyles(theme => ({
   ...theme.customProperties,
   heroContainer: {
