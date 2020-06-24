@@ -1,0 +1,3 @@
+alias dev='gatsby develop'
+alias build='gatsby build'
+alias clean='gatsby clean'
