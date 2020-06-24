@@ -42,9 +42,8 @@ export default function Hero({ children, minHeight }) {
         objectFit="cover"
         fluid={data.placeholderImage.childImageSharp.fluid}
       /> */}
-      <BackgroundSection>
+      <BackgroundSection className={classes.heroContainer}>
         <Box
-          boxShadow={8}
           minHeight={minHeight || "30vh"}
           component="section"
           className={classes.heroContainer}
