@@ -35,28 +35,7 @@ export default function Contact() {
                 return <CardContact key={course.name} {...course} />;
               })}
             </Grid>
-            <Box>
-              <Box m={2} display="flex" justifyContent="center">
-                <Paper style={{ backgroundColor: "rgba(0,0,0,0.8)" }}>
-                  <Box p={2} style={{ width: "100%" }}>
-                    <Call variant="small" />
-                  </Box>
-                  <Box p={2} style={{ width: "100%" }}>
-                    <Fax variant="small" />
-                  </Box>
-                </Paper>
-              </Box>
-
-              <Box
-                p={2}
-                marginBottom={2}
-                display="flex"
-                justifyContent="center"
-                style={{ width: "100%", backgroundColor: "black" }}
-              >
-                <PulseSpinner size={80} color="#686769" />
-              </Box>
-            </Box>
+            <PulseSpinner size={80} color="#686769" />
             <TrainingTracker />
           </Section>
         </HeaderSection>

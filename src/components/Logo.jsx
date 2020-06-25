@@ -14,7 +14,7 @@ export default function Logo() {
           <Box p={2}>
             <CardMedia
               component="img"
-              image={require("../images/CorpMod1.png")}
+              image={require("static/images/LogoNew.png")}
             />
           </Box>
         </Container>

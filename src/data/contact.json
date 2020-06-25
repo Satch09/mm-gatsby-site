@@ -11,24 +11,31 @@
   },
   "contacts": [
     {
+      "name": "Fax",
+      "department": "Fax",
+      "title": "General Enquires",
+      "number": "021 872 4805",
+      "email": "info@mandmelec.co.za"
+    },
+    {
       "name": "Gunther Braasch",
       "department": "Workshop",
       "title": "Workshop",
-      "number": "021 8722218",
+      "number": "021 872 2218",
       "email": "workshop@mandmelec.co.za"
     },
     {
       "name": "Martin Van Der Merwer",
       "department": "Sales",
       "title": "Sales",
-      "number": "021 8722218",
+      "number": "021 872 2218",
       "email": "sales@mandmelec.co.za"
     },
     {
       "name": "Collette Williams",
       "department": "Sales",
       "title": "Accounts",
-      "number": "021 8722218",
+      "number": "021 872 2218",
       "email": "accounts@mandmelec.co.za"
     }
   ]
