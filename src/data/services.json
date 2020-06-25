@@ -14,14 +14,24 @@
       "heading": "Design",
       "items": [
         {
-          "title": "Network Architecture"
+          "title": "Engineering Documentation/Datapacks",
+          "detail": "Taglist, cable schedules, termination schedules, etc"
         },
         {
-          "title": "Motion Control Applications"
+          "title": "EC&I Drawings",
+          "detail": "Eplan/AutoCAD, GA's, loop drawings"
         },
         {
-          "title": "Power Monitoring",
-          "detail": "Greater efficacy on cost saving"
+          "title": "Network Architecture and Design",
+          "detail": "Ethernet/IP, Profibus, Devicenet, etc"
+        },
+        {
+          "title": "Design Documentation",
+          "detail": "Functional requirement specification, control philosophies, "
+        },
+        {
+          "title": "Process Control Systems",
+          "detail": "PLC, SCADA, VSD's, motion control system design"
         },
         {
           "title": "Medium Voltage VSD Applications"
@@ -32,20 +42,28 @@
       "heading": "Development",
       "items": [
         {
-          "title": "PLC Software",
-          "detail": "Logical implementation of your solutions"
+          "title": "PLC/PAC Software ",
+          "detail": "PLC/PAC programming"
         },
         {
-          "title": "SCADA Interfaces"
+          "title": "Visualization",
+          "detail": "HMI SCADA applications, Thinmanager"
         },
         {
-          "title": "HMI Interfaces"
+          "title": "Thinmanager",
+          "detail": "Design configure and implement"
         },
         {
-          "title": "Functional Specifications"
+          "title": "Migrations/Modernzations",
+          "detail": "Front end engineering design, execution, and commissioning"
         },
         {
-          "title": "System Requirements"
+          "title": "MES/Analytics",
+          "detail": "Management and data acquisition"
+        },
+        {
+          "title": "IIOT-Industrial Internet of Things",
+          "detail": "Smart manufacturing, company wide integration"
         }
       ]
     },
@@ -53,31 +71,32 @@
       "heading": "Service",
       "items": [
         {
-          "title": "EC&I Design"
+          "title": "24/7 Technical & Sales Support",
+          "detail": "Field service on-site support"
         },
         {
-          "title": "Electrical COC and Inspections"
+          "title": "Repair Services",
+          "detail": "Electrical/Electronic repair services"
         },
         {
-          "title": "Technician / Electrician Service Contracts"
+          "title": "LV Motor Control",
+          "detail": "VSD's, softstarters, overloads "
+        },
+        {
+          "title": "MV Servicing and Commissioning",
+          "detail": "PowerFlex 7000 & 6000, softstarters and switch gear"
         },
         {
           "title": "Fixed Term Service Level Agreements",
-          "detail": "Qualified personell when you need them"
+          "detail": "24/7 Priority service agreements"
         },
         {
-          "title": "Schematics and Documentation",
-          "detail": "EPLAN P8 drafting services"
+          "title": "Power Monitoring",
+          "detail": "Realtime data trending and reporting"
         },
         {
-          "title": "Realtime Data Trending and Reporting",
-          "detail": "Giving you insight into your system processes and operations"
-        },
-        {
-          "title": "System Upgrades and Extensions"
-        },
-        {
-          "title": "Plant & Process Commissioning"
+          "title": "Electrical COC and Inspections",
+          "detail": "COC, corrections, recommendations and reporting"
         }
       ]
     },
@@ -86,16 +105,23 @@
       "items": [
         {
           "title": "Power Distribution Boards",
-          "detail": "Type tested panels"
+          "detail": "Type tested enclosures"
         },
         {
-          "title": "Control System Panels"
+          "title": "Control System Panels",
+          "detail": "Local/remote control panels "
         },
         {
-          "title": "Motor Control Centers"
+          "title": "Motor Control Centers",
+          "detail": "VSD's, Softstarters, E300 Network Overloads, DOL's"
         },
         {
-          "title": "DCS Interfaces"
+          "title": "Power Factor Corrections",
+          "detail": "Calculate, design and supply of automatic PFC panels"
+        },
+        {
+          "title": "PCB Manufacturing",
+          "detail": "Circuit board design, manufacture and assembly"
         }
       ]
     }

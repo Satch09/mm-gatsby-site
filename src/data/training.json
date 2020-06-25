@@ -6,18 +6,21 @@
   "heading": {
     "title": "training",
     "body": [
-      "We provide customer-specific training which ensures that those delegates attending our courses are trained according to the systems they work on. Please contact us should you wish to find out more about any of our proudly offered courses"
+      "With our fully equipped training room M&M Electronics are able to offer a wide range of theoretical and hands-on training courses. We also provide customer-specific training which ensures that those delegates attending our courses are trained according to the systems they work on. Please contact us should you wish to find out more about any of our proudly offered courses"
     ]
   },
   "courses": [
     {
       "name": "PLC Basic",
-      "description": "This 3 day course gives a basic introduction into the concepts behind PLC theory",
+      "description": "This 2 day course gives a basic introduction into the concepts behind PLC theory",
       "objectives": [
-        "What the PLC is and what it is used for",
+        "Introduction to PLC, Software & Communications",
         "Digital and Analogue theory",
-        "Control Circuits",
-        "Digital Inputs and Outputs",
+        "Starting a new project",
+        "IO Configuartion",
+        "Creating TAGS",
+        "Ladder Logic Basics",
+        "Upload/Download Projects",
         "Analogue Inputs and Outputs",
         "Ladder Logic Basics",
         "Practical Wiring and Programming",
@@ -29,14 +32,44 @@
     },
     {
       "name": "PLC Advanced",
-      "description": "This 3 day course gives advanced practical programming training of PLCs",
+      "description": "This 4 day course gives advanced theory and practical programming on the STUDIO5000 platform",
       "objectives": [
-        "Programming principles",
-        "Functional Specifications",
-        "Design and Code of Software",
-        "Documentation",
-        "The standard Stop/Start circuit with interlocks",
-        "Programming of Complete Machine"
+        "Introduction to PLC & Software",
+        "Networks & Communications",
+        "Control Flash",
+        "Starting a new project",
+        "IO Configuartion & AOP's",
+        "Tasks & Programs",
+        "Creating TAGS, AOI & UDT's",
+        "Upload/Downloads & Online Editing",
+        "Practical Wiring and Programming",
+        "Discussion of PLC related topic",
+        "Programming principles and orginizing",
+        "Documentation"
+      ],
+      "requirements": [
+        "PLC Basic"
+      ]
+    },
+    {
+      "name": "PLC/SCADA Advanced",
+      "description": "This 6 day course gives advanced theory and practical programming on the STUDIO5000 and Factory Talk View HMI platform",
+      "objectives": [
+        "Introduction to PLC & Software",
+        "Networks & Communications",
+        "Control Flash",
+        "Starting a new project",
+        "IO Configuartion & AOP's",
+        "Tasks & Programs",
+        "Creating TAGS, AOI & UDT's",
+        "Upload/Downloads & Online Editing",
+        "Practical Wiring and Programming",
+        "Discussion of PLC related topic",
+        "Programming principles and orginizing",
+        "FT View Introduction and Topologies",
+        "Applcation Setup & Configuration",
+        "Application Backup/Restore",
+        "Documentation"
       ],
       "requirements": [
         "PLC Basic"
