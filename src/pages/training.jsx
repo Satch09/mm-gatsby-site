@@ -3,12 +3,12 @@ import Grid from "@material-ui/core/Grid";
 
 import { CardTraining } from "components/Cards";
 
-import HeaderPicture from "components/Header";
+import HeaderPicture from "layout/Header";
 
 import MessageBox from "components/MessageBox";
 import ContentLayout from "layout/ContentLayout";
 import OverhangSpacing from "layout/OverhangSpacing";
-import Footer from "components/Footer";
+import Footer from "layout/Footer";
 import ContactOperatingHours from "components/ContactOperatingHours";
 
 import page from "data/training.json";

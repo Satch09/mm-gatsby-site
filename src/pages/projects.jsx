@@ -3,11 +3,11 @@ import Grid from "@material-ui/core/Grid";
 
 import MessageBox from "components/MessageBox";
 import { Box } from "@material-ui/core";
-import HeaderPicture from "components/Header";
+import HeaderPicture from "layout/Header";
 import { ProjectCard } from "components/Cards";
 import ContentLayout from "layout/ContentLayout";
 import OverhangSpacing from "layout/OverhangSpacing";
-import Footer from "components/Footer";
+import Footer from "layout/Footer";
 import ContactOperatingHours from "components/ContactOperatingHours";
 import Rehydrate from "interactions/Rehydrate";
 import page from "data/projects.json";

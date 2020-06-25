@@ -2,14 +2,14 @@ import PropTypes from "prop-types";
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Hero from "components/Hero";
-import ScrollingNavbar from "components/ScrollingNav";
+import ScrollingNavbar from "components/Navbar/ScrollingNav";
 import { graphql } from "gatsby";
 import Img from "gatsby-image";
 
 import { Grid, Container } from "@material-ui/core";
 import Logo from "components/Logo";
-import Slogan from "./Slogan";
-import SocialLinks from "./SocialLinks";
+import Slogan from "../components/Slogan";
+import SocialLinks from "../components/SocialLinks";
 import Section from "layout/Section";
 
 const useStyles = makeStyles(theme => ({

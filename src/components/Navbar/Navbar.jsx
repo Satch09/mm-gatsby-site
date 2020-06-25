@@ -12,8 +12,8 @@ import Box from "@material-ui/core/Box";
 import MenuIcon from "@material-ui/icons/Menu";
 import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
-import { Call } from "./Contact";
-import { Email } from "./Contact";
+import { Call } from "../Contact";
+import { Email } from "../Contact";
 
 const useStyles = makeStyles(theme => ({
   ...theme.customProperties,

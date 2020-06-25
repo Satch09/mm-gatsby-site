@@ -4,11 +4,11 @@ import Typography from "@material-ui/core/Typography";
 
 import CardContact from "components/Cards/CardContact";
 import { Box, Paper, Container, Button, Dialog } from "@material-ui/core";
-import HeaderPicture from "components/Header";
+import HeaderPicture from "layout/Header";
 
 import HeaderSection from "layout/HeaderSection";
 import page from "data/contact.json";
-import Footer from "components/Footer";
+import Footer from "layout/Footer";
 import ContactOperatingHours from "components/ContactOperatingHours";
 
 import Rehydrate from "interactions/Rehydrate";

@@ -3,11 +3,11 @@ import React from "react";
 
 import MessageBox from "components/MessageBox";
 // Icons
-import HeaderPicture from "components/Header";
+import HeaderPicture from "layout/Header";
 import AffiliatesBanner from "components/AffiliatesBanner";
 import ContentLayout from "layout/ContentLayout";
 import OverhangSpacing from "layout/OverhangSpacing";
-import Footer from "components/Footer";
+import Footer from "layout/Footer";
 import ContactOperatingHours from "components/ContactOperatingHours";
 import { ServicesList } from "components/Cards";
 import { Grid, Container } from "@material-ui/core";

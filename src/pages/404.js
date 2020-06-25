@@ -1,7 +1,7 @@
 import React from "react";
 import MessageBox from "components/MessageBox";
 
-import HeaderPicture from "components/Header";
+import HeaderPicture from "layout/Header";
 import HeaderSection from "layout/HeaderSection";
 import ContentLayout from "layout/ContentLayout";
 

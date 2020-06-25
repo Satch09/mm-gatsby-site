@@ -6,7 +6,7 @@ import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Typography from "@material-ui/core/Typography";
-import ExpansionPanelTraining from "components/ExpansionPanelTraining";
+import ExpansionPanelTraining from "components/Cards/ExpansionPanelTraining";
 import ContactDialog from "components/ContactDialog";
 
 const useStyles = makeStyles(theme => ({

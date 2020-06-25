@@ -4,14 +4,14 @@ import Grid from "@material-ui/core/Grid";
 import { Link as Go } from "gatsby";
 
 import MessageBox from "components/MessageBox";
-import HeaderPicture from "components/Header";
+import HeaderPicture from "layout/Header";
 import { Box, Paper, Container } from "@material-ui/core";
 // Icons
 
 import QuickLinks from "components/QuickLinks";
 import ContentLayout from "layout/ContentLayout";
 import CovidBanner from "components/CovidBanner";
-import Footer from "components/Footer";
+import Footer from "layout/Footer";
 import ContactOperatingHours from "components/ContactOperatingHours";
 import OverhangSpacing from "layout/OverhangSpacing";
 import page from "data/home.json";
