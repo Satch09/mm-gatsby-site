@@ -23,9 +23,7 @@ export default function ContentLayout({ children }) {
   return (
     <>
       <FadeIn>
-        <SlideIn>
-          <div>{children}</div>
-        </SlideIn>
+        <div>{children}</div>
       </FadeIn>
     </>
   );

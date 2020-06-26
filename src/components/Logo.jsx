@@ -13,7 +13,7 @@ export default function Logo() {
       <Rehydrate>
         <Fade in={true} timeout={250}>
           <Container maxWidth="xs">
-            <Box p={2}>
+            <Box p={1}>
               <CardMedia component="img" image={LogoImage} />
             </Box>
           </Container>

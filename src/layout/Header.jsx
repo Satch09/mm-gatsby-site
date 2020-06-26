@@ -6,7 +6,7 @@ import ScrollingNavbar from "components/Navbar/ScrollingNav";
 import { graphql } from "gatsby";
 import Img from "gatsby-image";
 
-import { Grid, Container } from "@material-ui/core";
+import { Grid, Container, Paper, Box } from "@material-ui/core";
 import Logo from "components/Logo";
 import Slogan from "../components/Slogan";
 import SocialLinks from "../components/SocialLinks";
