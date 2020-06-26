@@ -10,7 +10,8 @@ export const bookWithPencil = () => {
       height="64px"
       viewbox="0 0 64 64"
       enableBackground="new 0 0 64 64"
-      xmlSpace="preserve">
+      xmlSpace="preserve"
+    >
       <rect
         x="1"
         y="1"
