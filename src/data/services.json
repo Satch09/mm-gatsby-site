@@ -6,7 +6,7 @@
   "heading": {
     "title": "services",
     "body": [
-      "We offer a wide range of industry leading automation services and solutions. Over our 24 years of operation, we have developed a keen sense of the problems that our clients face and how best to solve them. We have been awarded Recognise System Integrator status by Rockwell Automation which means that our solutions are backed and supported giving you piece of mind that our solutions are the best in the industry."
+      "We offer a wide range of industry leading automation services and solutions. Over our 24 years of operation, we have developed a keen sense of the problems that our clients face and how best to solve them. We have been awarded both Recognised System Integrator and Power Partner status by Rockwell Automation. This means that our solutions are backed and supported giving you piece of mind that we provide the best solutions in the industry."
     ]
   },
   "services": [
@@ -19,7 +19,7 @@
         },
         {
           "title": "EC&I Drawings",
-          "detail": "Eplan/AutoCAD, GA's, loop drawings"
+          "detail": "Eplan/AutoCAD, GA's, Loop Drawings"
         },
         {
           "title": "Network Architecture and Design",
@@ -43,27 +43,19 @@
       "items": [
         {
           "title": "PLC/PAC Software ",
-          "detail": "PLC/PAC programming"
+          "detail": "PLC/PAC Programming"
+        },
+        {
+          "title": "Motion Control",
+          "detail": "Stand-alone, Multi-Axis Control"
         },
         {
           "title": "Visualization",
-          "detail": "HMI SCADA applications, Thinmanager"
+          "detail": "Thinmanager, Stratus, HyperV"
         },
         {
-          "title": "Thinmanager",
-          "detail": "Design configure and implement"
-        },
-        {
-          "title": "Migrations/Modernzations",
-          "detail": "Front end engineering design, execution, and commissioning"
-        },
-        {
-          "title": "MES/Analytics",
-          "detail": "Management and data acquisition"
-        },
-        {
-          "title": "IIOT-Industrial Internet of Things",
-          "detail": "Smart manufacturing, company wide integration"
+          "title": "Migrations/Modernization",
+          "detail": "Front end engineering design, execution, and commissioning. Life Cycle Analysis"
         }
       ]
     },
@@ -76,15 +68,23 @@
         },
         {
           "title": "Repair Services",
-          "detail": "Electrical/Electronic repair services"
+          "detail": "Industrial electrical/electronics repair"
         },
         {
-          "title": "LV Motor Control",
-          "detail": "VSD's, softstarters, overloads "
+          "title": "Technical Services",
+          "detail": "In-house engineering, Project management and consulting"
+        },
+        {
+          "title": "Turn-Key Solutions",
+          "detail": "Complete end-to-end solutions"
+        },
+        {
+          "title": "LV Motor Control & Servicing",
+          "detail": "VSD's, Softstarters, overloads "
         },
         {
           "title": "MV Servicing and Commissioning",
-          "detail": "PowerFlex 7000 & 6000, softstarters and switch gear"
+          "detail": "PowerFlex 7000 & 6000, Softstarters and Switch Gear"
         },
         {
           "title": "Fixed Term Service Level Agreements",
@@ -100,7 +100,7 @@
         },
         {
           "title": "Generator Installation and Automation",
-          "detail": ""
+          "detail": "Stand alone and synchronised systems"
         }
       ]
     },
@@ -117,23 +117,13 @@
         },
         {
           "title": "Motor Control Centers",
-          "detail": "VSD's, Softstarters, E300 Network Overloads, DOL's"
+          "detail": "VSD's, Softstarters, Protection Devices, DOL's"
         },
         {
           "title": "Power Factor Corrections",
           "detail": "Calculate, design and supply of automatic PFC panels"
-        },
-        {
-          "title": "PCB Manufacturing",
-          "detail": "Circuit board design, manufacture and assembly"
         }
       ]
     }
-  ],
-  "old": {
-    "title": "services",
-    "body": [
-      "We at M&M Electronics believe that with a positive work ethic and a “can do” attitude no problem is insurmountable. Our talented staff and unique approach have made us leaders in automation along with our ability to provide a complete solution whether it be maintaining your existing system, sourcing of parts, providing a 24-hour 365 day emergency call out service or providing a complete new system.Our qualified engineers are specialists in their field and have the ability to assess the clients’ needs and, using an assortment of technical options and also drawing on their combined expertise, to provide the most effective solution for the client ensuring a seamless, maintainable system that provides growth with minimal disruption."
-    ]
-  }
+  ]
 }
