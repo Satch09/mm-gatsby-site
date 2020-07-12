@@ -1,6 +1,7 @@
 ---
 title: "New PowerFlex Drives Released"
 date: "2020-06-23"
+industries: [ "Food and Beverage" ]
 ---
 
 ## The new PowerFlex is here

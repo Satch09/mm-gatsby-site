@@ -56,12 +56,12 @@ export default function ContactOperatingHours() {
   return (
     <>
       <ContainerGrid>
-        <Paper>
+        {/* <Paper>
           <Box paddingY={1} m={1}>
             <EmailSignUp />
           </Box>
-        </Paper>
-        <Divider orientation="vertical" flexItem />
+        </Paper> */}
+        {/* <Divider orientation="vertical" flexItem /> */}
         <SpacedGrid>
           <Box p={1}>
             <OperatingHoursNormal />

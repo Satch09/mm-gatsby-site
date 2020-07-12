@@ -12,6 +12,7 @@ import ContactOperatingHours from "components/ContactOperatingHours";
 import Rehydrate from "interactions/Rehydrate";
 import page from "data/projects.json";
 import Section from "layout/Section";
+import ProjectPost from "components/Cards/ProjectPost";
 
 export default function Projects() {
   return (
@@ -24,6 +25,7 @@ export default function Projects() {
           <ContentLayout>
             <Section>
               <Grid container justify="center" xs={12} spacing={2}>
+                <ProjectPost />
                 {page.projects.map(project => {
                   return (
                     <Grid item xs={12} md={10} key={project.title}>
