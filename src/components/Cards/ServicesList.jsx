@@ -34,7 +34,7 @@ export default function ServicesList(service) {
 
         <Paper elevation={2}>
           <List
-            style={{ minHeight: "600px" }}
+            style={{ minHeight: "800px" }}
             component="div"
             aria-label="services lists"
           >

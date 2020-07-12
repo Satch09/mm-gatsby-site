@@ -1,6 +1,7 @@
 import React from "react";
 import { StaticQuery, graphql } from "gatsby";
 import ProjectCardTest from "./ProjectCardTest";
+import { Grid } from "@material-ui/core";
 
 const ProjectPost = () => (
   <StaticQuery
@@ -17,6 +18,9 @@ const ProjectPost = () => (
                 description
                 industries
               }
+              fields {
+                slug
+              }
             }
           }
         }
@@ -24,7 +28,9 @@ const ProjectPost = () => (
     `}
     render={data => (
       <>
-        <ProjectCardTest {...data.allMarkdownRemark} />
+        <Grid container justify="center" xs={12} spacing={2}>
+          <ProjectCardTest {...data.allMarkdownRemark} />
+        </Grid>
       </>
     )}
   ></StaticQuery>

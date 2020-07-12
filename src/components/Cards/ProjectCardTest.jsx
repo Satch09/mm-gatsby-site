@@ -1,5 +1,7 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
+import { Link } from "gatsby";
+
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
@@ -16,81 +18,73 @@ import ListItemText from "@material-ui/core/ListItemText";
 import InboxIcon from "@material-ui/icons/Inbox";
 import DraftsIcon from "@material-ui/icons/Drafts";
 
-import { Box } from "@material-ui/core";
-
-function ListItemLink(props) {
-  return <ListItem button component="a" {...props} />;
-}
+import { Box, Container, CardHeader, Grid } from "@material-ui/core";
 
 const useStyles = makeStyles({
   root: {
-    maxWidth: "md",
+    maxWidth: "sm",
     maxHeight: "md",
   },
   media: {
-    height: 140,
+    height: 250,
   },
 });
 
 export default function ProjectCardTest({ edges }) {
   const e = [...edges];
 
-  const renderPosts = (Component, posts) => <Component>{posts}</Component>;
-
   const classes = useStyles();
-  const ItemPost = ({ node: { frontmatter } }) => {
+  const ItemPost = ({
+    node: {
+      frontmatter: post,
+      fields: { slug },
+    },
+  }) => {
     return (
-      <Card className={classes.root}>
-        <CardActionArea>
-          <CardMedia
-            className={classes.media}
-            image="/static/images/cards/contemplative-reptile.jpg"
-            title="Contemplative Reptile"
-          />
-          <CardContent>
-            <Typography gutterBottom variant="h5" component="h2">
-              {frontmatter.title}
-            </Typography>
-            <Typography variant="body2" color="textSecondary" component="p">
-              {frontmatter.description}
-            </Typography>
-          </CardContent>
-        </CardActionArea>
-        <CardActions>
-          <Button size="small" color="primary">
-            Share
-          </Button>
-          <Button size="small" color="primary">
-            Learn More
-          </Button>
-        </CardActions>
-      </Card>
+      <Grid item xs={12} md={4}>
+        <Card className={classes.root}>
+          <Link to={slug} style={{ textDecoration: "none", color: "inherit" }}>
+            <CardHeader title={post.title} subheader={post.date} />
+            <CardActionArea>
+              <CardMedia
+                className={classes.media}
+                image={require("../../images/drive1.jpg")}
+                title="project"
+              />
+
+              <CardContent>
+                <Typography variant="body1" color="textSecondary" component="p">
+                  {post.description}
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+          </Link>
+          <Box
+            display="flex"
+            flexDirection="column"
+            justifyContent="space-between"
+            p={1}
+          >
+            <Box display="flex">
+              {post.tags.map(tag => (
+                <Box display="flex" key={tag}>
+                  <Button size="medium" color="primary">
+                    #{tag}
+                  </Button>
+                </Box>
+              ))}
+            </Box>
+            <CardActions>
+              <Link to={slug} style={{ textDecoration: "none" }}>
+                <Button size="small" color="primary">
+                  Learn More
+                </Button>
+              </Link>
+            </CardActions>
+          </Box>
+        </Card>
+      </Grid>
     );
   };
-  return (
-    <>
-      {e.map(i => ItemPost(i))}
-      {/* <ItemPost /> */}
-    </>
-  );
+  return <>{e.map(i => ItemPost(i))}</>;
 }
-/* <Card className={classes.root}>
-        <CardContent className={classes.content}>
-          <Box m={2} p={2}>
-            <Typography component="h5" variant="h5">
-              {title}
-            </Typography>
-          </Box>
-          <Divider variant="middle" />
-          <Box m={1} p={0}>
-            <Typography variant="subtitle1" color="textSecondary">
-              {body}
-            </Typography>
-          </Box>
-        </CardContent>
-        <CardMedia
-          className={classes.cover}
-          image={require("../../images/drive1.jpg")}
-          title="Drive"
-        ></CardMedia>
-      </Card> */

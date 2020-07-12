@@ -1,5 +1,5 @@
 ---
-title: "End of life for 1492-J4"
+title: "AVUSA Times Media"
 date: "2020-06-24"
 industries: [ "Food and Beverage", "Marine" ]
 tags: ["PLC", "Marine", "Mining"]

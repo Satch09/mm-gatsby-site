@@ -58,7 +58,7 @@ export default function Header({ children, minHeight, headerProps }, data) {
       <Hero minHeight={minHeight || null}>
         <ScrollingNavbar />
         {/* {console.log(options)} */}
-        {options.logo ? null : <Logo />}
+        {options && options.logo ? null : <Logo />}
 
         <Slogan />
         <SocialLinks />

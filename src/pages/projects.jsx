@@ -24,15 +24,15 @@ export default function Projects() {
         >
           <ContentLayout>
             <Section>
+              <ProjectPost />
               <Grid container justify="center" xs={12} spacing={2}>
-                <ProjectPost />
-                {page.projects.map(project => {
+                {/* {page.projects.map(project => {
                   return (
                     <Grid item xs={12} md={10} key={project.title}>
                       <ProjectCard {...project} />
                     </Grid>
                   );
-                })}
+                })} */}
               </Grid>
             </Section>
           </ContentLayout>
