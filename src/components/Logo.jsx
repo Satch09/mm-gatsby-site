@@ -31,7 +31,11 @@ export default function Logo() {
       <Container maxWidth="xs">
         <Paper>
           <Box p={1}>
-            <Img fluid={data.image.childImageSharp.fluid} />
+            <Img
+              title="logo"
+              alt="logo"
+              fluid={data.image.childImageSharp.fluid}
+            />
           </Box>
         </Paper>
       </Container>
