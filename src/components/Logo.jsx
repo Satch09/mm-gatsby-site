@@ -1,4 +1,7 @@
 import React from "react";
+import { useStaticQuery, graphql } from "gatsby";
+
+import Img from "gatsby-image";
 import LogoImage from "static/images/LogoWebsite.jpg";
 import { Fade, Container, Box, Paper } from "@material-ui/core";
 
@@ -8,19 +11,30 @@ import Rehydrate from "interactions/Rehydrate";
 // Icons
 
 export default function Logo() {
+  const data = useStaticQuery(graphql`
+    query Images {
+      image: file(relativePath: { eq: "LogoWebsite.jpg" }) {
+        id
+        childImageSharp {
+          fixed(width: 400) {
+            ...GatsbyImageSharpFixed
+          }
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `);
   return (
     <>
-      <Rehydrate>
-        <Fade in={true} timeout={250}>
-          <Container maxWidth="xs">
-            <Paper>
-              <Box p={1}>
-                <CardMedia component="img" alt="logo" image={LogoImage} />
-              </Box>
-            </Paper>
-          </Container>
-        </Fade>
-      </Rehydrate>
+      <Container maxWidth="xs">
+        <Paper>
+          <Box p={1}>
+            <Img fluid={data.image.childImageSharp.fluid} />
+          </Box>
+        </Paper>
+      </Container>
     </>
   );
 }

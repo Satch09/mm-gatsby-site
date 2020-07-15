@@ -12,14 +12,13 @@ export default function Rehydrate({ children }) {
   const [hasMounted, setHasMounted] = useState(false);
 
   useEffect(() => {
-    if (window.mmSiteFirstLoad) setHasMounted(true);
-    else
-      setTimeout(() => {
-        window.mmSiteFirstLoad = true;
-        setHasMounted(true);
-      }, 2000);
-
-    return () => {};
+    setHasMounted(true);
+    // if (window.mmSiteFirstLoad) setHasMounted(true);
+    // else
+    //   setTimeout(() => {
+    //     window.mmSiteFirstLoad = true;
+    //     setHasMounted(true);
+    //   }, 2000);
   }, []);
 
   if (!hasMounted) {

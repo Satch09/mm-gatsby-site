@@ -13,12 +13,7 @@ import ContactOperatingHours from "components/ContactOperatingHours";
 
 import Rehydrate from "interactions/Rehydrate";
 import Section from "layout/Section";
-import { Call } from "components/Contact";
-import { Fax } from "components/Contact";
-import { OperatingHoursNormal } from "components/OperatingHours";
 import { TrainingTracker } from "components/Contact";
-import Spinner from "components/Spinner";
-import { PulseSpinner } from "react-spinners-kit";
 import SEO from "components/seo";
 export default function Contact() {
   const foo = 1;
@@ -37,7 +32,6 @@ export default function Contact() {
                 return <CardContact key={course.name} {...course} />;
               })}
             </Grid>
-            <PulseSpinner size={80} color="#686769" />
             <TrainingTracker />
           </Section>
         </HeaderSection>
