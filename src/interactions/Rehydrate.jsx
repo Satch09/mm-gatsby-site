@@ -17,7 +17,7 @@ export default function Rehydrate({ children }) {
       setTimeout(() => {
         window.mmSiteFirstLoad = true;
         setHasMounted(true);
-      }, 3000);
+      }, 2000);
 
     return () => {};
   }, []);

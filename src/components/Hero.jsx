@@ -37,10 +37,6 @@ export default function Hero({ children, minHeight }) {
 
   return (
     <>
-      {/* <Img
-        objectFit="cover"
-        fluid={data.placeholderImage.childImageSharp.fluid}
-      /> */}
       <CardMedia image={coverImage} className={classes.image}>
         <Box
           boxShadow={8}
