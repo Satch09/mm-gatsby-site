@@ -1,10 +1,9 @@
 import React from "react";
-import LogoImage from "static/images/LogoWebsiteSite.png";
+import LogoImage from "static/images/LogoWebsite.jpg";
 import { Fade, Container, Box, Paper } from "@material-ui/core";
 
 import CardMedia from "@material-ui/core/CardMedia";
 import Rehydrate from "interactions/Rehydrate";
-import SVGLogo from "static/images/LogoWebsiteSVG";
 
 // Icons
 
@@ -12,18 +11,15 @@ export default function Logo() {
   return (
     <>
       <Rehydrate>
-        <Container maxWidth="xs">
-          <Paper>
-            <Box
-              p={1}
-              display="flex"
-              alignContent="center"
-              justifyContent="center"
-            >
-              <SVGLogo />
-            </Box>
-          </Paper>
-        </Container>
+        <Fade in={true} timeout={250}>
+          <Container maxWidth="xs">
+            <Paper>
+              <Box p={1}>
+                <CardMedia component="img" alt="logo" image={LogoImage} />
+              </Box>
+            </Paper>
+          </Container>
+        </Fade>
       </Rehydrate>
     </>
   );
