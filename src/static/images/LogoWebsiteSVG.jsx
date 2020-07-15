@@ -3,8 +3,8 @@ import React from "react";
 const SVGLogo = () => {
   return (
     <svg
-      maxWidth="500"
-      maxHeight="500"
+      width="auto"
+      height="auto"
       viewBox="0 0 2387 1532"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
