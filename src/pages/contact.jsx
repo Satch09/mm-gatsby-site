@@ -19,11 +19,13 @@ import { OperatingHoursNormal } from "components/OperatingHours";
 import { TrainingTracker } from "components/Contact";
 import Spinner from "components/Spinner";
 import { PulseSpinner } from "react-spinners-kit";
+import SEO from "components/seo";
 export default function Contact() {
   const foo = 1;
   return (
     <>
       <Rehydrate>
+        <SEO title="Contact Us" />
         <HeaderPicture headerProps={page.headerProps} />
         <HeaderSection>
           <Section>

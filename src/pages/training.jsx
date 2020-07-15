@@ -14,10 +14,12 @@ import ContactOperatingHours from "components/ContactOperatingHours";
 import page from "data/training.json";
 import Rehydrate from "interactions/Rehydrate";
 import Section from "layout/Section";
+import SEO from "components/seo";
 export default function Training() {
   return (
     <>
       <Rehydrate>
+        <SEO title="Training" />
         <HeaderPicture headerProps={page.headerProps} />
         <OverhangSpacing
           mainItem={<MessageBox {...page.heading} noBottomDivider />}

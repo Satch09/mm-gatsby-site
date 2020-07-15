@@ -13,6 +13,7 @@
 
 // You can delete this file if you're not using it
 
+const page = require("./src/data/projects.json");
 const path = require(`path`);
 const { createFilePath } = require(`gatsby-source-filesystem`);
 
@@ -59,6 +60,7 @@ exports.createPages = async ({ graphql, actions }) => {
       path: node.fields.slug,
       component: path.resolve(`./src/templates/project.js`),
       context: {
+        page,
         // Data passed to context is available
         // in page queries as GraphQL variables.
         slug: node.fields.slug,

@@ -15,6 +15,7 @@ import { Grid, Container } from "@material-ui/core";
 import page from "data/services.json";
 import Rehydrate from "interactions/Rehydrate";
 import Section from "layout/Section";
+import SEO from "components/seo";
 // const useStyles = makeStyles((theme) => ({
 //   ...theme.customProperties,
 //   root: {
@@ -42,6 +43,7 @@ export default function Services() {
   return (
     <>
       <Rehydrate>
+        <SEO title="Services" />
         <HeaderPicture headerProps={page.headerProps} />
 
         <OverhangSpacing

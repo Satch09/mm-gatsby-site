@@ -18,6 +18,7 @@ import page from "data/home.json";
 import Rehydrate from "interactions/Rehydrate";
 import EmailSignUp from "components/EmailSignUp";
 import Section from "layout/Section";
+import SEO from "components/seo";
 
 const useStyles = makeStyles(theme => ({
   ...theme.customProps,
@@ -57,6 +58,7 @@ const IndexPage = () => {
   return (
     <>
       <Rehydrate>
+        <SEO />
         <HeaderPicture minHeight="50vh" headerProps={headerPropsWithOptions}>
           <CovidBanner />
         </HeaderPicture>

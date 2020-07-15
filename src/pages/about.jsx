@@ -14,11 +14,13 @@ import OverhangSpacing from "layout/OverhangSpacing";
 import page from "data/about.json";
 import Rehydrate from "interactions/Rehydrate";
 import Section from "layout/Section";
+import SEO from "components/seo";
 
 export default function About() {
   return (
     <>
       <Rehydrate>
+        <SEO title="About" />
         <HeaderPicture headerProps={page.headerProps} />
         <OverhangSpacing
           mainItem={<MessageBox {...page.heading} noBottomDivider />}

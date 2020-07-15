@@ -13,11 +13,13 @@ import Rehydrate from "interactions/Rehydrate";
 import page from "data/projects.json";
 import Section from "layout/Section";
 import ProjectPost from "components/Cards/ProjectPost";
+import SEO from "components/seo";
 
 export default function Projects() {
   return (
     <>
       <Rehydrate>
+        <SEO title="Projects" />
         <HeaderPicture headerProps={page.headerProps} />
         <OverhangSpacing
           mainItem={<MessageBox {...page.heading} noBottomDivider />}
