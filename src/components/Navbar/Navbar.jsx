@@ -26,7 +26,7 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: "none",
   },
   menuButton: {
-    marginRight: theme.spacing(2),
+    margin: theme.spacing(1),
   },
   title: {
     flexGrow: 1,
@@ -66,10 +66,11 @@ export default function Navbar() {
       `}
       render={data => (
         <>
-          <Box>
+          <Box p={0}>
             <Call variant="small" />
             <Email variant="small" />
           </Box>
+
           <div className={classes.root}>
             {isSmallDisplay ? (
               <Box p={0} display="flex" flexWrap="no-wrap">
@@ -87,14 +88,16 @@ export default function Navbar() {
                 })}
               </Box>
             ) : (
-              <div className="">
-                <Button
-                  aria-controls="simple-menu"
-                  aria-haspopup="true"
-                  onClick={handleClick}
-                >
-                  <MenuIcon style={{ color: "white" }} />
-                </Button>
+              <>
+                <Box>
+                  <Button
+                    aria-controls="simple-menu"
+                    aria-haspopup="true"
+                    onClick={handleClick}
+                  >
+                    <MenuIcon style={{ color: "white" }} />
+                  </Button>
+                </Box>
                 <Menu
                   id="simple-menu"
                   anchorEl={anchorEl}
@@ -123,7 +126,7 @@ export default function Navbar() {
                     );
                   })}
                 </Menu>
-              </div>
+              </>
             )}
           </div>
         </>
