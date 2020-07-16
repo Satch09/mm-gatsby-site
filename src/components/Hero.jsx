@@ -26,7 +26,7 @@ const useStyles = makeStyles(theme => ({
   },
   image: {
     repeat: "no-repeat",
-    zIndex: -1,
+    zIndex: -2,
     backgroundPosition: "bottom",
     [theme.breakpoints.up("lg")]: { backgroundAttachment: "fixed" },
   },

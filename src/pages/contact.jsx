@@ -11,7 +11,6 @@ import page from "data/contact.json";
 import Footer from "layout/Footer";
 import ContactOperatingHours from "components/ContactOperatingHours";
 
-import Rehydrate from "interactions/Rehydrate";
 import Section from "layout/Section";
 import { TrainingTracker } from "components/Contact";
 import SEO from "components/seo";
@@ -19,26 +18,23 @@ export default function Contact() {
   const foo = 1;
   return (
     <>
-      <Rehydrate>
-        <SEO title="Contact" />
-        <HeaderPicture headerProps={page.headerProps} />
-        <HeaderSection>
-          <Section>
-            <Box p={2}>
-              <Typography variant="h4">Departments</Typography>
-            </Box>
-            <Grid container justify="center">
-              {page.contacts.map(course => {
-                return <CardContact key={course.name} {...course} />;
-              })}
-            </Grid>
-            <TrainingTracker />
-          </Section>
-        </HeaderSection>
-        <Footer>
-          <ContactOperatingHours />
-        </Footer>
-      </Rehydrate>
+      <SEO title="Contact" />
+      <HeaderSection>
+        <Section>
+          <Box p={2}>
+            <Typography variant="h4">Departments</Typography>
+          </Box>
+          <Grid container justify="center">
+            {page.contacts.map(course => {
+              return <CardContact key={course.name} {...course} />;
+            })}
+          </Grid>
+          <TrainingTracker />
+        </Section>
+      </HeaderSection>
+      <Footer>
+        <ContactOperatingHours />
+      </Footer>
     </>
   );
 }

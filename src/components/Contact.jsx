@@ -50,7 +50,7 @@ export function Call({ variant }) {
         style={{ textDecoration: "none", color: "white" }}
       >
         <Box display="flex">
-          <Box marginRight={1}>
+          <Box marginRight={1} display="flex" alignItems="center">
             <PhoneIcon fontSize="medium" style={{ color: "white" }} />
           </Box>
           <Box>
@@ -68,7 +68,7 @@ export function Call({ variant }) {
         style={{ textDecoration: "none", color: "white" }}
       >
         <Box display="flex">
-          <Box marginRight={1}>
+          <Box marginRight={1} display="flex" alignItems="center">
             <PhoneIcon fontSize="small" style={{ color: "white" }} />
           </Box>
           <Box>
@@ -91,7 +91,7 @@ export function Fax({ variant }) {
           style={{ textDecoration: "none", color: "white" }}
         >
           <Box display="flex">
-            <Box marginRight={1}>
+            <Box marginRight={1} display="flex" alignItems="center">
               <DescriptionIcon fontSize="medium" style={{ color: "white" }} />
             </Box>
             <Box>
@@ -110,7 +110,7 @@ export function Fax({ variant }) {
         style={{ textDecoration: "none", color: "white" }}
       >
         <Box display="flex">
-          <Box marginRight={1}>
+          <Box marginRight={1} display="flex" alignItems="center">
             <DescriptionIcon fontSize="small" style={{ color: "white" }} />
           </Box>
           <Box>
@@ -151,7 +151,7 @@ export function Email({ variant }) {
           style={{ textDecoration: "none", color: "white" }}
         >
           <Box display="flex">
-            <Box marginRight={1}>
+            <Box marginRight={1} display="flex" alignItems="center">
               <EmailIcon fontSize="large" style={{ color: "white" }} />
             </Box>
             <Box>
@@ -170,7 +170,7 @@ export function Email({ variant }) {
           style={{ textDecoration: "none", color: "white" }}
         >
           <Box display="flex">
-            <Box marginRight={1}>
+            <Box marginRight={1} display="flex" alignItems="center">
               <EmailIcon fontSize="small" style={{ color: "white" }} />
             </Box>
             <Box>

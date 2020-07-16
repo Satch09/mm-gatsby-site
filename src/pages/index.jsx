@@ -15,7 +15,6 @@ import Footer from "layout/Footer";
 import ContactOperatingHours from "components/ContactOperatingHours";
 import OverhangSpacing from "layout/OverhangSpacing";
 import page from "data/home.json";
-import Rehydrate from "interactions/Rehydrate";
 import EmailSignUp from "components/EmailSignUp";
 import Section from "layout/Section";
 import SEO from "components/seo";
@@ -58,9 +57,10 @@ const IndexPage = () => {
   return (
     <>
       <SEO />
-      <HeaderPicture minHeight="50vh" headerProps={headerPropsWithOptions}>
+      {/* <HeaderPicture minHeight="50vh" headerProps={headerPropsWithOptions}>
         <CovidBanner />
-      </HeaderPicture>
+      </HeaderPicture> */}
+
       <OverhangSpacing mainItem={<QuickLinks />}>
         <ContentLayout>
           <Section>

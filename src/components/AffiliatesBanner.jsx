@@ -11,7 +11,7 @@ import { Box } from "@material-ui/core";
 //   },
 // }));
 
-export default function CovidBanner() {
+export default function AffiliatesBanner() {
   // const classes = useStyles();
 
   return (
@@ -24,7 +24,8 @@ export default function CovidBanner() {
           p={3}
           marginBottom={2}
           boxShadow={6}
-          style={{ backgroundColor: "white" }}>
+          style={{ backgroundColor: "white" }}
+        >
           <Grid container justify="center">
             <Grid item>
               <img alt="logo" src={require("../images/logo1.png")} />

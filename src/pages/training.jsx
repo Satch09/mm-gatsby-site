@@ -12,41 +12,37 @@ import Footer from "layout/Footer";
 import ContactOperatingHours from "components/ContactOperatingHours";
 
 import page from "data/training.json";
-import Rehydrate from "interactions/Rehydrate";
 import Section from "layout/Section";
 import SEO from "components/seo";
 export default function Training() {
   return (
     <>
-      <Rehydrate>
-        <SEO title="Training" />
-        <HeaderPicture headerProps={page.headerProps} />
-        <OverhangSpacing
-          mainItem={<MessageBox {...page.heading} noBottomDivider />}
-        >
-          <ContentLayout>
-            <Section>
-              <Grid
-                container
-                display="flex"
-                flexDirection="row"
-                justify="start"
-                align="center"
-                spacing={2}
-              >
-                {page.courses.map(course => (
-                  <Grid item md={4} xs={12} key={course.heading}>
-                    <CardTraining {...course} />
-                  </Grid>
-                ))}
-              </Grid>
-            </Section>
-          </ContentLayout>
-          <Footer>
-            <ContactOperatingHours />
-          </Footer>
-        </OverhangSpacing>
-      </Rehydrate>
+      <SEO title="Training" />
+      <OverhangSpacing
+        mainItem={<MessageBox {...page.heading} noBottomDivider />}
+      >
+        <ContentLayout>
+          <Section>
+            <Grid
+              container
+              display="flex"
+              flexDirection="row"
+              justify="start"
+              align="center"
+              spacing={2}
+            >
+              {page.courses.map(course => (
+                <Grid item md={4} xs={12} key={course.heading}>
+                  <CardTraining {...course} />
+                </Grid>
+              ))}
+            </Grid>
+          </Section>
+        </ContentLayout>
+        <Footer>
+          <ContactOperatingHours />
+        </Footer>
+      </OverhangSpacing>
     </>
   );
 }

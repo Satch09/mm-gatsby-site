@@ -6,9 +6,9 @@ import Dialog from "@material-ui/core/Dialog";
 import DialogActions from "@material-ui/core/DialogActions";
 
 import { makeStyles } from "@material-ui/core/styles";
-import { Grid, Box, Paper } from "@material-ui/core";
-import AlternateEmailIcon from "@material-ui/icons/AlternateEmail";
+import { Grid, Box } from "@material-ui/core";
 import EmailIcon from "@material-ui/icons/Email";
+
 export default function ContactDialog({ children, useIcon }) {
   const [open, setOpen] = React.useState(false);
   const [details, setDetails] = React.useState({});

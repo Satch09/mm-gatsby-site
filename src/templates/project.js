@@ -1,6 +1,5 @@
 import React from "react";
 import { graphql } from "gatsby";
-import Rehydrate from "interactions/Rehydrate";
 import HeaderSection from "layout/HeaderSection";
 import OverhangSpacing from "layout/OverhangSpacing";
 import HeaderPicture from "layout/Header";

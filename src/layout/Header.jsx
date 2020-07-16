@@ -10,7 +10,7 @@ import { Grid, Container, Paper, Box } from "@material-ui/core";
 import Logo from "components/Logo";
 import Slogan from "../components/Slogan";
 import SocialLinks from "../components/SocialLinks";
-import Section from "layout/Section";
+import CovidBanner from "components/CovidBanner";
 
 const useStyles = makeStyles(theme => ({
   ...theme.customProps,
@@ -55,15 +55,12 @@ export default function Header({ children, minHeight, headerProps }, data) {
 
   return (
     <>
-      <Hero minHeight={minHeight || null}>
-        <ScrollingNavbar />
-        {/* {console.log(options)} */}
-        {options && options.logo ? null : <Logo />}
+      {options && options.logo ? null : <Logo />}
 
-        <Slogan />
-        <SocialLinks />
-        {children}
-      </Hero>
+      <Slogan />
+      <SocialLinks />
+      <CovidBanner />
+      {children}
     </>
   );
 }

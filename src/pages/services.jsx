@@ -13,7 +13,6 @@ import { ServicesList } from "components/Cards";
 import { Grid, Container } from "@material-ui/core";
 
 import page from "data/services.json";
-import Rehydrate from "interactions/Rehydrate";
 import Section from "layout/Section";
 import SEO from "components/seo";
 // const useStyles = makeStyles((theme) => ({
@@ -42,37 +41,28 @@ import SEO from "components/seo";
 export default function Services() {
   return (
     <>
-      <Rehydrate>
-        <SEO title="Services" />
-        <HeaderPicture headerProps={page.headerProps} />
+      <SEO title="Services" />
 
-        <OverhangSpacing
-          mainItem={<MessageBox {...page.heading} noBottomDivider />}
-        >
-          <ContentLayout>
-            <Section>
-              <AffiliatesBanner />
-              <Grid
-                container
-                xs={12}
-                justify="center"
-                align="center"
-                spacing={2}
-              >
-                {page.services.map(service => (
-                  <Grid item xs={12} sm={5} key={service.heading}>
-                    <ServicesList {...service} />
-                  </Grid>
-                ))}
-              </Grid>
-            </Section>
-          </ContentLayout>
+      <OverhangSpacing
+        mainItem={<MessageBox {...page.heading} noBottomDivider />}
+      >
+        <ContentLayout>
+          <Section>
+            <AffiliatesBanner />
+            <Grid container xs={12} justify="center" align="center" spacing={2}>
+              {page.services.map(service => (
+                <Grid item xs={12} sm={5} key={service.heading}>
+                  <ServicesList {...service} />
+                </Grid>
+              ))}
+            </Grid>
+          </Section>
+        </ContentLayout>
 
-          <Footer>
-            <ContactOperatingHours />
-          </Footer>
-        </OverhangSpacing>
-      </Rehydrate>
+        <Footer>
+          <ContactOperatingHours />
+        </Footer>
+      </OverhangSpacing>
     </>
   );
 }

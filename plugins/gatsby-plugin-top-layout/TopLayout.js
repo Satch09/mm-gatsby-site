@@ -5,9 +5,17 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import { ThemeProvider } from "@material-ui/core/styles";
 import theme from "util/theme";
 import "./baseline.css";
-import SEO from "components/seo";
 import Rehydrate from "interactions/Rehydrate";
+import Logo from "components/Logo";
+import Header from "layout/Header";
+import Footer from "layout/Footer";
+import ContactOperatingHours from "components/ContactOperatingHours";
+import Hero from "components/Hero";
+import ScrollingNav from "components/Navbar/ScrollingNav";
 export default function TopLayout(props) {
+  const headerPropsWithOptions = {
+    options: { slogan: true },
+  };
   return (
     <>
       <Helmet>
@@ -18,7 +26,13 @@ export default function TopLayout(props) {
       </Helmet>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <Rehydrate>{props.children}</Rehydrate>
+        <Rehydrate>
+          <Hero>
+            <ScrollingNav />
+            <Header headerProps={headerPropsWithOptions} />
+          </Hero>
+          {props.children}
+        </Rehydrate>
       </ThemeProvider>
     </>
   );
