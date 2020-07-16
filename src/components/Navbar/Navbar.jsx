@@ -76,8 +76,8 @@ export default function Navbar() {
               <Box p={0} display="flex" flexWrap="no-wrap">
                 {data.site.siteMetadata.menuLinks.map(item => {
                   return (
-                    <Route key={item.name} to={item.link}>
-                      <Link component="button" variant="body2" color="primary">
+                    <Route key={item.name} to={item.link} component="button">
+                      <Link component="button" variant="body1" color="primary">
                         <Button className={classes.navButton}>
                           {item.name.charAt(0).toUpperCase() +
                             item.name.slice(1)}
@@ -114,6 +114,7 @@ export default function Navbar() {
                         <Link component="li" className={classes.navButton}>
                           <MenuItem>
                             <Button
+                              variant="body1"
                               onClick={handleClose}
                               className={classes.navButton}
                             >
