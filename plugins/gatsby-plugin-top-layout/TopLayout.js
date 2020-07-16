@@ -24,16 +24,16 @@ export default function TopLayout(props) {
           content="minimum-scale=1, initial-scale=1, width=device-width"
         />
       </Helmet>
-      <ThemeProvider theme={theme}>
-        <CssBaseline />
-        <Rehydrate>
+      <CssBaseline />
+      <Rehydrate>
+        <ThemeProvider theme={theme}>
           <Hero>
             <ScrollingNav />
             <Header headerProps={headerPropsWithOptions} />
           </Hero>
           {props.children}
-        </Rehydrate>
-      </ThemeProvider>
+        </ThemeProvider>
+      </Rehydrate>
     </>
   );
 }

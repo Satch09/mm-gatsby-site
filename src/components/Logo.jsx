@@ -6,7 +6,6 @@ import LogoImage from "static/images/LogoWebsite.jpg";
 import { Fade, Container, Box, Paper } from "@material-ui/core";
 
 import CardMedia from "@material-ui/core/CardMedia";
-import Spinner from "./Spinner";
 
 // Icons
 
