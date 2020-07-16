@@ -19,6 +19,10 @@ export default function TopLayout(props) {
   return (
     <>
       <Helmet>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Rubik&display=swap"
+          rel="preload"
+        />
         <meta
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width"
