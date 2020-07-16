@@ -76,14 +76,7 @@ export default function Navbar() {
                 {data.site.siteMetadata.menuLinks.map(item => {
                   return (
                     <Route key={item.name} to={item.link}>
-                      <Link
-                        component="button"
-                        variant="body2"
-                        color="primary"
-                        // onClick={() => {
-                        //   // console.info("I'm a button.");
-                        // }}
-                      >
+                      <Link component="button" variant="body2" color="primary">
                         <Button className={classes.navButton}>
                           {item.name.charAt(0).toUpperCase() +
                             item.name.slice(1)}
@@ -117,7 +110,10 @@ export default function Navbar() {
                       <Route key={item.name} to={item.link}>
                         <Link component="li" className={classes.navButton}>
                           <MenuItem>
-                            <Button className={classes.navButton}>
+                            <Button
+                              onClick={handleClose}
+                              className={classes.navButton}
+                            >
                               {item.name.charAt(0).toUpperCase() +
                                 item.name.slice(1)}
                             </Button>
