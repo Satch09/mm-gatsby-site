@@ -20,7 +20,7 @@ export default function Contact() {
   return (
     <>
       <Rehydrate>
-        <SEO title="Contact Us" />
+        <SEO title="Contact" />
         <HeaderPicture headerProps={page.headerProps} />
         <HeaderSection>
           <Section>

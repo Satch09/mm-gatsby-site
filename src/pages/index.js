@@ -57,45 +57,42 @@ const IndexPage = () => {
 
   return (
     <>
-      <Rehydrate>
-        <SEO />
-        <HeaderPicture minHeight="50vh" headerProps={headerPropsWithOptions}>
-          <CovidBanner />
-        </HeaderPicture>
-        <OverhangSpacing mainItem={<QuickLinks />}>
-          <ContentLayout>
-            {/* <div ref={inputEl}></div> */}
-            <Section>
-              <Grid
-                container
-                display="flex"
-                flexDirection="row"
-                justify="center"
-                align="center"
-                spacing={2}
-              >
-                {page.topics.map(topic => (
-                  <Grid item md={3} xs={12} key={topic.heading}>
-                    <Box style={{ height: "100%" }}>
-                      <Go to={topic.link} style={{ textDecoration: "none" }}>
-                        <Paper
-                          style={{ minHeight: "100%" }}
-                          className={classes.heading}
-                        >
-                          <MessageBox {...topic} noBottomDivider />
-                        </Paper>
-                      </Go>
-                    </Box>
-                  </Grid>
-                ))}
-              </Grid>
-            </Section>
-          </ContentLayout>
-          <Footer>
-            <ContactOperatingHours />
-          </Footer>
-        </OverhangSpacing>
-      </Rehydrate>
+      <SEO />
+      <HeaderPicture minHeight="50vh" headerProps={headerPropsWithOptions}>
+        <CovidBanner />
+      </HeaderPicture>
+      <OverhangSpacing mainItem={<QuickLinks />}>
+        <ContentLayout>
+          <Section>
+            <Grid
+              container
+              display="flex"
+              flexDirection="row"
+              justify="center"
+              align="center"
+              spacing={2}
+            >
+              {page.topics.map(topic => (
+                <Grid item md={3} xs={12} key={topic.heading}>
+                  <Box style={{ height: "100%" }}>
+                    <Go to={topic.link} style={{ textDecoration: "none" }}>
+                      <Paper
+                        style={{ minHeight: "100%" }}
+                        className={classes.heading}
+                      >
+                        <MessageBox {...topic} noBottomDivider />
+                      </Paper>
+                    </Go>
+                  </Box>
+                </Grid>
+              ))}
+            </Grid>
+          </Section>
+        </ContentLayout>
+        <Footer>
+          <ContactOperatingHours />
+        </Footer>
+      </OverhangSpacing>
     </>
   );
 };

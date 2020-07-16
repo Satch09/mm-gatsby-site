@@ -7,6 +7,7 @@ import { Fade, Container, Box, Paper } from "@material-ui/core";
 
 import CardMedia from "@material-ui/core/CardMedia";
 import Rehydrate from "interactions/Rehydrate";
+import Spinner from "./Spinner";
 
 // Icons
 
@@ -32,6 +33,8 @@ export default function Logo() {
         <Paper>
           <Box p={1}>
             <Img
+              // onStartLoad={<Spinner />}
+              // onLoad={<Spinner />}
               title="logo"
               alt="logo"
               fluid={data.image.childImageSharp.fluid}

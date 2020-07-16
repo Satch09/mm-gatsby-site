@@ -6,10 +6,10 @@ import { ThemeProvider } from "@material-ui/core/styles";
 import theme from "util/theme";
 import "./baseline.css";
 import SEO from "components/seo";
+import Rehydrate from "interactions/Rehydrate";
 export default function TopLayout(props) {
   return (
     <>
-      <SEO />
       <Helmet>
         <meta
           name="viewport"
@@ -18,7 +18,7 @@ export default function TopLayout(props) {
       </Helmet>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        {props.children}
+        <Rehydrate>{props.children}</Rehydrate>
       </ThemeProvider>
     </>
   );

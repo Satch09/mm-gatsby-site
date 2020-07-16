@@ -155,7 +155,7 @@ export function Email({ variant }) {
               <EmailIcon fontSize="large" style={{ color: "white" }} />
             </Box>
             <Box>
-              <Typography variant="p">{contact.email.info}</Typography>
+              <Typography variant="body1">{contact.email.info}</Typography>
             </Box>
           </Box>
         </a>
@@ -174,7 +174,7 @@ export function Email({ variant }) {
               <EmailIcon fontSize="small" style={{ color: "white" }} />
             </Box>
             <Box>
-              <Typography variant="p">{contact.email.info}</Typography>
+              <Typography variant="body1">{contact.email.info}</Typography>
             </Box>
           </Box>
         </a>
