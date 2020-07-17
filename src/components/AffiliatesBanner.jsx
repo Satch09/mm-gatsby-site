@@ -16,13 +16,19 @@ export default function AffiliatesBanner() {
 
   return (
     <>
-      <Grid container justify="space-around" align="center" xs={12} m={3}>
+      <Grid
+        container
+        marginY={4}
+        justify="space-around"
+        align="center"
+        xs={12}
+        m={3}
+      >
         <Box
           display="flex"
           flexDirection="row"
           justifyContent="space-between"
           p={3}
-          marginBottom={2}
           boxShadow={6}
           style={{ backgroundColor: "white" }}
         >

@@ -10,11 +10,12 @@ import OverhangSpacing from "layout/OverhangSpacing";
 import Footer from "layout/Footer";
 import ContactOperatingHours from "components/ContactOperatingHours";
 import { ServicesList } from "components/Cards";
-import { Grid, Container } from "@material-ui/core";
+import { Grid, Container, Box, Paper } from "@material-ui/core";
 
 import page from "data/services.json";
 import Section from "layout/Section";
 import SEO from "components/seo";
+import PageLayout from "layout/PageLayout";
 // const useStyles = makeStyles((theme) => ({
 //   ...theme.customProperties,
 //   root: {
@@ -39,30 +40,31 @@ import SEO from "components/seo";
 // }));
 
 export default function Services() {
+  const topContent = (
+    <Box display="flex" justifyContent="center">
+      <Container maxWidth="lg">
+        <Paper elevation={8}>
+          <MessageBox {...page.heading} noBottomDivider />
+        </Paper>
+      </Container>
+    </Box>
+  );
+  const mainContent = (
+    <>
+      <AffiliatesBanner />
+      <Grid container xs={12} justify="center" align="center" spacing={2}>
+        {page.services.map(service => (
+          <Grid item xs={12} sm={5} key={service.heading}>
+            <ServicesList {...service} />
+          </Grid>
+        ))}
+      </Grid>
+    </>
+  );
   return (
     <>
       <SEO title="Services" />
-
-      <OverhangSpacing
-        mainItem={<MessageBox {...page.heading} noBottomDivider />}
-      >
-        <ContentLayout>
-          <Section>
-            <AffiliatesBanner />
-            <Grid container xs={12} justify="center" align="center" spacing={2}>
-              {page.services.map(service => (
-                <Grid item xs={12} sm={5} key={service.heading}>
-                  <ServicesList {...service} />
-                </Grid>
-              ))}
-            </Grid>
-          </Section>
-        </ContentLayout>
-
-        <Footer>
-          <ContactOperatingHours />
-        </Footer>
-      </OverhangSpacing>
+      <PageLayout topContent={topContent} mainContent={mainContent} />
     </>
   );
 }

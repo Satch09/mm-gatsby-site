@@ -2,7 +2,7 @@ import React from "react";
 import Grid from "@material-ui/core/Grid";
 
 import MessageBox from "components/MessageBox";
-import { Box } from "@material-ui/core";
+import { Box, Container, Paper } from "@material-ui/core";
 import HeaderPicture from "layout/Header";
 import { ProjectCard } from "components/Cards";
 import ContentLayout from "layout/ContentLayout";
@@ -13,32 +13,23 @@ import page from "data/projects.json";
 import Section from "layout/Section";
 import ProjectPost from "components/Cards/ProjectPost";
 import SEO from "components/seo";
+import PageLayout from "layout/PageLayout";
 
 export default function Projects() {
+  const topContent = (
+    <Box display="flex" justifyContent="center">
+      <Container maxWidth="lg">
+        <Paper elevation={8}>
+          <MessageBox {...page.heading} noBottomDivider />
+        </Paper>
+      </Container>
+    </Box>
+  );
+  const mainContent = <ProjectPost />;
   return (
     <>
       <SEO title="Projects" />
-      <OverhangSpacing
-        mainItem={<MessageBox {...page.heading} noBottomDivider />}
-      >
-        <ContentLayout>
-          <Section>
-            <ProjectPost />
-            <Grid container justify="center" xs={12} spacing={2}>
-              {/* {page.projects.map(project => {
-                  return (
-                    <Grid item xs={12} md={10} key={project.title}>
-                      <ProjectCard {...project} />
-                    </Grid>
-                  );
-                })} */}
-            </Grid>
-          </Section>
-        </ContentLayout>
-        <Footer>
-          <ContactOperatingHours />
-        </Footer>
-      </OverhangSpacing>
+      <PageLayout topContent={topContent} mainContent={mainContent} />
     </>
   );
 }

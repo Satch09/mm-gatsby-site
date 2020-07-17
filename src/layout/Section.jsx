@@ -21,15 +21,15 @@ import SlideIn from "interactions/SlideIn";
 export default function Section({ children }) {
   return (
     <>
-      <Container>
+      <Container maxWidth="lg">
         <Box
           display="flex"
           flexDirection="column"
           alignItems="center"
           justifyContent="center"
-          minHeight="50vh"
-          paddingY={8}
-          paddingX={2}
+          minHeight="100%"
+          paddingX={1}
+          paddingY={3}
         >
           {children}
         </Box>

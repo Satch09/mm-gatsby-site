@@ -14,27 +14,32 @@ import ContactOperatingHours from "components/ContactOperatingHours";
 import Section from "layout/Section";
 import { TrainingTracker } from "components/Contact";
 import SEO from "components/seo";
+import PageLayout from "layout/PageLayout";
+import MessageBox from "components/MessageBox";
 export default function Contact() {
-  const foo = 1;
+  const topContent = (
+    <Box display="flex" justifyContent="center">
+      <Container maxWidth="lg">
+        <Paper elevation={8}>
+          <MessageBox {...page.heading} noBottomDivider />
+        </Paper>
+      </Container>
+    </Box>
+  );
+  const mainContent = (
+    <>
+      <Grid container justify="center">
+        {page.contacts.map(course => {
+          return <CardContact key={course.name} {...course} />;
+        })}
+      </Grid>
+      <TrainingTracker />
+    </>
+  );
   return (
     <>
       <SEO title="Contact" />
-      <HeaderSection>
-        <Section>
-          <Box p={2}>
-            <Typography variant="h4">Departments</Typography>
-          </Box>
-          <Grid container justify="center">
-            {page.contacts.map(course => {
-              return <CardContact key={course.name} {...course} />;
-            })}
-          </Grid>
-          <TrainingTracker />
-        </Section>
-      </HeaderSection>
-      <Footer>
-        <ContactOperatingHours />
-      </Footer>
+      <PageLayout topContent={topContent} mainContent={mainContent} />
     </>
   );
 }

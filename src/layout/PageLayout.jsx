@@ -18,7 +18,6 @@ import page from "data/home.json";
 import EmailSignUp from "components/EmailSignUp";
 import Section from "layout/Section";
 import SEO from "components/seo";
-import PageLayout from "layout/PageLayout";
 
 const useStyles = makeStyles(theme => ({
   ...theme.customProps,
@@ -47,46 +46,38 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-const IndexPage = () => {
+const PageLayout = ({ topContent, mainContent }) => {
   const classes = useStyles();
 
-  const topContent = (
-    <Box display="flex" justifyContent="center">
-      <Container maxWidth="lg">
-        <Paper elevation={8}>
-          <QuickLinks />
-        </Paper>
-      </Container>
-    </Box>
-  );
-  const mainContent = (
-    <Grid
-      container
-      display="flex"
-      flexDirection="row"
-      justify="center"
-      align="center"
-      spacing={2}
-    >
-      {page.topics.map(topic => (
-        <Grid item md={3} xs={12} key={topic.heading}>
-          <Box style={{ height: "100%" }}>
-            <Go to={topic.link} style={{ textDecoration: "none" }}>
-              <Paper style={{ minHeight: "100%" }} className={classes.heading}>
-                <MessageBox {...topic} noBottomDivider />
-              </Paper>
-            </Go>
-          </Box>
-        </Grid>
-      ))}
-    </Grid>
-  );
+  const headerPropsWithOptions = {
+    ...page.headerProps,
+    options: { slogan: true },
+  };
+
   return (
     <>
-      <SEO />
-      <PageLayout topContent={topContent} mainContent={mainContent} />
+      <div
+        style={{
+          position: "absolute",
+          width: "100%",
+        }}
+      >
+        <div
+          style={{
+            position: "relative",
+            top: "-5vh",
+            width: "100%",
+          }}
+        >
+          {topContent ? topContent : null}
+        </div>
+        <Section>{mainContent ? mainContent : null}</Section>
+        <Footer>
+          <ContactOperatingHours />
+        </Footer>
+      </div>
     </>
   );
 };
 
-export default IndexPage;
+export default PageLayout;

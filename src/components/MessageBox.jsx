@@ -12,36 +12,38 @@ const MessageBox = ({ title, body, noBottomDivider }) => {
   return (
     <>
       <Box paddingY={1} margin={1}>
-        <Container>
-          <Typography variant="h4" component="p">
-            <Box
-              display="flex"
-              alignItems="center"
-              justifyContent="center"
-              fontSize="1.6rem"
-              height="5em"
-            >
-              {title.toUpperCase()}
-            </Box>
-          </Typography>
-
-          <Divider variant="middle" />
+        <Typography variant="h4" component="h2">
           <Box
-            marginY={2}
             display="flex"
-            align="center"
-            style={{ height: "100%" }}
+            alignItems="center"
+            justifyContent="center"
+            fontSize="1.6rem"
+            height="4em"
+            paddingX="1em"
           >
-            <Typography variant="body1" color="textSecondary" component="p">
-              {body.map(line => (
-                <Box component="p" key={line}>
-                  {line}
-                </Box>
-              ))}
-            </Typography>
+            {title.toUpperCase()}
           </Box>
-          {!noBottomDivider && <Divider variant="middle" />}
-        </Container>
+        </Typography>
+
+        <Divider variant="middle" />
+        <Box
+          marginY={3}
+          paddingX={4}
+          display="flex"
+          justifyContent="center"
+          align="center"
+          alignItems="center"
+          minHeight="12vh"
+        >
+          <Typography variant="body1" color="textSecondary" component="p">
+            {body.map(line => (
+              <Box component="p" key={line}>
+                {line}
+              </Box>
+            ))}
+          </Typography>
+        </Box>
+        {!noBottomDivider && <Divider variant="middle" />}
       </Box>
     </>
   );

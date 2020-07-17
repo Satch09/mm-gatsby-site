@@ -40,7 +40,7 @@ export default function Hero({ children, minHeight }) {
       <CardMedia image={coverImage} className={classes.image}>
         <Box
           boxShadow={8}
-          minHeight={minHeight || "30vh"}
+          minHeight={minHeight || "20vh"}
           component="section"
           className={classes.heroContainer}
         >

@@ -28,7 +28,7 @@ const ProjectPost = () => (
     `}
     render={data => (
       <>
-        <Grid container justify="center" xs={12} spacing={2}>
+        <Grid container justify="start" xs={12} spacing={2}>
           <ProjectCardTest {...data.allMarkdownRemark} />
         </Grid>
       </>

@@ -1,5 +1,5 @@
 ---
-title: "AVUSA Times Media"
+title: "This is digital transformation"
 date: "2020-06-24"
 industries: [ "Food and Beverage", "Marine" ]
 tags: ["PLC", "Marine", "Mining"]

@@ -12,4 +12,12 @@ Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum nisi alias explica
 
 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum nisi alias explicabo ab doloribus quam illo minus minima cumque veniam, at officiis temporibus aliquid atque tenetur velit quasi nihil nulla consectetur repudiandae eum dicta rem.
 
+#### No more terminals
+
+- test
+- testing
+- testing 3
+
+> This is a test quote
+
 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum nisi alias explicabo ab doloribus quam illo minus minima cumque veniam, at officiis temporibus aliquid atque tenetur velit quasi nihil nulla consectetur repudiandae eum dicta rem.

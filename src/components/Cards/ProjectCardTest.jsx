@@ -22,8 +22,10 @@ import { Box, Container, CardHeader, Grid } from "@material-ui/core";
 
 const useStyles = makeStyles({
   root: {
-    maxWidth: "sm",
-    maxHeight: "md",
+    display: "flex",
+    flexDirection: "column",
+    maxWidth: "100%",
+    height: "100%",
   },
   media: {
     height: 250,
@@ -51,7 +53,6 @@ export default function ProjectCardTest({ edges }) {
                 image={require("../../images/drive1.jpg")}
                 title="project"
               />
-
               <CardContent>
                 <Typography variant="body1" color="textSecondary" component="p">
                   {post.description}
@@ -66,13 +67,15 @@ export default function ProjectCardTest({ edges }) {
             p={1}
           >
             <Box display="flex">
-              {post.tags.map(tag => (
-                <Box display="flex" key={tag}>
-                  <Button size="medium" color="primary">
-                    #{tag}
-                  </Button>
-                </Box>
-              ))}
+              {post.tags
+                ? post.tags.map(tag => (
+                    <Box display="flex" key={tag}>
+                      <Button size="medium" color="primary">
+                        #{tag}
+                      </Button>
+                    </Box>
+                  ))
+                : null}
             </Box>
             <CardActions>
               <Link to={slug} style={{ textDecoration: "none" }}>

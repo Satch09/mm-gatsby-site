@@ -1,7 +1,8 @@
 import PropTypes from "prop-types";
 import React, { useEffect, useRef } from "react";
 import HeaderSection from "./HeaderSection";
-import { Paper } from "@material-ui/core";
+import { Paper, Container } from "@material-ui/core";
+import Rehydrate from "interactions/Rehydrate";
 export default function OverhangSpacing({ children, mainItem }) {
   const inputEl = useRef(null);
   useEffect(() => {
@@ -24,12 +25,22 @@ export default function OverhangSpacing({ children, mainItem }) {
             top: "-5vh",
           }}
         >
-          <HeaderSection>
-            <div ref={inputEl}></div>
+          <div ref={inputEl}></div>
+          <Container>
             <Paper elevation={8}>{mainItem}</Paper>
-          </HeaderSection>
-          {children}
+          </Container>
+          <div
+            style={{
+              position: "relative",
+              display: "block",
+              width: "100%",
+              minWidth: "100%",
+            }}
+          >
+            {children}
+          </div>
         </div>
+        <HeaderSection></HeaderSection>
       </div>
     </>
   );
