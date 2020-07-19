@@ -29,7 +29,7 @@ export default function Section({ children }) {
           justifyContent="center"
           minHeight="100%"
           paddingX={1}
-          paddingY={3}
+          paddingY={6}
         >
           {children}
         </Box>

@@ -25,7 +25,6 @@ export default function OverhangSpacing({ children, mainItem }) {
             top: "-5vh",
           }}
         >
-          <div ref={inputEl}></div>
           <Container>
             <Paper elevation={8}>{mainItem}</Paper>
           </Container>
@@ -37,10 +36,9 @@ export default function OverhangSpacing({ children, mainItem }) {
               minWidth: "100%",
             }}
           >
-            {children}
+            <div ref={inputEl}>{children}</div>
           </div>
         </div>
-        <HeaderSection></HeaderSection>
       </div>
     </>
   );

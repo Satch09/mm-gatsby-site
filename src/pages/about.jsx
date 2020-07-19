@@ -1,5 +1,5 @@
 import React from "react";
-// import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 
@@ -16,8 +16,16 @@ import MessageBox from "components/MessageBox";
 import page from "data/about.json";
 import SEO from "components/seo";
 import PageLayout from "layout/PageLayout";
-
+const useStyles = makeStyles(theme => ({
+  ...theme.customProperties,
+  leftSection: {
+    "&:last-child": {
+      marginBottom: theme.spacing(12),
+    },
+  },
+}));
 export default function About() {
+  const classes = useStyles();
   const topContent = (
     <Box display="flex" justifyContent="center">
       <Container maxWidth="lg">
@@ -69,14 +77,16 @@ export default function About() {
             {page.principlesAndValues.body}
           </Typography>
           {page.principlesAndValues.items.map(principle => (
-            <Box m={2} key={principle.title}>
-              <Typography variant="h6" component="h2">
-                {principle.title}
-              </Typography>
-              <Typography variant="body1" color="textSecondary" component="p">
-                {principle.body}
-              </Typography>
-            </Box>
+            <div className={classes.leftSection} key={principle.title}>
+              <Box m={2}>
+                <Typography variant="h6" component="h2">
+                  {principle.title}
+                </Typography>
+                <Typography variant="body1" color="textSecondary" component="p">
+                  {principle.body}
+                </Typography>
+              </Box>
+            </div>
           ))}
         </Grid>
         <Grid item xs={12} sm={5}>

@@ -25,9 +25,7 @@ const useStyles = makeStyles(theme => ({
     alignItems: "middle",
     backgroundColor: "none",
   },
-  menuButton: {
-    margin: theme.spacing(1),
-  },
+  menuButton: {},
   title: {
     flexGrow: 1,
   },
@@ -78,10 +76,12 @@ export default function Navbar() {
                   return (
                     <Route key={item.name} to={item.link} component="button">
                       <Link component="button" variant="body1" color="primary">
-                        <Button className={classes.navButton}>
-                          {item.name.charAt(0).toUpperCase() +
-                            item.name.slice(1)}
-                        </Button>
+                        <MenuItem>
+                          <Button className={classes.navButton}>
+                            {item.name.charAt(0).toUpperCase() +
+                              item.name.slice(1)}
+                          </Button>
+                        </MenuItem>
                       </Link>
                     </Route>
                   );

@@ -5,7 +5,7 @@ import { Link as Go } from "gatsby";
 
 import MessageBox from "components/MessageBox";
 import HeaderPicture from "layout/Header";
-import { Box, Paper, Container } from "@material-ui/core";
+import { Box, Paper, Container, Snackbar } from "@material-ui/core";
 // Icons
 
 import QuickLinks from "components/QuickLinks";

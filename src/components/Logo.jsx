@@ -15,7 +15,7 @@ export default function Logo() {
       image: file(relativePath: { eq: "LogoWebsite.jpg" }) {
         id
         childImageSharp {
-          fixed(width: 400) {
+          fixed(width: 300) {
             ...GatsbyImageSharpFixed
           }
           fluid {

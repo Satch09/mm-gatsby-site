@@ -101,23 +101,3 @@ export default function ProjectCard({ title, body }) {
     );
   }
 }
-/* <Card className={classes.root}>
-        <CardContent className={classes.content}>
-          <Box m={2} p={2}>
-            <Typography component="h5" variant="h5">
-              {title}
-            </Typography>
-          </Box>
-          <Divider variant="middle" />
-          <Box m={1} p={0}>
-            <Typography variant="subtitle1" color="textSecondary">
-              {body}
-            </Typography>
-          </Box>
-        </CardContent>
-        <CardMedia
-          className={classes.cover}
-          image={require("../../images/drive1.jpg")}
-          title="Drive"
-        ></CardMedia>
-      </Card> */

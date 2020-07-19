@@ -13,7 +13,7 @@ const ProjectPost = () => (
               id
               frontmatter {
                 title
-                date
+                date(formatString: "Do MMM YYYY")
                 tags
                 description
                 industries

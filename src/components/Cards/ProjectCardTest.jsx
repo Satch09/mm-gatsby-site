@@ -24,6 +24,7 @@ const useStyles = makeStyles({
   root: {
     display: "flex",
     flexDirection: "column",
+    justifyContent: "space-between",
     maxWidth: "100%",
     height: "100%",
   },
@@ -43,51 +44,58 @@ export default function ProjectCardTest({ edges }) {
     },
   }) => {
     return (
-      <Grid item xs={12} md={4}>
-        <Card className={classes.root}>
-          <Link to={slug} style={{ textDecoration: "none", color: "inherit" }}>
-            <CardHeader title={post.title} subheader={post.date} />
-            <CardActionArea>
-              <CardMedia
-                className={classes.media}
-                image={require("../../images/drive1.jpg")}
-                title="project"
-              />
-              <CardContent>
-                <Typography variant="body1" color="textSecondary" component="p">
-                  {post.description}
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-          </Link>
-          <Box
-            display="flex"
-            flexDirection="column"
-            justifyContent="space-between"
-            p={1}
+      <Card className={classes.root}>
+        <Link to={slug} style={{ textDecoration: "none", color: "inherit" }}>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "start",
+            }}
           >
-            <Box display="flex">
-              {post.tags
-                ? post.tags.map(tag => (
-                    <Box display="flex" key={tag}>
-                      <Button size="medium" color="primary">
-                        #{tag}
-                      </Button>
-                    </Box>
-                  ))
-                : null}
-            </Box>
-            <CardActions>
-              <Link to={slug} style={{ textDecoration: "none" }}>
-                <Button size="small" color="primary">
-                  Learn More
-                </Button>
-              </Link>
-            </CardActions>
-          </Box>
-        </Card>
-      </Grid>
+            <CardHeader title={post.title} subheader={post.date} />
+            <CardMedia
+              className={classes.media}
+              image={require("../../images/drive1.jpg")}
+              title={post.title}
+            />
+
+            <CardContent>
+              <Typography variant="body1" color="textSecondary" component="p">
+                {post.description}
+              </Typography>
+            </CardContent>
+          </div>
+        </Link>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "end",
+          }}
+        >
+          <CardActions>
+            {post.tags
+              ? post.tags.map(tag => (
+                  <Box variant="button" key={tag}>
+                    <Button size="medium" color="primary">
+                      #{tag}
+                    </Button>
+                  </Box>
+                ))
+              : null}
+          </CardActions>
+        </div>
+      </Card>
     );
   };
-  return <>{e.map(i => ItemPost(i))}</>;
+  return (
+    <>
+      {e.map(i => (
+        <Grid item xs={12} md={4}>
+          {ItemPost(i)}
+        </Grid>
+      ))}
+    </>
+  );
 }

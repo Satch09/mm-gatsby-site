@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import { Link as Go } from "gatsby";
@@ -48,11 +48,15 @@ const useStyles = makeStyles(theme => ({
 
 const PageLayout = ({ topContent, mainContent }) => {
   const classes = useStyles();
-
-  const headerPropsWithOptions = {
-    ...page.headerProps,
-    options: { slogan: true },
-  };
+  const inputEl = useRef(null);
+  useEffect(() => {
+    window.scrollTo({
+      behavior: "smooth",
+      top: inputEl,
+    });
+    inputEl.current.focus();
+    return () => {};
+  }, []);
 
   return (
     <>
@@ -71,10 +75,27 @@ const PageLayout = ({ topContent, mainContent }) => {
         >
           {topContent ? topContent : null}
         </div>
-        <Section>{mainContent ? mainContent : null}</Section>
-        <Footer>
-          <ContactOperatingHours />
-        </Footer>
+        <div
+          style={{
+            position: "relative",
+            width: "100%",
+          }}
+        >
+          <div ref={inputEl}>
+            <Section>{mainContent ? mainContent : null}</Section>
+          </div>
+        </div>
+        <div
+          style={{
+            position: "relative",
+            top: "5vh",
+            width: "100%",
+          }}
+        >
+          <Footer>
+            <ContactOperatingHours />
+          </Footer>
+        </div>
       </div>
     </>
   );

@@ -6,14 +6,10 @@ import { ThemeProvider } from "@material-ui/core/styles";
 import theme from "util/theme";
 import "./baseline.css";
 import Rehydrate from "interactions/Rehydrate";
-import Logo from "components/Logo";
 import Header from "layout/Header";
-import Footer from "layout/Footer";
-import ContactOperatingHours from "components/ContactOperatingHours";
 import Hero from "components/Hero";
 import ScrollingNav from "components/Navbar/ScrollingNav";
-import Section from "layout/Section";
-import CovidBanner from "components/CovidBanner";
+import CustomizedSnackbars from "layout/SnackBar";
 export default function TopLayout(props) {
   const headerPropsWithOptions = {
     options: { slogan: true },
@@ -38,6 +34,7 @@ export default function TopLayout(props) {
           {/* <div style={{ position: "fixed", bottom: "10px" }}>
             <CovidBanner />
           </div> */}
+          <CustomizedSnackbars />
         </ThemeProvider>
       </Rehydrate>
     </>

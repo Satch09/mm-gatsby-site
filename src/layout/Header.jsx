@@ -59,7 +59,7 @@ export default function Header({ children, minHeight, headerProps }, data) {
 
       <Slogan />
       <SocialLinks />
-      <CovidBanner />
+      {/* <CovidBanner /> */}
       {children}
     </>
   );
