@@ -43,14 +43,13 @@ export default function BlogPost({ data: { post } }) {
   const mainContent = (
     <>
       <Paper>
-        <Typography variant="body2">{post.frontmatter.date}</Typography>
-        <Box p={3}>
+        <Box p={3} m={2}>
+          <Typography variant="body2">{post.frontmatter.date}</Typography>
           <Typography>
             <div dangerouslySetInnerHTML={{ __html: post.html }} />
           </Typography>
         </Box>
       </Paper>
-      {console.log(mdElements)}
       {/* <Paper>
         {mdElements.map(element => (
           <Box m={1}>

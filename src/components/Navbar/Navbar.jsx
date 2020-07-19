@@ -111,18 +111,12 @@ export default function Navbar() {
                   {data.site.siteMetadata.menuLinks.map(item => {
                     return (
                       <Route key={item.name} to={item.link}>
-                        <Link component="li" className={classes.navButton}>
-                          <MenuItem>
-                            <Button
-                              variant="body1"
-                              onClick={handleClose}
-                              className={classes.navButton}
-                            >
-                              {item.name.charAt(0).toUpperCase() +
-                                item.name.slice(1)}
-                            </Button>
-                          </MenuItem>
-                        </Link>
+                        <MenuItem>
+                          <Link component="li" className={classes.navButton}>
+                            {item.name.charAt(0).toUpperCase() +
+                              item.name.slice(1)}
+                          </Link>
+                        </MenuItem>
                       </Route>
                     );
                   })}

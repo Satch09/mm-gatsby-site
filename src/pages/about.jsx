@@ -53,7 +53,7 @@ export default function About() {
         <Divider variant="middle" />
         <Box
           marginY={3}
-          paddingX={4}
+          paddingX={3}
           display="flex"
           justify="center"
           alignItems="center"
@@ -70,15 +70,17 @@ export default function About() {
       </Box>
       <Grid container justify="space-around" spacing={0}>
         <Grid item xs={12} sm={5}>
-          <Typography variant="h5" component="h1">
-            {page.principlesAndValues.title}
-          </Typography>
-          <Typography variant="body1" color="textSecondary" component="p">
-            {page.principlesAndValues.body}
-          </Typography>
+          <Box m={2}>
+            <Typography variant="h5" component="h2">
+              {page.principlesAndValues.title}
+            </Typography>
+            <Typography variant="body1" color="textSecondary" component="p">
+              {page.principlesAndValues.body}
+            </Typography>
+          </Box>
           {page.principlesAndValues.items.map(principle => (
             <div className={classes.leftSection} key={principle.title}>
-              <Box m={2}>
+              <Box m={3}>
                 <Typography variant="h6" component="h2">
                   {principle.title}
                 </Typography>
@@ -90,14 +92,16 @@ export default function About() {
           ))}
         </Grid>
         <Grid item xs={12} sm={5}>
-          <Typography variant="h5" component="h1">
-            {page.bee.title}
-          </Typography>
-          <Typography variant="body1" color="textSecondary" component="p">
-            {page.bee.body}
-          </Typography>
+          <Box m={2}>
+            <Typography variant="h5" component="h2">
+              {page.bee.title}
+            </Typography>
+            <Typography variant="body1" color="textSecondary" component="p">
+              {page.bee.body}
+            </Typography>
+          </Box>
           {page.bee.items.map(bee => (
-            <Box m={2} p={1} key={bee.title}>
+            <Box m={3} key={bee.title}>
               <Typography variant="h6" component="h2">
                 {bee.title}
               </Typography>

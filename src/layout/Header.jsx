@@ -55,12 +55,13 @@ export default function Header({ children, minHeight, headerProps }, data) {
 
   return (
     <>
-      {options && options.logo ? null : <Logo />}
+      <Container>
+        {options && options.logo ? null : <Logo />}
 
-      <Slogan />
-      <SocialLinks />
-      {/* <CovidBanner /> */}
-      {children}
+        <Slogan />
+        <SocialLinks />
+        {children}
+      </Container>
     </>
   );
 }

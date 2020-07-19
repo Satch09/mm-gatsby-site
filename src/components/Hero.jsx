@@ -34,7 +34,6 @@ const useStyles = makeStyles(theme => ({
 
 export default function Hero({ children, minHeight }) {
   const classes = useStyles();
-
   return (
     <>
       <CardMedia image={coverImage} className={classes.image}>

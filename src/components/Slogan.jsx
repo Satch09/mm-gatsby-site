@@ -5,7 +5,7 @@ import Typography from "@material-ui/core/Typography";
 import Typist from "react-typist";
 
 import Box from "@material-ui/core/Box";
-import { Grid } from "@material-ui/core";
+import { Grid, Container } from "@material-ui/core";
 
 const useStyles = makeStyles(theme => ({
   ...theme.customProps,
@@ -13,7 +13,10 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: "rgba(0,0,0,0.8)",
   },
   slogan: {
-    minHeight: "calc(1.5vh + 1.7vw + 25px)",
+    minHeight: "calc(1.7vh + 1.5vw + 25px)",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
   },
 }));
 
