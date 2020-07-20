@@ -20,6 +20,7 @@ export default function Logo() {
           }
           fluid {
             ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluidLimitPresentationSize
           }
         }
       }
@@ -29,7 +30,7 @@ export default function Logo() {
     <>
       <Container maxWidth="xs">
         <Paper>
-          <Box p={1}>
+          <Box p={1} m={1}>
             <Img
               // onStartLoad={<Spinner />}
               // onLoad={<Spinner />}

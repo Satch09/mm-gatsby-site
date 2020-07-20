@@ -22,7 +22,7 @@ const useStyles = makeStyles(theme => ({
     minWidth: "100%",
     height: "100%",
     padding: 0,
-    paddingBottom: "70px",
+    paddingBottom: "7vh",
   },
   image: {
     repeat: "no-repeat",

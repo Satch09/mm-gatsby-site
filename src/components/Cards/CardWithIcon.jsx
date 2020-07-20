@@ -9,11 +9,12 @@ const CardWithIcon = ({ classes, text, children, linkTo, Icon }) => {
     <>
       <Link to={linkTo} style={{ textDecoration: "inherit", color: "inherit" }}>
         <Container>
-          <Icon />
-
-          <Typography variant="body1" component="a">
-            {text}
-          </Typography>
+          <Box display="flex" flexDirection="column" textAlign="center">
+            <Icon />
+            <Typography variant="body1" component="a">
+              {text}
+            </Typography>
+          </Box>
         </Container>
       </Link>
     </>

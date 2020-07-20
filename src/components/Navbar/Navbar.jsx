@@ -75,13 +75,11 @@ export default function Navbar() {
                 {data.site.siteMetadata.menuLinks.map(item => {
                   return (
                     <Route key={item.name} to={item.link} component="button">
-                      <Link component="button" variant="body1" color="primary">
-                        <MenuItem>
-                          <Button className={classes.navButton}>
-                            {item.name.charAt(0).toUpperCase() +
-                              item.name.slice(1)}
-                          </Button>
-                        </MenuItem>
+                      <Link component="a" variant="body1" color="primary">
+                        <Button className={classes.navButton}>
+                          {item.name.charAt(0).toUpperCase() +
+                            item.name.slice(1)}
+                        </Button>
                       </Link>
                     </Route>
                   );
@@ -110,11 +108,16 @@ export default function Navbar() {
                 >
                   {data.site.siteMetadata.menuLinks.map(item => {
                     return (
-                      <Route key={item.name} to={item.link}>
+                      <Route key={item.name} to={item.link} component="button">
                         <MenuItem>
-                          <Link component="li" className={classes.navButton}>
-                            {item.name.charAt(0).toUpperCase() +
-                              item.name.slice(1)}
+                          <Link component="li" variant="body1" color="primary">
+                            <Button
+                              className={classes.navButton}
+                              onClick={handleClose}
+                            >
+                              {item.name.charAt(0).toUpperCase() +
+                                item.name.slice(1)}
+                            </Button>
                           </Link>
                         </MenuItem>
                       </Route>

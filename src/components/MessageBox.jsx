@@ -17,7 +17,7 @@ const MessageBox = ({ title, body, noBottomDivider }) => {
           alignItems="center"
           justifyContent="center"
           fontSize="1.6rem"
-          height="4em"
+          height="4.5em"
           paddingX="1em"
         >
           {title.toUpperCase()}

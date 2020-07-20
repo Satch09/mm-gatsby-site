@@ -82,7 +82,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {
-        exclude: [`/projects/*`],
+        exclude: [`/projects/*`, `/internal/`],
         query: `
         {
           site {

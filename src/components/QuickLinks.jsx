@@ -20,6 +20,12 @@ const useStyles = makeStyles(theme => ({
   icon: {
     fontSize: "3rem",
   },
+  linkContainer: {
+    [theme.breakpoints.down("xs")]: {
+      overflow: "scroll",
+      justifyContent: "start",
+    },
+  },
 }));
 
 export default function QuickLinks() {
@@ -95,6 +101,7 @@ export default function QuickLinks() {
         flexDirection="row"
         paddingY={4}
         justifyContent="center"
+        className={classes.linkContainer}
       >
         <CardWithIcon {...links.service} />
         <CardWithIcon {...links.contact} />
