@@ -42,7 +42,7 @@ import PageLayout from "layout/PageLayout";
 export default function Services() {
   const topContent = (
     <Box display="flex" justifyContent="center">
-      <Container maxWidth="lg">
+      <Container maxWidth="md">
         <Paper elevation={8}>
           <MessageBox {...page.heading} noBottomDivider />
         </Paper>

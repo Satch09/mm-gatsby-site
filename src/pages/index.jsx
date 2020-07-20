@@ -51,13 +51,11 @@ const IndexPage = () => {
   const classes = useStyles();
 
   const topContent = (
-    <Box display="flex" justifyContent="center">
-      <Container maxWidth="lg">
-        <Paper elevation={8}>
-          <QuickLinks />
-        </Paper>
-      </Container>
-    </Box>
+    <Container maxWidth="md">
+      <Paper elevation={8}>
+        <QuickLinks />
+      </Paper>
+    </Container>
   );
   const mainContent = (
     <Grid

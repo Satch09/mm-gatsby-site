@@ -8,18 +8,11 @@ import IconButton from "@material-ui/core/IconButton";
 import CloseIcon from "@material-ui/icons/Close";
 
 function Alert(props) {
-  return <MuiAlert elevation={6} variant="outlined" {...props} />;
+  return <MuiAlert variant="outlined" {...props} />;
 }
 
-const useStyles = makeStyles(theme => ({}));
-
 export default function CustomizedSnackbars() {
-  const classes = useStyles();
   const [open, setOpen] = React.useState(true);
-
-  const handleClick = () => {
-    setOpen(true);
-  };
 
   const handleClose = (event, reason) => {
     if (reason === "clickaway") {
@@ -30,19 +23,17 @@ export default function CustomizedSnackbars() {
   };
 
   return (
-    <Snackbar
-      anchorOrigin={{
-        vertical: "bottom",
-        horizontal: "center",
-      }}
-      open={open}
-      autoHideDuration={8000}
-      onClose={handleClose}
-      action={
-        <React.Fragment>
-          <CovidBanner onClick={handleClose} />
-        </React.Fragment>
-      }
-    />
+    <>
+      <Snackbar
+        anchorOrigin={{
+          vertical: "bottom",
+          horizontal: "center",
+        }}
+        open={open}
+        autoHideDuration={8000}
+        onClose={handleClose}
+        action={<CovidBanner onClick={handleClose} />}
+      />
+    </>
   );
 }

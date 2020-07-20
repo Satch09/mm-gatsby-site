@@ -27,7 +27,7 @@ export default function CovidBanner({ onClick }) {
         <Grid container justify="center" align="center" xs={12} spacing={0}>
           <div style={{ display: "flex" }}>
             <Container onClick={onClick}>
-              <Box p={2} boxShadow={6} className={classes.banner}>
+              <Box p={2} className={classes.banner}>
                 <Typography variant="body1" style={{ color: "white" }}>
                   We are committed to our clients during the global pandemic.
                 </Typography>

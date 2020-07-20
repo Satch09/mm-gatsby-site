@@ -19,7 +19,7 @@ import MessageBox from "components/MessageBox";
 export default function Contact() {
   const topContent = (
     <Box display="flex" justifyContent="center">
-      <Container maxWidth="lg">
+      <Container maxWidth="md">
         <Paper elevation={8}>
           <MessageBox {...page.heading} noBottomDivider />
         </Paper>
