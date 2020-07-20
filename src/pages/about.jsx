@@ -118,11 +118,8 @@ export default function About() {
               We are currently level 2 certified SME - Our certificate is
               available for download{" "}
               <Link
-                href=""
-                onClick={e => {
-                  e.preventDefault();
-                  alert("download cert");
-                }}
+                href={require("../static/documents/MJS_Electronics_BEE_Cert_2020.pdf")}
+                target="_blank"
               >
                 here
               </Link>
