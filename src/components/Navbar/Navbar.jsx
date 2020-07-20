@@ -64,7 +64,7 @@ export default function Navbar() {
       `}
       render={data => (
         <>
-          <Box p={0}>
+          <Box p={0} m={0}>
             <Call variant="small" />
             <Email variant="small" />
           </Box>
@@ -87,15 +87,14 @@ export default function Navbar() {
               </Box>
             ) : (
               <>
-                <Box>
-                  <Button
-                    aria-controls="simple-menu"
-                    aria-haspopup="true"
-                    onClick={handleClick}
-                  >
-                    <MenuIcon style={{ color: "white" }} />
-                  </Button>
-                </Box>
+                <Button
+                  aria-controls="simple-menu"
+                  aria-haspopup="true"
+                  onClick={handleClick}
+                >
+                  <MenuIcon style={{ color: "white" }} />
+                </Button>
+
                 <Menu
                   id="simple-menu"
                   anchorEl={anchorEl}

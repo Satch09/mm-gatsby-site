@@ -6,7 +6,7 @@ import Dialog from "@material-ui/core/Dialog";
 import DialogActions from "@material-ui/core/DialogActions";
 
 import { makeStyles } from "@material-ui/core/styles";
-import { Grid, Box } from "@material-ui/core";
+import { Grid, Box, Container } from "@material-ui/core";
 import EmailIcon from "@material-ui/icons/Email";
 
 export default function ContactDialog({ children, useIcon }) {
@@ -51,7 +51,7 @@ export default function ContactDialog({ children, useIcon }) {
   const dialogProps = {
     open: open,
     onClose: handleClose,
-    minWidth: "md",
+    fullWidth: true,
     ["aria-lablledby"]: "form-dialog-title",
   };
   const submitButton = {
@@ -101,7 +101,7 @@ export default function ContactDialog({ children, useIcon }) {
         name: "message",
         label: "Message",
         multiline: true,
-        rows: 4,
+        rows: 8,
         defaultValue: "",
         variant: "outlined",
         onChange: handleChange,
@@ -113,7 +113,7 @@ export default function ContactDialog({ children, useIcon }) {
     container: {
       container: true,
       justify: "center",
-      spacing: 0,
+      spacing: 2,
     },
     item: {
       start: {
@@ -128,6 +128,7 @@ export default function ContactDialog({ children, useIcon }) {
       },
     },
   };
+
   const renderButtons = () => {
     if (useIcon) {
       return (
@@ -147,20 +148,18 @@ export default function ContactDialog({ children, useIcon }) {
     <div>
       {renderButtons()}
       <Dialog {...dialogProps}>
-        <Grid {...grid.container}>
-          <Grid {...grid.item.end}></Grid>
+        <Grid {...grid.item.end}>
           <Grid {...grid.item.start}>
-            <Box p={1}>
-              <form {...form.containerProps} className={classes.root}>
-                <div>
-                  <TextField {...form.textFields.name} />
-                  <TextField {...form.textFields.number} />
-                  <TextField {...form.textFields.message} />
-                </div>
-              </form>
-            </Box>
+            <form {...form.containerProps} className={classes.root}>
+              <div>
+                <TextField {...form.textFields.name} />
+                <TextField {...form.textFields.number} />
+                <TextField {...form.textFields.message} />
+              </div>
+            </form>
           </Grid>
         </Grid>
+
         <DialogActions>
           <Button {...cancelButton} />
           <Button {...submitButton} />

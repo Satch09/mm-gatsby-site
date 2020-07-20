@@ -53,9 +53,8 @@ export function Call({ variant }) {
           <Box marginRight={1} display="flex" alignItems="center">
             <PhoneIcon fontSize="medium" style={{ color: "white" }} />
           </Box>
-          <Box>
-            <Typography variant="body1">{contact.tel}</Typography>
-          </Box>
+
+          <Typography variant="body1">{contact.tel}</Typography>
         </Box>
         <Typography>Normal | Standby</Typography>
       </a>
@@ -71,9 +70,8 @@ export function Call({ variant }) {
           <Box marginRight={1} display="flex" alignItems="center">
             <PhoneIcon fontSize="small" style={{ color: "white" }} />
           </Box>
-          <Box>
-            <Typography variant="body1">{contact.tel}</Typography>
-          </Box>
+
+          <Typography variant="body1">{contact.tel}</Typography>
         </Box>
       </a>
     </Button>
@@ -109,8 +107,8 @@ export function Fax({ variant }) {
         href={`tel:${contact.fax}`}
         style={{ textDecoration: "none", color: "white" }}
       >
-        <Box display="flex">
-          <Box marginRight={1} display="flex" alignItems="center">
+        <Box display="flex" alignItems="center">
+          <Box marginRight={1} display="flex">
             <DescriptionIcon fontSize="small" style={{ color: "white" }} />
           </Box>
           <Box>
@@ -150,13 +148,12 @@ export function Email({ variant }) {
           href={`mailto:${contact.email.info}`}
           style={{ textDecoration: "none", color: "white" }}
         >
-          <Box display="flex">
-            <Box marginRight={1} display="flex" alignItems="center">
+          <Box display="flex" alignItems="center">
+            <Box marginRight={1} display="flex">
               <EmailIcon fontSize="large" style={{ color: "white" }} />
             </Box>
-            <Box>
-              <Typography variant="body1">{contact.email.info}</Typography>
-            </Box>
+
+            <Typography variant="body1">{contact.email.info}</Typography>
           </Box>
         </a>
       </Button>
@@ -169,13 +166,12 @@ export function Email({ variant }) {
           href={`mailto:${contact.email.info}`}
           style={{ textDecoration: "none", color: "white" }}
         >
-          <Box display="flex">
-            <Box marginRight={1} display="flex" alignItems="center">
+          <Box display="flex" alignItems="center">
+            <Box marginRight={1} display="flex">
               <EmailIcon fontSize="small" style={{ color: "white" }} />
             </Box>
-            <Box>
-              <Typography variant="body1">{contact.email.info}</Typography>
-            </Box>
+
+            <Typography variant="body1">{contact.email.info}</Typography>
           </Box>
         </a>
       </Button>
