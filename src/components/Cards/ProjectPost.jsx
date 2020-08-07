@@ -3,7 +3,8 @@ import { StaticQuery, graphql } from "gatsby";
 import ProjectCardTest from "./ProjectCardTest";
 import { Grid } from "@material-ui/core";
 
-const ProjectPost = () => (
+const ProjectPost = () => {
+  return <div></div>;
   // <StaticQuery
   //   query={graphql`
   //     {
@@ -34,6 +35,6 @@ const ProjectPost = () => (
   //     </>
   //   )}
   // ></StaticQuery>
-);
+};
 
 export default ProjectPost;
