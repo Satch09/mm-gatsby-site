@@ -18,10 +18,11 @@ const useStyles = makeStyles(theme => ({
     margin: theme.spacing(2),
   },
   icon: {
-    fontSize: "3rem",
+    fontSize: "3em",
   },
   linkContainer: {
     [theme.breakpoints.down("xs")]: {
+      display: "none",
       overflow: "scroll",
       justifyContent: "start",
     },

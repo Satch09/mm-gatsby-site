@@ -17,10 +17,6 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-function ListItemLink(props) {
-  return <ListItem button component="a" {...props} />;
-}
-
 export default function ServicesList(service) {
   const classes = useStyles();
 
@@ -32,22 +28,16 @@ export default function ServicesList(service) {
           <Divider />
         </Box>
 
-        <Paper elevation={2}>
-          <List
-            style={{ minHeight: "800px" }}
-            component="div"
-            aria-label="services lists"
-          >
-            {service.items.map(topic => (
-              <ListItem key={topic.title}>
-                <ListItemText
-                  primary={topic.title}
-                  secondary={topic.detail || null}
-                />
-              </ListItem>
-            ))}
-          </List>
-        </Paper>
+        <List component="div" aria-label="services lists">
+          {service.items.map(topic => (
+            <ListItem key={topic.title}>
+              <ListItemText
+                primary={topic.title}
+                secondary={topic.detail || null}
+              />
+            </ListItem>
+          ))}
+        </List>
       </Box>
     </>
   );

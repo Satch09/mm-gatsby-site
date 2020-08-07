@@ -13,7 +13,7 @@
 
 // You can delete this file if you're not using it
 
-const page = require("./src/data/projects.json");
+/* const page = require("./src/data/projects.json");
 const path = require(`path`);
 const { createFilePath } = require(`gatsby-source-filesystem`);
 
@@ -67,4 +67,4 @@ exports.createPages = async ({ graphql, actions }) => {
       },
     });
   });
-};
+}; */

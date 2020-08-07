@@ -67,7 +67,7 @@ export default function BlogPost({ data: { post } }) {
     </>
   );
 }
-export const query = graphql`
+/* export const query = graphql`
   query($slug: String!) {
     post: markdownRemark(fields: { slug: { eq: $slug } }) {
       html
@@ -80,3 +80,4 @@ export const query = graphql`
     }
   }
 `;
+ */

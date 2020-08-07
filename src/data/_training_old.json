@@ -90,6 +90,37 @@
       "requirements": [
         "Drive Installation and Practice 1"
       ]
+    },
+    {
+      "name": "Troubleshooting",
+      "description": "This 1 day course gives a Basic Introduction to Fault Finding",
+      "objectives": [
+        "Fault finding basics",
+        "Troubleshooting Theory",
+        "The 5 step method",
+        "Troubleshooting Practical",
+        "The standard stop/start circuit with interlocks"
+      ],
+      "requirements": [
+        "Basic electrical"
+      ]
+    },
+    {
+      "name": "Automation Control Systems 1",
+      "description": "This 1 day course gives a basic introduction to Control Systems",
+      "objectives": [
+        "The concept of process control",
+        "Field Instruments",
+        "Process Variables and Control Variables",
+        "Digital and Analog Controllable Processes",
+        "Digital and Analog Measurable Processes",
+        "Control Loop and Application",
+        "Introduction to PID",
+        "Discussion of Automation related topics"
+      ],
+      "requirements": [
+        "Basic electrical"
+      ]
     }
   ]
 }
