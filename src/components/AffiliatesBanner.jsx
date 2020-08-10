@@ -39,7 +39,7 @@ export default function AffiliatesBanner() {
             </Grid>
             <Grid item>
               <img alt="logo" src={require("../images/logo3.png")} />
-              <img alt="logo" src={require("../images/logo4.png")} />
+              <img alt="logo" src={require("../images/g10.jpg")} />
             </Grid>
           </Grid>
         </Box>

@@ -51,8 +51,8 @@ export default function Services() {
   );
   const mainContent = (
     <>
-      <AffiliatesBanner />
       <Grid container xs={12} justify="center" align="center" spacing={2}>
+        <AffiliatesBanner />
         {page.services.map(service => (
           <Grid item xs={12} sm={5} key={service.heading}>
             <ServicesList {...service} />
