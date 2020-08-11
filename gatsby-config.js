@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: `https://www.mandmdemo.netlify.app`,
+    siteUrl: `https://mandmelec.co.za`,
     title: `M and M Electronics`,
     keywords: [`industrial`, `automation`, `allen-bradley`],
     titleTemplate: `Leaders in automation`,
@@ -155,7 +155,14 @@ module.exports = {
         icon: `src/images/favicon-32x32.png`, // This path is relative to the root of the site.
       },
     },
-
+    {
+      resolve: `gatsby-plugin-robots-txt`,
+      options: {
+        host: `https://mandmelec.co.za`,
+        sitemap: `https://mandmelec.co.za/sitemap.xml`,
+        policy: [{ userAgent: "*", allow: "/", disallow: "/internal" }],
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

@@ -23,6 +23,7 @@
     "gatsby-plugin-preact": "^4.0.9",
     "gatsby-plugin-react-helmet": "^3.3.5",
     "gatsby-plugin-resolve-src": "^2.1.0",
+    "gatsby-plugin-robots-txt": "^1.5.1",
     "gatsby-plugin-sharp": "^2.6.13",
     "gatsby-plugin-sitemap": "^2.4.6",
     "gatsby-source-filesystem": "^2.3.13",
