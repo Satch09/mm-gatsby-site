@@ -107,8 +107,6 @@ module.exports = {
         serialize: ({ site, allSitePage }) =>
           allSitePage.edges.map(edge => ({
             url: site.siteMetadata.siteUrl + edge.node.path,
-            changefreq: `daily`,
-            priority: 0.7,
           })),
       },
     },
@@ -142,6 +140,12 @@ module.exports = {
         },
       },
     },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        //trackingId: `ADD YOUR TRACKING ID HERE`,
+      },
+    },
 
     {
       resolve: `gatsby-plugin-manifest`,
@@ -160,7 +164,7 @@ module.exports = {
       options: {
         host: `https://mandmelec.co.za`,
         sitemap: `https://mandmelec.co.za/sitemap.xml`,
-        policy: [{ userAgent: "*", allow: "/", disallow: "/internal" }],
+        policy: [{ userAgent: "*", disallow: "/internal/" }],
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

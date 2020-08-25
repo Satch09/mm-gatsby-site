@@ -12,7 +12,7 @@
   "courses": [
     {
       "name": "PLC Basic",
-      "description": "This 2 day course gives a basic introduction into the concepts behind PLC theory",
+      "description": "This course gives a basic introduction into the concepts behind PLC theory",
       "objectives": [
         "Introduction to PLC, Software & Communications",
         "Digital and Analogue theory",
@@ -32,7 +32,7 @@
     },
     {
       "name": "PLC Advanced",
-      "description": "This 4 day course gives advanced theory and practical programming on the STUDIO5000 platform",
+      "description": "This course gives advanced theory and practical programming on the STUDIO5000 platform",
       "objectives": [
         "Introduction to PLC & Software",
         "Networks & Communications",
@@ -53,7 +53,7 @@
     },
     {
       "name": "PLC/SCADA Advanced",
-      "description": "This 6 day course gives advanced theory and practical programming on the STUDIO5000 and Factory Talk View HMI platform",
+      "description": "This course gives advanced theory and practical programming on the STUDIO5000 and Factory Talk View HMI platform",
       "objectives": [
         "Introduction to PLC & Software",
         "Networks & Communications",
@@ -77,7 +77,7 @@
     },
     {
       "name": "Drive Basic",
-      "description": "This 1 day course gives advanced insight into the parameters of Variable Frequency Drives",
+      "description": "This course gives advanced insight into the parameters of Variable Frequency Drives",
       "objectives": [
         "Recap of principals of AC drives",
         "Practical applications",

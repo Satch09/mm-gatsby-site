@@ -31,9 +31,7 @@ export default function TopLayout(props) {
           </Hero>
 
           {props.children}
-          {/* <div style={{ position: "fixed", bottom: "10px" }}>
-            <CovidBanner />
-          </div> */}
+
           <CustomizedSnackbars />
         </ThemeProvider>
       </Rehydrate>
