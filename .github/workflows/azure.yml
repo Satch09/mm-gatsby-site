@@ -3,7 +3,7 @@ name: Build and deploy Gatsby site to Azure Blob Storage
 on:
   push:
     paths-ignore:
-      - ".github/workflows/**"
+      - "./.github/workflows/**"
     branches:
       - master #on push to the master branch do the jobs below
 
