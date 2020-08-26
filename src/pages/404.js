@@ -1,24 +1,26 @@
 import React from "react";
 import MessageBox from "components/MessageBox";
-
-import HeaderPicture from "layout/Header";
-import HeaderSection from "layout/HeaderSection";
-import ContentLayout from "layout/ContentLayout";
+import { Box, Paper, Container } from "@material-ui/core";
 
 import page from "data/notFound.json";
 import SEO from "components/seo";
-export default function PageNotFound() {
-  // const inputEl = useRef(null);
+import PageLayout from "layout/PageLayout";
+
+export default function notFound() {
+  const topContent = (
+    <Box display="flex" justifyContent="center">
+      <Container maxWidth="md">
+        <Paper elevation={8}>
+          <MessageBox {...page.heading} noBottomDivider />
+        </Paper>
+      </Container>
+    </Box>
+  );
 
   return (
     <>
-      <SEO title="Not found" />
-      <HeaderPicture headerProps={page.headerProps} />
-
-      <HeaderSection>
-        <MessageBox {...page.heading} />
-      </HeaderSection>
-      <ContentLayout></ContentLayout>
+      <SEO title="Not Found" />
+      <PageLayout topContent={topContent} />
     </>
   );
 }
