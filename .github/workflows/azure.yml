@@ -2,6 +2,8 @@ name: Build and deploy Gatsby site to Azure Blob Storage
 
 on:
   push:
+    paths-ignore:
+      - ".github/workflows/**"
     branches:
       - master #on push to the master branch do the jobs below
 
@@ -15,7 +17,7 @@ jobs:
       - name: Set up Node.js version
         uses: actions/setup-node@v1
         with:
-          node-version: '12.x'
+          node-version: "12.x"
 
       - name: npm install and build
         run: |
