@@ -1,4 +1,4 @@
-name: Build and deploy Gatsby site to Azure Blob Storage
+name: Build and deploy Gatsby
 
 on:
   push:
@@ -23,9 +23,18 @@ jobs:
         run: |
           npm install
           npm run build
+
       - name: Upload To Azure Blob Storage
         uses: bacongobbler/azure-blob-storage-upload@v1.0.0
         with:
           source_dir: public #gatsby build generates this file after build
           container_name: $web
           connection_string: ${{ secrets.BLOB_STORAGE_CONNECTION_STRING }}
+      - name: Upload To Netlify
+        uses: netlify/actions/cli@master
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_APP_ID }}
+        with:
+          # 5. "gatsby build" creates "public" folder, which is what we are deploying
+          args: deploy --dir=public --prod
