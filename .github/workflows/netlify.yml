@@ -27,4 +27,3 @@ jobs:
         with:
           # 5. "gatsby build" creates "public" folder, which is what we are deploying
           args: deploy --dir=public --prod
-          secrets: '["NETLIFY_AUTH_TOKEN", "NETLIFY_SITE_ID"]'
