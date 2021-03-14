@@ -5,7 +5,7 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import { ThemeProvider } from "@material-ui/core/styles";
 import theme from "util/theme";
 import "./baseline.css";
-import Rehydrate from "interactions/Rehydrate";
+import Rehydrate from "util/Rehydrate";
 import Header from "layout/Header";
 import Hero from "components/Hero";
 import ScrollingNav from "components/Navbar/ScrollingNav";
@@ -29,9 +29,7 @@ export default function TopLayout(props) {
             <ScrollingNav />
             <Header headerProps={headerPropsWithOptions} />
           </Hero>
-
           {props.children}
-
           <CustomizedSnackbars />
         </ThemeProvider>
       </Rehydrate>

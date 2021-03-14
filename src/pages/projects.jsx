@@ -1,18 +1,10 @@
 import React from "react";
-import Grid from "@material-ui/core/Grid";
 
 import MessageBox from "components/MessageBox";
 import { Box, Container, Paper } from "@material-ui/core";
-import HeaderPicture from "layout/Header";
-import { ProjectCard } from "components/Cards";
-import ContentLayout from "layout/ContentLayout";
-import OverhangSpacing from "layout/OverhangSpacing";
-import Footer from "layout/Footer";
-import ContactOperatingHours from "components/ContactOperatingHours";
+
 import page from "data/projects.json";
-import Section from "layout/Section";
-// import ProjectPost from "components/Cards/ProjectPost";
-import SEO from "components/seo";
+import { SEO } from "components/seo";
 import PageLayout from "layout/PageLayout";
 
 export default function Projects() {

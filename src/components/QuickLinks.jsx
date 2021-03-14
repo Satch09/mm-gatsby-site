@@ -1,9 +1,8 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import Grid from "@material-ui/core/Grid";
 
 import CardWithIcon from "components/Cards/CardWithIcon";
-import { Box, Container } from "@material-ui/core";
+import { Box } from "@material-ui/core";
 // Icons
 import AccessAlarmIcon from "@material-ui/icons/AccessAlarm";
 import CodeIcon from "@material-ui/icons/Code";
@@ -14,7 +13,6 @@ const useStyles = makeStyles(theme => ({
   ...theme.customProperties,
   linkBox: {
     minWidth: "100px",
-    //minHeight: "100px",
     margin: theme.spacing(2),
   },
   icon: {

@@ -6,11 +6,9 @@ import ExpansionPanelSummary from "@material-ui/core/ExpansionPanelSummary";
 import ExpansionPanelDetails from "@material-ui/core/ExpansionPanelDetails";
 import Typography from "@material-ui/core/Typography";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
-import { Box, List, ListItem, ListItemText } from "@material-ui/core";
-// import Divider from "@material-ui/core/Divider";
+import { List, ListItem, ListItemText } from "@material-ui/core";
 
 const useStyles = makeStyles(theme => ({
-  root: {},
   heading: {
     fontSize: theme.typography.pxToRem(15),
     fontWeight: theme.typography.fontWeightRegular,
@@ -22,7 +20,7 @@ export default function ExpansionPanelTraining({ objectives, requirements }) {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
+    <div>
       <ExpansionPanel>
         <ExpansionPanelSummary
           expandIcon={<ExpandMoreIcon />}

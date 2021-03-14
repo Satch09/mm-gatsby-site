@@ -6,6 +6,7 @@ on:
       - "./.github/workflows/**"
     branches:
       - master #on push to the master branch do the jobs below
+      - refactor
 
 jobs:
   build-and-deploy:

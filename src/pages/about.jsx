@@ -14,11 +14,11 @@ import {
 import MessageBox from "components/MessageBox";
 
 import page from "data/about.json";
-import SEO from "components/seo";
+import { SEO } from "components/seo";
 import PageLayout from "layout/PageLayout";
 const useStyles = makeStyles(theme => ({
   ...theme.customProperties,
-  leftSection: {
+  lastChild: {
     "&:last-child": {
       marginBottom: theme.spacing(12),
     },
@@ -79,7 +79,7 @@ export default function About() {
             </Typography>
           </Box>
           {page.principlesAndValues.items.map(principle => (
-            <div className={classes.leftSection} key={principle.title}>
+            <div className={classes.lastChild} key={principle.title}>
               <Box m={3}>
                 <Typography variant="h6" component="h2">
                   {principle.title}

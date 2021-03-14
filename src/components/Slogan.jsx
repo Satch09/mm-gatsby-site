@@ -17,6 +17,8 @@ const useStyles = makeStyles(theme => ({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
+    fontSize: "3rem",
+    minHeight: 120,
   },
 }));
 

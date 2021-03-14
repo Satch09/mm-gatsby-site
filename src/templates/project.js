@@ -1,6 +1,6 @@
 import React from "react";
 import { graphql } from "gatsby";
-import HeaderSection from "layout/HeaderSection";
+// import HeaderSection from "layout/HeaderSection";
 import OverhangSpacing from "layout/OverhangSpacing";
 import HeaderPicture from "layout/Header";
 import Footer from "layout/Footer";
@@ -11,7 +11,7 @@ import Section from "layout/Section";
 
 import { Grid, Box, Container, Paper, Typography } from "@material-ui/core";
 import PageLayout from "layout/PageLayout";
-import Rehydrate from "interactions/Rehydrate";
+import Rehydrate from "util/Rehydrate";
 
 export default function BlogPost({ data: { post } }) {
   const messageBox = {

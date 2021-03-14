@@ -17,7 +17,7 @@ import OverhangSpacing from "layout/OverhangSpacing";
 import page from "data/home.json";
 import EmailSignUp from "components/EmailSignUp";
 import Section from "layout/Section";
-import SEO from "components/seo";
+import { SEO } from "components/seo";
 
 const useStyles = makeStyles(theme => ({
   ...theme.customProps,

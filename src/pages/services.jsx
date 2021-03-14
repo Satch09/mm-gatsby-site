@@ -3,18 +3,13 @@ import React from "react";
 
 import MessageBox from "components/MessageBox";
 // Icons
-import HeaderPicture from "layout/Header";
 import AffiliatesBanner from "components/AffiliatesBanner";
-import ContentLayout from "layout/ContentLayout";
-import OverhangSpacing from "layout/OverhangSpacing";
-import Footer from "layout/Footer";
-import ContactOperatingHours from "components/ContactOperatingHours";
+
 import { ServicesList } from "components/Cards";
 import { Grid, Container, Box, Paper } from "@material-ui/core";
 
 import page from "data/services.json";
-import Section from "layout/Section";
-import SEO from "components/seo";
+import { SEO } from "components/seo";
 import PageLayout from "layout/PageLayout";
 // const useStyles = makeStyles((theme) => ({
 //   ...theme.customProperties,

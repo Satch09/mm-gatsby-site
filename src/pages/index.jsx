@@ -4,20 +4,12 @@ import Grid from "@material-ui/core/Grid";
 import { Link as Go } from "gatsby";
 
 import MessageBox from "components/MessageBox";
-import HeaderPicture from "layout/Header";
 import { Box, Paper, Container, Snackbar } from "@material-ui/core";
 // Icons
 
 import QuickLinks from "components/QuickLinks";
-import ContentLayout from "layout/ContentLayout";
-import CovidBanner from "components/CovidBanner";
-import Footer from "layout/Footer";
-import ContactOperatingHours from "components/ContactOperatingHours";
-import OverhangSpacing from "layout/OverhangSpacing";
 import page from "data/home.json";
-import EmailSignUp from "components/EmailSignUp";
-import Section from "layout/Section";
-import SEO from "components/seo";
+import { SEO } from "components/seo";
 import PageLayout from "layout/PageLayout";
 
 const useStyles = makeStyles(theme => ({

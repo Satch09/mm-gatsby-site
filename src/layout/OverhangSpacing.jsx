@@ -1,8 +1,7 @@
 import PropTypes from "prop-types";
 import React, { useEffect, useRef } from "react";
-import HeaderSection from "./HeaderSection";
 import { Paper, Container } from "@material-ui/core";
-import Rehydrate from "interactions/Rehydrate";
+import Rehydrate from "util/Rehydrate";
 export default function OverhangSpacing({ children, mainItem }) {
   const inputEl = useRef(null);
   useEffect(() => {

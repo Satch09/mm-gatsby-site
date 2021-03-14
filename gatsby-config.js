@@ -42,41 +42,6 @@ module.exports = {
       { name: `projects`, link: `/projects` },
       { name: `contact`, link: `/contact` },
     ],
-    overallPages: {
-      home: {},
-      about: {
-        title: "our story",
-        body: [
-          "We believe that passion, dedication and consistent service to our clients over our 24 year history have lead to our success. We would like to share the story of our beginning as well as the principles we follow and practice daily that have lead to our success.",
-        ],
-      },
-      contact: {
-        title: "we are here to help",
-        body: ["We are always available, night and day"],
-      },
-      "404": {
-        title: "page not found",
-        body: ["The page that you are looking for cannot be found."],
-      },
-      projects: {
-        title: "projects",
-        body: [
-          "A picture says a thousand words and so we are excited to showcase some of the solutions that have greatly benefited our clients. We look forward to adding your solution to the collection soon.",
-        ],
-      },
-      services: {
-        title: "services",
-        body: [
-          "We offer a wide range of industry leading automation services and solutions. Over our 24 years of operation, we have developed a keen sense of the problems that our clients face and how best to solve them. We have been awarded both Recognised System Integrator and Power Partner status by Rockwell Automation. This means that our solutions are backed and supported giving you piece of mind that we provide the best solutions in the industry.",
-        ],
-      },
-      training: {
-        title: "training",
-        body: [
-          "With our fully equipped training room M&M Electronics are able to offer a wide range of theoretical and hands-on training courses. We also provide customer-specific training which ensures that those delegates attending our courses are trained according to the systems they work on. Please contact us should you wish to find out more about any of our proudly offered courses",
-        ],
-      },
-    },
   },
   plugins: [
     {
@@ -110,7 +75,6 @@ module.exports = {
           })),
       },
     },
-    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -125,8 +89,8 @@ module.exports = {
         path: `${__dirname}/content/projects`,
       },
     },
+    `gatsby-plugin-react-helmet`,
     `gatsby-transformer-remark`,
-
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-resolve-src`,

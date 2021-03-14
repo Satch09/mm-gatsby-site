@@ -3,7 +3,7 @@ import MessageBox from "components/MessageBox";
 import { Box, Paper, Container } from "@material-ui/core";
 
 import page from "data/notFound.json";
-import SEO from "components/seo";
+import { SEO } from "components/seo";
 import PageLayout from "layout/PageLayout";
 
 export default function notFound() {

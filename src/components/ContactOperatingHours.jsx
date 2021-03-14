@@ -9,8 +9,7 @@ import Divider from "@material-ui/core/Divider";
 import ExternalLink from "./ExternalLink";
 import { StreetAddress, PostalAddress } from "./Address";
 import { OperatingHoursNormal, OperatingHoursAfter } from "./OperatingHours";
-import { Call, Fax } from "./Contact";
-import EmailSignUp from "./EmailSignUp";
+
 const useStyles = makeStyles(theme => ({
   ...theme.customProps,
   root: {
